@@ -1,0 +1,4 @@
+/home/jj/tasktown_ws/build/village_interfaces/rosidl_adapter/village_interfaces:msg/Task.idl
+/home/jj/tasktown_ws/build/village_interfaces/rosidl_adapter/village_interfaces:srv/BorrowMoney.idl
+/home/jj/tasktown_ws/build/village_interfaces/rosidl_adapter/village_interfaces:srv/TaskAssign.idl
+/home/jj/tasktown_ws/build/village_interfaces/rosidl_adapter/village_interfaces:srv/TaskUpdate.idl

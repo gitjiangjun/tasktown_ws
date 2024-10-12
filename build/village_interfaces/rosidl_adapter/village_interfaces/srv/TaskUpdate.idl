@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from village_interfaces/srv/TaskUpdate.srv
+// generated code does not contain a copyright notice
+
+
+module village_interfaces {
+  module srv {
+    struct TaskUpdate_Request {
+      sequence<int32> tasks;
+    };
+    struct TaskUpdate_Response {
+      boolean success;
+    };
+  };
+};

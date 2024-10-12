@@ -1,0 +1,13 @@
+<action name="task_assign">
+  <goals>
+    <goal name="task_sequence" />
+  </goals>
+  <result>
+    <decision name="succeeded" />
+    <decision name="aborted" />
+    <decision name="failed" />
+  </result>
+  <feedback>
+    <status name="updating" />
+  </feedback>
+</action>

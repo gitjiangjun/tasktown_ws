@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/jj/tasktown_ws/install/village_interfaces/include/**",
+        "/opt/ros/foxy/include/**",
+        "/home/jj/tasktown_ws/src/village_interfaces/include/**",
+        "/home/jj/tasktown_ws/src/village_operator/include/**",
+        "/home/jj/tasktown_ws/src/village_task/include/**",
+        "/home/jj/tasktown_ws/src/village_taskgroups/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

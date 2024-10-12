@@ -1,0 +1,1 @@
+/home/jj/tasktown_ws/build/village_operator/ament_cmake_core/village_operatorConfig-version.cmake

@@ -1,0 +1,9 @@
+{
+  "package_name": "village_interfaces",
+  "non_idl_tuples": [
+    "/home/jj/tasktown_ws/src/village_interfaces:msg/Task.msg",
+    "/home/jj/tasktown_ws/src/village_interfaces:srv/BorrowMoney.srv",
+    "/home/jj/tasktown_ws/src/village_interfaces:srv/TaskAssign.srv",
+    "/home/jj/tasktown_ws/src/village_interfaces:srv/TaskUpdate.srv"
+  ]
+}

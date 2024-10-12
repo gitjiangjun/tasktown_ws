@@ -1,0 +1,16 @@
+/home/jj/tasktown_ws/install/village_taskgroups/share/ament_index/resource_index/package_run_dependencies/village_taskgroups
+/home/jj/tasktown_ws/install/village_taskgroups/share/ament_index/resource_index/parent_prefix_path/village_taskgroups
+/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/environment/ament_prefix_path.sh
+/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/environment/ament_prefix_path.dsv
+/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/environment/path.sh
+/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/environment/path.dsv
+/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/local_setup.bash
+/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/local_setup.sh
+/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/local_setup.zsh
+/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/local_setup.dsv
+/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/package.dsv
+/home/jj/tasktown_ws/install/village_taskgroups/share/ament_index/resource_index/packages/village_taskgroups
+/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/cmake/village_taskgroupsConfig.cmake
+/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/cmake/village_taskgroupsConfig-version.cmake
+/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/package.xml
+/home/jj/tasktown_ws/install/village_taskgroups/lib/village_taskgroups/taskgroups_node

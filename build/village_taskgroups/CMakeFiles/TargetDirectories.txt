@@ -1,0 +1,10 @@
+/home/jj/tasktown_ws/build/village_taskgroups/CMakeFiles/install/strip.dir
+/home/jj/tasktown_ws/build/village_taskgroups/CMakeFiles/install/local.dir
+/home/jj/tasktown_ws/build/village_taskgroups/CMakeFiles/install.dir
+/home/jj/tasktown_ws/build/village_taskgroups/CMakeFiles/list_install_components.dir
+/home/jj/tasktown_ws/build/village_taskgroups/CMakeFiles/rebuild_cache.dir
+/home/jj/tasktown_ws/build/village_taskgroups/CMakeFiles/edit_cache.dir
+/home/jj/tasktown_ws/build/village_taskgroups/CMakeFiles/test.dir
+/home/jj/tasktown_ws/build/village_taskgroups/CMakeFiles/taskgroups_node.dir
+/home/jj/tasktown_ws/build/village_taskgroups/CMakeFiles/village_taskgroups_uninstall.dir
+/home/jj/tasktown_ws/build/village_taskgroups/CMakeFiles/uninstall.dir
