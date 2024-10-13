@@ -1,0 +1,8 @@
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskAssignServer::assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:689:54:[m[K [01;31m[Kerror: [m[K‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<std::pair<std::vector<int>, std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > > > >, std::pair<std::vector<int>, std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > > > >::value_type[m[K’ {aka ‘[01m[Kstruct std::pair<std::vector<int>, std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > > >[m[K’} has no member named ‘[01m[Kfist[m[K’; did you mean ‘[01m[Kfirst[m[K’?
+  689 |             global_task_sequence[unlucky_task_index].[01;31m[Kfist[m[K[3+who]-=5;
+      |                                                      [01;31m[K^~~~[m[K
+      |                                                      [32m[Kfirst[m[K
+make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

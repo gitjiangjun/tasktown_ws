@@ -560,8 +560,7 @@ void assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign::Response> 
 
        // vector<vector<double>> reward_matrix(3, vector<double>(global_task_sequence.size(), 0.0)); // 任务收益矩阵，行数固定为3（操作员数量），列数根据当前任务数动态调整
         vector<int> idle_operators;                                                               // 存储空闲的操作员索引
-        vector<size_t> task_indices;  
-        vector<int> busy_operators;                                                            // 未处理的任务索引
+        vector<size_t> task_indices;                                                              // 未处理的任务索引
         //task_lock.unlock();
         // 遍历所有操作员，检查哪些操作员空闲
         for (size_t operator_index = 0; operator_index < operators_.size(); ++operator_index)
@@ -572,12 +571,6 @@ void assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign::Response> 
                 idle_operators.push_back(operator_index); // 记录空闲操作员
                 RCLCPP_INFO(this->get_logger(), "操作员 %d 已空闲，可以分配任务。", operator_index);
             }
-            else
-            {
-                busy_operators.push_back(operator_index); // 记录忙碌的操作员
-                //RCLCPP_INFO(this->get_logger(), "操作员 %d 正在处理任务，无法分配任务。", operator_index);
-            }
-
         }
 
         // 如果没有空闲操作员，结束循环
@@ -678,18 +671,7 @@ void assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign::Response> 
             RCLCPP_INFO(this->get_logger(), "%d", element);
         }
         RCLCPP_INFO(this->get_logger(), "KM算法计算的最大总收益为: %.2f", max_reward);
-        for(size_t i=0;i< busy_operators.size();i++)//
-        {   int unlucky_task_index;
-            int who = busy_operators[i]; 
-            auto task_it=std::find(matching_result.begin(), matching_result.end(), who);   
-            if(task_it!=matching_result.end())
-            {
-                unlucky_task_index = task_indices[std::distance(matching_result.begin(), task_it)];//改动
-            }
-            task_lock.lock();
-            global_task_sequence[unlucky_task_index].first[3+who]-=5;
-            task_lock.unlock();
-        }
+
         // 分配任务，只给空闲的操作员分配任务，并将任务标记为已处理
         for (size_t i = 0; i < idle_operators.size(); ++i)
         {
@@ -704,7 +686,6 @@ void assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign::Response> 
             else
             {
                 RCLCPP_INFO(this->get_logger(), "problem:bug1");
-                std::this_thread::sleep_for(std::chrono::seconds(5));
                 continue;
             }
             //size_t selected_task_index = task_indices[matching_result[i]]; // 从匹配结果中获取任务索引

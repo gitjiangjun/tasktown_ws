@@ -1,0 +1,12 @@
+[35m[1mScanning dependencies of target operator_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskAssignServer::assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:687:21:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kunlucky_task_index[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  687 |                 int [01;35m[Kunlucky_task_index[m[K = task_indices[std::distance(matching_result.begin(), task_it)];//改动
+      |                     [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:689:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kunlucky_task_index[m[K’ was not declared in this scope
+  689 |             global_task_sequence[[01;31m[Kunlucky_task_index[m[K].fist[3+who]-=5;
+      |                                  [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

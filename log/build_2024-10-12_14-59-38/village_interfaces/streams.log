@@ -1,0 +1,236 @@
+[0.017s] Invoking command in '/home/jj/tasktown_ws/build/village_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/jj/tasktown_ws/src/village_interfaces -DCMAKE_INSTALL_PREFIX=/home/jj/tasktown_ws/install/village_interfaces
+[0.077s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.099s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.100s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.277s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.287s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.309s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.313s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.444s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.622s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.633s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.723s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[0.899s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[1.230s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.415s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.444s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[1.445s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[1.478s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.479s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[1.479s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[1.574s] -- Added test 'lint_cmake' to check CMake code style
+[1.575s] -- Added test 'xmllint' to check XML markup files
+[1.582s] -- Configuring done
+[1.686s] -- Generating done
+[1.691s] -- Build files have been written to: /home/jj/tasktown_ws/build/village_interfaces
+[1.700s] Invoked command in '/home/jj/tasktown_ws/build/village_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/jj/tasktown_ws/src/village_interfaces -DCMAKE_INSTALL_PREFIX=/home/jj/tasktown_ws/install/village_interfaces
+[1.704s] Invoking command in '/home/jj/tasktown_ws/build/village_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_interfaces -- -j2 -l2
+[1.749s] [35m[1mScanning dependencies of target village_interfaces__rosidl_generator_c[0m
+[1.759s] [  1%] Built target village_interfaces__cpp
+[1.765s] [  3%] [32mBuilding C object CMakeFiles/village_interfaces__rosidl_generator_c.dir/rosidl_generator_c/village_interfaces/msg/detail/task__functions.c.o[0m
+[1.772s] [35m[1mScanning dependencies of target village_interfaces__rosidl_typesupport_cpp[0m
+[1.788s] [  5%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/village_interfaces/msg/task__type_support.cpp.o[0m
+[2.047s] [  7%] [32mBuilding C object CMakeFiles/village_interfaces__rosidl_generator_c.dir/rosidl_generator_c/village_interfaces/srv/detail/borrow_money__functions.c.o[0m
+[2.201s] [  9%] [32mBuilding C object CMakeFiles/village_interfaces__rosidl_generator_c.dir/rosidl_generator_c/village_interfaces/srv/detail/task_assign__functions.c.o[0m
+[2.347s] [ 10%] [32mBuilding C object CMakeFiles/village_interfaces__rosidl_generator_c.dir/rosidl_generator_c/village_interfaces/srv/detail/task_update__functions.c.o[0m
+[2.398s] [ 12%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/village_interfaces/srv/borrow_money__type_support.cpp.o[0m
+[2.508s] [ 14%] [32m[1mLinking C shared library libvillage_interfaces__rosidl_generator_c.so[0m
+[2.577s] [ 16%] Built target village_interfaces__rosidl_generator_c
+[2.590s] [35m[1mScanning dependencies of target village_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[2.609s] [ 18%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/village_interfaces/msg/detail/dds_fastrtps/task__type_support.cpp.o[0m
+[2.734s] [ 20%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/village_interfaces/srv/task_assign__type_support.cpp.o[0m
+[3.153s] [ 21%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/village_interfaces/srv/task_update__type_support.cpp.o[0m
+[3.303s] [ 23%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/village_interfaces/srv/detail/dds_fastrtps/borrow_money__type_support.cpp.o[0m
+[3.449s] [ 25%] [32m[1mLinking CXX shared library libvillage_interfaces__rosidl_typesupport_cpp.so[0m
+[3.499s] [ 27%] Built target village_interfaces__rosidl_typesupport_cpp
+[3.512s] [35m[1mScanning dependencies of target village_interfaces__rosidl_typesupport_introspection_c[0m
+[3.527s] [ 29%] [32mBuilding C object CMakeFiles/village_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/village_interfaces/msg/detail/task__type_support.c.o[0m
+[3.568s] [ 30%] [32mBuilding C object CMakeFiles/village_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/village_interfaces/srv/detail/borrow_money__type_support.c.o[0m
+[3.618s] [ 32%] [32mBuilding C object CMakeFiles/village_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/village_interfaces/srv/detail/task_assign__type_support.c.o[0m
+[3.667s] [ 34%] [32mBuilding C object CMakeFiles/village_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/village_interfaces/srv/detail/task_update__type_support.c.o[0m
+[3.713s] [ 36%] [32m[1mLinking C shared library libvillage_interfaces__rosidl_typesupport_introspection_c.so[0m
+[3.747s] [ 38%] Built target village_interfaces__rosidl_typesupport_introspection_c
+[3.760s] [35m[1mScanning dependencies of target village_interfaces__rosidl_typesupport_c[0m
+[3.775s] [ 40%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/village_interfaces/msg/task__type_support.cpp.o[0m
+[3.808s] [ 41%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/village_interfaces/srv/borrow_money__type_support.cpp.o[0m
+[3.820s] [ 43%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/village_interfaces/srv/detail/dds_fastrtps/task_assign__type_support.cpp.o[0m
+[3.843s] [ 45%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/village_interfaces/srv/task_assign__type_support.cpp.o[0m
+[3.880s] [ 47%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/village_interfaces/srv/task_update__type_support.cpp.o[0m
+[3.915s] [ 49%] [32m[1mLinking CXX shared library libvillage_interfaces__rosidl_typesupport_c.so[0m
+[3.962s] [ 50%] Built target village_interfaces__rosidl_typesupport_c
+[3.974s] [35m[1mScanning dependencies of target village_interfaces__rosidl_typesupport_introspection_cpp[0m
+[3.990s] [ 52%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/village_interfaces/msg/detail/task__type_support.cpp.o[0m
+[4.441s] [ 54%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/village_interfaces/srv/detail/dds_fastrtps/task_update__type_support.cpp.o[0m
+[4.472s] [ 56%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/village_interfaces/srv/detail/borrow_money__type_support.cpp.o[0m
+[4.807s] [ 58%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/village_interfaces/srv/detail/task_assign__type_support.cpp.o[0m
+[4.984s] [ 60%] [32m[1mLinking CXX shared library libvillage_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[5.148s] [ 61%] Built target village_interfaces__rosidl_typesupport_fastrtps_cpp
+[5.160s] [35m[1mScanning dependencies of target village_interfaces__rosidl_typesupport_fastrtps_c[0m
+[5.181s] [ 63%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/village_interfaces/msg/detail/task__type_support_c.cpp.o[0m
+[5.187s] [ 65%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/village_interfaces/srv/detail/task_update__type_support.cpp.o[0m
+[5.548s] [ 67%] [32m[1mLinking CXX shared library libvillage_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[5.604s] [ 69%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/village_interfaces/srv/detail/borrow_money__type_support_c.cpp.o[0m
+[5.660s] [ 70%] Built target village_interfaces__rosidl_typesupport_introspection_cpp
+[5.669s] [ 72%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/village_interfaces/srv/detail/task_assign__type_support_c.cpp.o[0m
+[6.067s] [ 74%] [32mBuilding CXX object CMakeFiles/village_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/village_interfaces/srv/detail/task_update__type_support_c.cpp.o[0m
+[6.464s] [ 76%] [32m[1mLinking CXX shared library libvillage_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[6.584s] [ 78%] Built target village_interfaces__rosidl_typesupport_fastrtps_c
+[6.604s] [ 78%] Built target village_interfaces
+[6.627s] [ 80%] Built target village_interfaces__py
+[6.648s] [35m[1mScanning dependencies of target village_interfaces__python[0m
+[6.668s] [ 81%] [32mBuilding C object CMakeFiles/village_interfaces__python.dir/rosidl_generator_py/village_interfaces/msg/_task_s.c.o[0m
+[6.668s] [ 83%] [32mBuilding C object CMakeFiles/village_interfaces__python.dir/rosidl_generator_py/village_interfaces/srv/_borrow_money_s.c.o[0m
+[6.852s] [ 85%] [32mBuilding C object CMakeFiles/village_interfaces__python.dir/rosidl_generator_py/village_interfaces/srv/_task_assign_s.c.o[0m
+[6.875s] [ 87%] [32mBuilding C object CMakeFiles/village_interfaces__python.dir/rosidl_generator_py/village_interfaces/srv/_task_update_s.c.o[0m
+[7.046s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/village_interfaces/libvillage_interfaces__python.so[0m
+[7.103s] [ 89%] Built target village_interfaces__python
+[7.113s] [35m[1mScanning dependencies of target village_interfaces__rosidl_typesupport_c__pyext[0m
+[7.113s] [35m[1mScanning dependencies of target village_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[7.132s] [ 90%] [32mBuilding C object CMakeFiles/village_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/village_interfaces/_village_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[7.134s] [ 92%] [32mBuilding C object CMakeFiles/village_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/village_interfaces/_village_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[7.328s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/village_interfaces/village_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[7.336s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/village_interfaces/village_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[7.370s] [ 96%] Built target village_interfaces__rosidl_typesupport_c__pyext
+[7.379s] [ 96%] Built target village_interfaces__rosidl_typesupport_introspection_c__pyext
+[7.380s] [35m[1mScanning dependencies of target village_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[7.399s] [ 98%] [32mBuilding C object CMakeFiles/village_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/village_interfaces/_village_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[7.598s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/village_interfaces/village_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[7.662s] [100%] Built target village_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[7.676s] Invoked command in '/home/jj/tasktown_ws/build/village_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_interfaces -- -j2 -l2
+[7.783s] Invoking command in '/home/jj/tasktown_ws/build/village_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jj/tasktown_ws/build/village_interfaces
+[7.794s] -- Install configuration: "RelWithDebInfo"
+[7.795s] -- Execute custom install script
+[7.795s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/ament_index/resource_index/rosidl_interfaces/village_interfaces
+[7.796s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__functions.h
+[7.797s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__struct.h
+[7.797s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__type_support.h
+[7.798s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/rosidl_generator_c__visibility_control.h
+[7.798s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/task.h
+[7.798s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/borrow_money.h
+[7.798s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__functions.h
+[7.799s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__struct.h
+[7.799s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__type_support.h
+[7.799s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__functions.h
+[7.800s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__struct.h
+[7.800s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__type_support.h
+[7.800s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__functions.h
+[7.801s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__struct.h
+[7.801s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__type_support.h
+[7.801s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/task_assign.h
+[7.802s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/task_update.h
+[7.802s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/library_path.sh
+[7.802s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/library_path.dsv
+[7.803s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_c.h
+[7.804s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[7.804s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__rosidl_typesupport_fastrtps_c.h
+[7.804s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__rosidl_typesupport_fastrtps_c.h
+[7.804s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__rosidl_typesupport_fastrtps_c.h
+[7.805s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_fastrtps_c.so
+[7.806s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_cpp.hpp
+[7.806s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[7.806s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__rosidl_typesupport_fastrtps_cpp.hpp
+[7.807s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__rosidl_typesupport_fastrtps_cpp.hpp
+[7.807s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__rosidl_typesupport_fastrtps_cpp.hpp
+[7.808s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[7.808s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__rosidl_typesupport_introspection_c.h
+[7.809s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[7.809s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__rosidl_typesupport_introspection_c.h
+[7.809s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__rosidl_typesupport_introspection_c.h
+[7.810s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__rosidl_typesupport_introspection_c.h
+[7.810s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__builder.hpp
+[7.811s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__struct.hpp
+[7.811s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__traits.hpp
+[7.811s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__type_support.hpp
+[7.812s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[7.812s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/task.hpp
+[7.812s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/borrow_money.hpp
+[7.813s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__builder.hpp
+[7.813s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__struct.hpp
+[7.813s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__traits.hpp
+[7.814s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__type_support.hpp
+[7.814s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__builder.hpp
+[7.814s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__struct.hpp
+[7.815s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__traits.hpp
+[7.815s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__type_support.hpp
+[7.815s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__builder.hpp
+[7.816s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__struct.hpp
+[7.816s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__traits.hpp
+[7.816s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__type_support.hpp
+[7.816s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/task_assign.hpp
+[7.817s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/task_update.hpp
+[7.817s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__rosidl_typesupport_introspection_cpp.hpp
+[7.818s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__rosidl_typesupport_introspection_cpp.hpp
+[7.818s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__rosidl_typesupport_introspection_cpp.hpp
+[7.818s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__rosidl_typesupport_introspection_cpp.hpp
+[7.819s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/pythonpath.sh
+[7.819s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/pythonpath.dsv
+[7.820s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/__init__.py
+[7.820s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/msg/__init__.py
+[7.821s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/msg/_task.py
+[7.821s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/srv/__init__.py
+[7.822s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/srv/_borrow_money.py
+[7.822s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/srv/_task_assign.py
+[7.822s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/srv/_task_update.py
+[7.823s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/village_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[7.823s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/village_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[7.824s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/village_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[7.824s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__python.so
+[7.825s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/msg/Task.idl
+[7.825s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/BorrowMoney.idl
+[7.826s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskAssign.idl
+[7.826s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskUpdate.idl
+[7.826s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/msg/Task.msg
+[7.827s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/BorrowMoney.srv
+[7.827s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/BorrowMoney_Request.msg
+[7.828s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/BorrowMoney_Response.msg
+[7.828s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskAssign.srv
+[7.829s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskAssign_Request.msg
+[7.829s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskAssign_Response.msg
+[7.829s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskUpdate.srv
+[7.830s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskUpdate_Request.msg
+[7.830s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskUpdate_Response.msg
+[7.831s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/ament_index/resource_index/package_run_dependencies/village_interfaces
+[7.831s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/ament_index/resource_index/parent_prefix_path/village_interfaces
+[7.832s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/ament_prefix_path.sh
+[7.832s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/ament_prefix_path.dsv
+[7.832s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/path.sh
+[7.833s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/path.dsv
+[7.833s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/local_setup.bash
+[7.834s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/local_setup.sh
+[7.834s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/local_setup.zsh
+[7.834s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/local_setup.dsv
+[7.835s] -- Symlinking: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/package.dsv
+[7.844s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/ament_index/resource_index/packages/village_interfaces
+[7.845s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/rosidl_cmake-extras.cmake
+[7.845s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.846s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[7.846s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[7.847s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.847s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[7.848s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[7.848s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfacesConfig.cmake
+[7.848s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfacesConfig-version.cmake
+[7.849s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/package.xml
+[7.849s] -- Installing: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_generator_c.so
+[7.850s] -- Set runtime path of "/home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_generator_c.so" to ""
+[7.850s] -- Installing: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_introspection_c.so
+[7.850s] -- Set runtime path of "/home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[7.851s] -- Installing: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_c.so
+[7.851s] -- Set runtime path of "/home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_c.so" to ""
+[7.852s] -- Installing: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_introspection_cpp.so
+[7.852s] -- Set runtime path of "/home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[7.853s] -- Installing: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_cpp.so
+[7.853s] -- Set runtime path of "/home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_cpp.so" to ""
+[7.885s] Compiling '/home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/__init__.py'...
+[7.891s] -- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_generator_cExport.cmake
+[7.892s] -- Installing: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_generator_cExport-relwithdebinfo.cmake
+[7.892s] -- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[7.892s] -- Installing: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_introspection_cExport-relwithdebinfo.cmake
+[7.893s] -- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_cExport.cmake
+[7.893s] -- Installing: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_cExport-relwithdebinfo.cmake
+[7.894s] -- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_generator_cppExport.cmake
+[7.894s] -- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[7.894s] -- Installing: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_introspection_cppExport-relwithdebinfo.cmake
+[7.895s] -- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_cppExport.cmake
+[7.895s] -- Installing: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_cppExport-relwithdebinfo.cmake
+[7.899s] Invoked command in '/home/jj/tasktown_ws/build/village_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jj/tasktown_ws/build/village_interfaces

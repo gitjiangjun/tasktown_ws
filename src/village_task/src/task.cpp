@@ -6,17 +6,35 @@
 #include <algorithm> // 算法头文件
 #include <chrono>    // 时间头文件
 #include <memory>    // 内存管理头文件
-
+#include <signal.h>
+#include <functional>
 // 1.导入服务接口类型
 // 任务更新的服务接口 [创建完srv文件要记得编译才会出现"update_task.hpp"!!!]
 #include "village_interfaces/srv/task_update.hpp"
-
+#include "std_msgs/msg/string.hpp"  // 添加标准消息头文件
 // 提前声明的占位符，留着创建客户端的时候用
 using std::placeholders::_1;
 
 // 使用标准命名空间
 using namespace std;
 
+// 信号处理器
+void signal_handler(int signal) {
+    static_cast<void>(signal); // 避免未使用的警告
+    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "捕获到中断信号，发送结束信号");
+    rclcpp::Node::SharedPtr node = rclcpp::Node::make_shared("signal_handler_node");
+    auto signal_publisher = node->create_publisher<std_msgs::msg::String>("task_signal", 10);
+
+    std_msgs::msg::String signal_msg;
+    signal_msg.data = "END_TASK";
+    signal_publisher->publish(signal_msg);
+    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "发送任务结束信号");
+
+    // 等待一段时间以确保信号消息被接收
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+    exit(0);
+}
 /*
     创建一个类节点，名字叫做TaskRequestNode,继承自Node.
 */
@@ -41,6 +59,12 @@ public:
     }
 
     void send_tasks_request() {
+        // 发送开始信号（仅第一次发送）
+        if (!has_sent_start) {
+            publish_start_signal();
+            has_sent_start = true;
+        }
+
         // 5.1等待服务端上线
         if (!task_update_client->wait_for_service(std::chrono::seconds(2))) {
             RCLCPP_WARN(this->get_logger(), "等待任务更新和分配服务上线");
@@ -56,7 +80,7 @@ public:
         if (is_first_request) {
             task_row[0] = 0; // 第一次发送任务类型为"0"
             task_row[1] = 2; // "0"类型任务的价值固定为2
-            task_row[2] = 19; // "0"类型任务的执行时间固定为900秒  改动
+            task_row[2] = 90; // "0"类型任务的执行时间固定为900秒  改动
             is_first_request = false;
         } else {
             task_row[0] = rand() % 3 + 1; // 任务类型为"1", "2", "3"中的一个
@@ -114,6 +138,25 @@ private:
     bool is_first_request; // 标志是否是第一次发送任务请求
     std::vector<std::vector<int>> accumulated_tasks; // 20240818修改：累积任务序列
 
+    void publish_start_signal() {
+        std_msgs::msg::String signal_msg;
+        signal_msg.data = "START_TASK";
+        signal_publisher->publish(signal_msg);
+        RCLCPP_INFO(this->get_logger(), "发送任务启动信号");
+
+        // 等待一段时间以确保信号消息被接收
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    }
+
+    void publish_end_signal() {
+        std_msgs::msg::String signal_msg;
+        signal_msg.data = "END_TASK";
+        signal_publisher->publish(signal_msg);
+        RCLCPP_INFO(this->get_logger(), "发送任务结束信号");
+
+        // 等待一段时间以确保信号消息被接收
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    }
     // 2.创建请求结果接收回调函数
     void tasks_callback(rclcpp::Client<village_interfaces::srv::TaskUpdate>::SharedFuture response) {
         
@@ -123,6 +166,15 @@ private:
         // 20240818修改：打印已经发送的任务总数
         RCLCPP_INFO(this->get_logger(), "发送了 %zu 个任务，任务已成功发送并更新", accumulated_tasks.size());     
 
+    }
+    void publish_task_signal() {
+        std_msgs::msg::String signal_msg;
+        signal_msg.data = "START_TASK";
+        signal_publisher->publish(signal_msg);
+        RCLCPP_INFO(this->get_logger(), "发送任务启动信号");
+
+        // 等待一段时间以确保信号消息被接收
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
     }
 };
 
