@@ -1,0 +1,9 @@
+[35m[1mScanning dependencies of target operator_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskAssignServer::timer_callback()[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:519:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_future<std::vector<rclcpp::Parameter> >[m[K’ has no member named ‘[01m[Kas_bool[m[K’
+  519 |         pre_signal = params.[01;31m[Kas_bool[m[K();
+      |                             [01;31m[K^~~~~~~[m[K
+make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

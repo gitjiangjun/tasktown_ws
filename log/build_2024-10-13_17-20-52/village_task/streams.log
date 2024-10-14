@@ -1,0 +1,35 @@
+[0.026s] Invoking command in '/home/jj/tasktown_ws/build/village_task': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j2 -l2
+[0.176s] [35m[1mScanning dependencies of target task_node[0m
+[0.261s] [ 50%] [32mBuilding CXX object CMakeFiles/task_node.dir/src/task.cpp.o[0m
+[2.448s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In member function ‘[01m[Kvoid TaskRequestNode::send_start_signal()[m[K’:
+[2.449s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:50:51:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::set_parameter(const char [13], bool)[m[K’
+[2.449s]    50 |         s_node->set_parameter("start_signal", true[01;31m[K)[m[K;
+[2.449s]       |                                                   [01;31m[K^[m[K
+[2.450s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[2.450s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[2.450s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.450s]                  from [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:2[m[K:
+[2.450s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:461:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krcl_interfaces::msg::SetParametersResult rclcpp::Node::set_parameter(const rclcpp::Parameter&)[m[K’
+[2.450s]   461 |   [01;36m[Kset_parameter[m[K(const rclcpp::Parameter & parameter);
+[2.450s]       |   [01;36m[K^~~~~~~~~~~~~[m[K
+[2.450s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:461:3:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[2.451s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In member function ‘[01m[Kvoid TaskRequestNode::send_stop_signal()[m[K’:
+[2.451s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:55:51:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::set_parameter(const char [12], bool)[m[K’
+[2.451s]    55 |         s_node->set_parameter("stop_signal", false[01;31m[K)[m[K;
+[2.451s]       |                                                   [01;31m[K^[m[K
+[2.451s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[2.451s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[2.451s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.451s]                  from [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:2[m[K:
+[2.451s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:461:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krcl_interfaces::msg::SetParametersResult rclcpp::Node::set_parameter(const rclcpp::Parameter&)[m[K’
+[2.451s]   461 |   [01;36m[Kset_parameter[m[K(const rclcpp::Parameter & parameter);
+[2.451s]       |   [01;36m[K^~~~~~~~~~~~~[m[K
+[2.451s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:461:3:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[2.472s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In static member function ‘[01m[Kstatic void TaskRequestNode::signal_handler(int)[m[K’:
+[2.472s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:150:30:[m[K [01;31m[Kerror: [m[Kcannot call member function ‘[01m[Kvoid TaskRequestNode::send_stop_signal()[m[K’ without object
+[2.473s]   150 |             send_stop_signal([01;31m[K)[m[K;
+[2.473s]       |                              [01;31m[K^[m[K
+[3.496s] make[2]: *** [CMakeFiles/task_node.dir/build.make:63：CMakeFiles/task_node.dir/src/task.cpp.o] 错误 1
+[3.496s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/task_node.dir/all] 错误 2
+[3.496s] make: *** [Makefile:141：all] 错误 2
+[3.500s] Invoked command in '/home/jj/tasktown_ws/build/village_task' returned '2': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j2 -l2

@@ -30,6 +30,11 @@ std::vector<std::pair<std::vector<int32_t>, std::chrono::steady_clock::time_poin
 
 // 20240819新增：用于保护全局任务序列的互斥锁
 std::mutex global_task_sequence_mutex;
+
+bool global_signal;
+std::mutex global_signal_mutex;
+
+
 // 写俩占位符，用于创建客户端时绑定回调函数
 // 回调函数有request和response，所以是两个占位符
 using std::placeholders::_1;
@@ -391,7 +396,7 @@ public:
 class TaskUpdateNode : public rclcpp::Node
 {
 public:
-    TaskUpdateNode(const std::string &name) : Node(name)
+    TaskUpdateNode(const std::string &name) : Node(name),is_first(true)
     {
         // 创建任务更新服务
         task_update_service = this->create_service<village_interfaces::srv::TaskUpdate>("task_update",
@@ -403,6 +408,7 @@ public:
     }
 
 private:
+    bool is_first;
     // 声明任务更新服务
     rclcpp::Service<village_interfaces::srv::TaskUpdate>::SharedPtr task_update_service;
     // 声明任务分配服务
@@ -416,11 +422,25 @@ private:
         // 20240914新增：记录任务的到达时间
         auto task_arrival_time = std::chrono::steady_clock::now();
 
-        
+        int signal;
         std::unique_lock<std::mutex> task_lock(global_task_sequence_mutex); // 加锁保护全局任务序列
-        // 将新任务添加到全局任务序列，并标记任务到达时间
-        global_task_sequence.push_back({request->tasks, task_arrival_time});  // 20240914新增
-        task_lock.unlock();
+        if(request->tasks[1]!=0)
+        {
+            // 将新任务添加到全局任务序列，并标记任务到达时间
+            global_task_sequence.push_back({request->tasks, task_arrival_time});  // 20240914新增
+            task_lock.unlock();
+        }
+        signal=request->tasks[1];
+        std::cout<<"signal:"<<signal<<std::endl;
+        if(signal == 0)
+        {
+            std::unique_lock<std::mutex> signal_lock(global_signal_mutex,std::defer_lock); // 加锁保护全局任务序列
+            signal_lock.lock();
+            global_signal=true;
+            std::cout<<"global_signal"<<global_signal<<std::endl;
+            signal_lock.unlock();
+            return;  
+        }
 
         // 设置响应结果
         response->success = true; // 或根据实际更新情况设置
@@ -458,15 +478,25 @@ private:
             task_lock.unlock();
 
         }
+        if(is_first){
 
-        // 使用回调函数处理异步请求的响应
-        task_assign_client->async_send_request(task_assign_request,
-                                               [this](rclcpp::Client<village_interfaces::srv::TaskAssign>::SharedFuture response_future)
-                                               {
-                                                   auto response = response_future.get();
-                                                   // 在这里处理任务分配服务的响应，如果需要的话
-                                                   RCLCPP_INFO(this->get_logger(), "任务分配服务响应已收到");
-                                               });
+            // 使用回调函数处理异步请求的响应
+            task_assign_client->async_send_request(task_assign_request,
+                                                [this](rclcpp::Client<village_interfaces::srv::TaskAssign>::SharedFuture response_future)
+                                                {
+                                                    auto response = response_future.get();
+                                                    // 在这里处理任务分配服务的响应，如果需要的话
+                                                    RCLCPP_INFO(this->get_logger(), "任务分配服务响应已收到");
+                                                });
+            is_first=false;                            
+            std::unique_lock<std::mutex> signal_lock(global_signal_mutex,std::defer_lock); // 加锁保护全局任务序列
+            signal_lock.lock();
+            global_signal=false;
+            signal_lock.unlock();  
+        }
+
+
+
     }
 };
 
@@ -550,7 +580,9 @@ private:
 void assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign::Response> response)
 {
     std::unique_lock<std::mutex> task_lock(global_task_sequence_mutex,std::defer_lock); //暂时不上锁// 使用互斥锁来保护对全局任务序列的访问
-
+    std::unique_lock<std::mutex> signal_lock(global_signal_mutex,std::defer_lock); // 加锁保护全局任务序列
+    bool tt;
+loop:
     while (true) // 无限循环：持续检查操作员和任务状态，并对任务进行分配
     {
         bool allTasksAssigned = true; // 初始化allTasksAssigned=true，跟踪并标记是否所有任务都已经分配
@@ -560,7 +592,8 @@ void assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign::Response> 
 
        // vector<vector<double>> reward_matrix(3, vector<double>(global_task_sequence.size(), 0.0)); // 任务收益矩阵，行数固定为3（操作员数量），列数根据当前任务数动态调整
         vector<int> idle_operators;                                                               // 存储空闲的操作员索引
-        vector<size_t> task_indices;                                                              // 未处理的任务索引
+        vector<size_t> task_indices;  
+        vector<int> busy_operators;                                                            // 未处理的任务索引
         //task_lock.unlock();
         // 遍历所有操作员，检查哪些操作员空闲
         for (size_t operator_index = 0; operator_index < operators_.size(); ++operator_index)
@@ -571,6 +604,12 @@ void assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign::Response> 
                 idle_operators.push_back(operator_index); // 记录空闲操作员
                 RCLCPP_INFO(this->get_logger(), "操作员 %d 已空闲，可以分配任务。", operator_index);
             }
+            else
+            {
+                busy_operators.push_back(operator_index); // 记录忙碌的操作员
+                //RCLCPP_INFO(this->get_logger(), "操作员 %d 正在处理任务，无法分配任务。", operator_index);
+            }
+
         }
 
         // 如果没有空闲操作员，结束循环
@@ -605,6 +644,8 @@ void assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign::Response> 
        if(task_count == 0)
        {
             RCLCPP_INFO(this->get_logger(), "没有未处理的任务，结束循环。");
+            tt=global_signal;
+            //std::cout<<"global_signal"<<global_signal<<std::endl;
             break;
        }
         vector<vector<double>> reward_matrix(3, vector<double>(task_count, 0.0)); // 任务收益矩阵，行数固定为3（操作员数量），列数根据当前任务数动态调整
@@ -671,7 +712,18 @@ void assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign::Response> 
             RCLCPP_INFO(this->get_logger(), "%d", element);
         }
         RCLCPP_INFO(this->get_logger(), "KM算法计算的最大总收益为: %.2f", max_reward);
-
+        for(size_t i=0;i< busy_operators.size();i++)//
+        {   int unlucky_task_index;
+            int who = busy_operators[i]; 
+            auto task_it=std::find(matching_result.begin(), matching_result.end(), who);   
+            if(task_it!=matching_result.end())
+            {
+                unlucky_task_index = task_indices[std::distance(matching_result.begin(), task_it)];//改动
+            }
+            task_lock.lock();
+            global_task_sequence[unlucky_task_index].first[3+who]-=5;
+            task_lock.unlock();
+        }
         // 分配任务，只给空闲的操作员分配任务，并将任务标记为已处理
         for (size_t i = 0; i < idle_operators.size(); ++i)
         {
@@ -686,6 +738,7 @@ void assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign::Response> 
             else
             {
                 RCLCPP_INFO(this->get_logger(), "problem:bug1");
+                std::this_thread::sleep_for(std::chrono::seconds(5));
                 continue;
             }
             //size_t selected_task_index = task_indices[matching_result[i]]; // 从匹配结果中获取任务索引
@@ -792,6 +845,11 @@ void assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign::Response> 
             RCLCPP_INFO(this->get_logger(), "所有任务都已分配，结束循环。");
             break;
         }
+    }
+
+    if(!tt)
+    {
+        goto loop;
     }
 
     RCLCPP_INFO(this->get_logger(), "任务执行总时间：%d", manager.getTotalTime());

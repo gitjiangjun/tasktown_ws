@@ -1,0 +1,36 @@
+[0.036s] Invoking command in '/home/jj/tasktown_ws/build/village_operator': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j2 -l2
+[0.170s] [35m[1mScanning dependencies of target operator_node[0m
+[0.262s] [ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[3.187s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In constructor ‘[01m[KTaskAssignServer::TaskAssignServer(const string&)[m[K’:
+[3.187s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:511:27:[m[K [01;35m[Kwarning: [m[K‘[01m[KTaskAssignServer::manager[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+[3.187s]   511 |     TaskAssignmentManager [01;35m[Kmanager[m[K; // 管理任务分配矩阵
+[3.187s]       |                           [01;35m[K^~~~~~~[m[K
+[3.187s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:505:10:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kbool TaskAssignServer::is_first[m[K’ [[01;35m[K-Wreorder[m[K]
+[3.187s]   505 |     bool [01;35m[Kis_first[m[K;
+[3.187s]       |          [01;35m[K^~~~~~~~[m[K
+[3.187s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:485:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+[3.187s]   485 |     [01;35m[KTaskAssignServer[m[K(const std::string &name) : Node(name), manager(),is_first(true)
+[3.187s]       |     [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[3.237s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K At global scope:
+[3.238s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:846:43:[m[K [01;31m[Kerror: [m[K‘[01m[KParameterEvent[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a type; did you mean ‘[01m[KParameterEventsQoS[m[K’?
+[3.238s]   846 | void handle_parameter_event(const rclcpp::[01;31m[KParameterEvent[m[K::SharedPtr event) {
+[3.238s]       |                                           [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.238s]       |                                           [32m[KParameterEventsQoS[m[K
+[3.238s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:846:69:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kevent[m[K’
+[3.238s]   846 | void handle_parameter_event(const rclcpp::ParameterEvent::SharedPtr [01;31m[Kevent[m[K) {
+[3.238s]       |                                                                     [01;31m[K^~~~~[m[K
+[3.238s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:846:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kevent[m[K’
+[3.238s]   846 | void handle_parameter_event[34m[K([m[Kconst rclcpp::ParameterEvent::SharedPtr[01;31m[K [m[K[32m[Kevent[m[K) {
+[3.238s]       |                            [34m[K~[m[K                                       [01;31m[K^[m[K[32m[K~~~~~[m[K
+[3.238s]       |                                                                    [32m[K)[m[K
+[3.238s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:846:69:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kevent[m[K’
+[3.239s]   846 | void handle_parameter_event(const rclcpp::ParameterEvent::SharedPtr [01;31m[Kevent[m[K) {
+[3.239s]       |                                                                     [01;31m[K^~~~~[m[K
+[3.252s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[3.252s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:883:20:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_parameter_event[m[K’ was not declared in this scope
+[3.252s]   883 |         std::bind(&[01;31m[Khandle_parameter_event[m[K, std::placeholders::_1)
+[3.252s]       |                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.480s] make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+[4.480s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+[4.480s] make: *** [Makefile:141：all] 错误 2
+[4.492s] Invoked command in '/home/jj/tasktown_ws/build/village_operator' returned '2': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j2 -l2

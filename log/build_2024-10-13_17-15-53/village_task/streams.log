@@ -1,0 +1,14 @@
+[0.053s] Invoking command in '/home/jj/tasktown_ws/build/village_task': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j2 -l2
+[0.198s] [35m[1mScanning dependencies of target task_node[0m
+[0.289s] [ 50%] [32mBuilding CXX object CMakeFiles/task_node.dir/src/task.cpp.o[0m
+[2.637s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:132:5:[m[K [01;31m[Kerror: [m[Knon-static data member declared with placeholder ‘[01m[Kauto[m[K’
+[2.637s]   132 |     [01;31m[Kauto[m[K s_node = rclcpp::Node::make_shared("signal_node");
+[2.637s]       |     [01;31m[K^~~~[m[K
+[2.671s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In static member function ‘[01m[Kstatic void TaskRequestNode::signal_handler(int)[m[K’:
+[2.671s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:146:30:[m[K [01;31m[Kerror: [m[Kcannot call member function ‘[01m[Kvoid TaskRequestNode::send_stop_signal()[m[K’ without object
+[2.672s]   146 |             send_stop_signal([01;31m[K)[m[K;
+[2.672s]       |                              [01;31m[K^[m[K
+[3.695s] make[2]: *** [CMakeFiles/task_node.dir/build.make:63：CMakeFiles/task_node.dir/src/task.cpp.o] 错误 1
+[3.696s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/task_node.dir/all] 错误 2
+[3.697s] make: *** [Makefile:141：all] 错误 2
+[3.705s] Invoked command in '/home/jj/tasktown_ws/build/village_task' returned '2': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j2 -l2

@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target task_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/task_node.dir/src/task.cpp.o[0m
+[100%] [32m[1mLinking CXX executable task_node[0m
+[100%] Built target task_node

@@ -1,0 +1,15 @@
+[35m[1mScanning dependencies of target operator_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskUpdateNode::handle_task_update_sequence_callback(std::shared_ptr<village_interfaces::srv::TaskUpdate_Request_<std::allocator<void> > >, std::shared_ptr<village_interfaces::srv::TaskUpdate_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:492:1:[m[K [01;31m[Kerror: [m[Kjump to label ‘[01m[Khere1[m[K’
+  492 | [01;31m[Khere1[m[K:
+      | [01;31m[K^~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:437:18:[m[K [01;36m[Knote: [m[K  from here
+  437 |             goto [01;36m[Khere1[m[K;
+      |                  [01;36m[K^~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:465:14:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kstd::shared_ptr<village_interfaces::srv::TaskAssign_Request_<std::allocator<void> > > task_assign_request[m[K’
+  465 |         auto [01;36m[Ktask_assign_request[m[K = std::make_shared<village_interfaces::srv::TaskAssign::Request>();
+      |              [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

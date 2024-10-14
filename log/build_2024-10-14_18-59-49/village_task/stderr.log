@@ -1,0 +1,10 @@
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In constructor ‘[01m[KTaskRequestNode::TaskRequestNode(const string&)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:41:23:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kvoid TaskRequestNode::signal_handler(int)[m[K’
+   41 |         signal(SIGINT,[01;31m[Ksignal_handler[m[K);
+      |                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:129:10:[m[K [01;36m[Knote: [m[Kdeclared here
+  129 |     void [01;36m[Ksignal_handler[m[K(int sig) {
+      |          [01;36m[K^~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/task_node.dir/build.make:63：CMakeFiles/task_node.dir/src/task.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/task_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

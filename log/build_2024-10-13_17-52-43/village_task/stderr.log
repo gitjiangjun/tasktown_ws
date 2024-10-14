@@ -1,0 +1,13 @@
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In lambda function:
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:163:33:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ is not captured
+  163 |     signal(SIGINT, [](int sig){ [01;31m[Knode[m[K->handle_signal(sig); });
+      |                                 [01;31m[K^~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:163:21:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+  163 |     signal(SIGINT, [[01;36m[K][m[K(int sig){ node->handle_signal(sig); });
+      |                     [01;36m[K^[m[K
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:162:10:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::shared_ptr<TaskRequestNode> node[m[K’ declared here
+  162 |     auto [01;36m[Knode[m[K = std::make_shared<TaskRequestNode>("task_request_node");
+      |          [01;36m[K^~~~[m[K
+make[2]: *** [CMakeFiles/task_node.dir/build.make:63：CMakeFiles/task_node.dir/src/task.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/task_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

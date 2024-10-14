@@ -1,0 +1,28 @@
+[0.054s] Invoking command in '/home/jj/tasktown_ws/build/village_task': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake /home/jj/tasktown_ws/src/village_task -DCMAKE_BUILD_TYPE=RelWithDebInfo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jj/tasktown_ws/install/village_task
+[0.089s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.139s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.539s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.557s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.607s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.611s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.875s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.945s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.947s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.107s] -- Found village_interfaces: 0.0.0 (/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake)
+[1.394s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.488s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.488s] -- Configured cppcheck include dirs: 
+[1.488s] -- Configured cppcheck exclude dirs and/or files: 
+[1.494s] -- Added test 'lint_cmake' to check CMake code style
+[1.494s] -- Added test 'uncrustify' to check C / C++ code style
+[1.494s] -- Configured uncrustify additional arguments: 
+[1.494s] -- Added test 'xmllint' to check XML markup files
+[1.494s] -- Configuring done
+[1.506s] -- Generating done
+[1.508s] -- Build files have been written to: /home/jj/tasktown_ws/build/village_task
+[1.527s] Invoked command in '/home/jj/tasktown_ws/build/village_task' returned '0': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake /home/jj/tasktown_ws/src/village_task -DCMAKE_BUILD_TYPE=RelWithDebInfo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jj/tasktown_ws/install/village_task
+[1.528s] Invoking command in '/home/jj/tasktown_ws/build/village_task': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j4 -l4
+[1.606s] [35m[1mScanning dependencies of target task_node[0m
+[1.671s] [ 50%] [32mBuilding CXX object CMakeFiles/task_node.dir/src/task.cpp.o[0m
+[7.678s] [100%] [32m[1mLinking CXX executable task_node[0m
+[7.977s] [100%] Built target task_node

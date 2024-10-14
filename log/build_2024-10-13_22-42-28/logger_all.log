@@ -1,0 +1,344 @@
+[0.208s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--event-handlers', 'console_cohesion+', '--base-paths', '/home/jj/tasktown_ws', '--cmake-args', '-DCMAKE_BUILD_TYPE=RelWithDebInfo']
+[0.208s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['/home/jj/tasktown_ws'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=['-DCMAKE_BUILD_TYPE=RelWithDebInfo'], cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=['console_cohesion+'], executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f78dfeb1370>>, merge_install=False, metas=['./colcon.meta'], mixin=None, mixin_files=None, mixin_verb=('build',), packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=2, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f78dfeb1370>, verb_name='build', verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f78dfeb1850>)
+[0.353s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.355s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.355s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jj/tasktown_ws'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws) by extension 'ignore'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws) by extension 'ignore_ament_install'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws) by extensions ['colcon_pkg']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws) by extension 'colcon_pkg'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws) by extensions ['colcon_meta']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws) by extension 'colcon_meta'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws) by extensions ['ros']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws) by extension 'ros'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws) by extensions ['cmake', 'python']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws) by extension 'cmake'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws) by extension 'python'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws) by extensions ['python_setup_py']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws) by extension 'python_setup_py'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/build) by extensions ['ignore', 'ignore_ament_install']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/build) by extension 'ignore'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/build) ignored
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/install) by extensions ['ignore', 'ignore_ament_install']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/install) by extension 'ignore'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/install) ignored
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/log) by extensions ['ignore', 'ignore_ament_install']
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/log) by extension 'ignore'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/log) ignored
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src) by extension 'ignore'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src) by extension 'ignore_ament_install'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src) by extensions ['colcon_pkg']
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src) by extension 'colcon_pkg'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src) by extensions ['colcon_meta']
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src) by extension 'colcon_meta'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src) by extensions ['ros']
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src) by extension 'ros'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src) by extensions ['cmake', 'python']
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src) by extension 'cmake'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src) by extension 'python'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src) by extensions ['python_setup_py']
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src) by extension 'python_setup_py'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_interfaces) by extension 'ignore'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_interfaces) by extension 'ignore_ament_install'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_interfaces) by extensions ['colcon_pkg']
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_interfaces) by extension 'colcon_pkg'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_interfaces) by extensions ['colcon_meta']
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_interfaces) by extension 'colcon_meta'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_interfaces) by extensions ['ros']
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_interfaces) by extension 'ros'
+[0.381s] DEBUG:colcon.colcon_core.package_identification:Package '/home/jj/tasktown_ws/src/village_interfaces' with type 'ros.ament_cmake' and name 'village_interfaces'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_operator) by extensions ['ignore', 'ignore_ament_install']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_operator) by extension 'ignore'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_operator) by extension 'ignore_ament_install'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_operator) by extensions ['colcon_pkg']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_operator) by extension 'colcon_pkg'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_operator) by extensions ['colcon_meta']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_operator) by extension 'colcon_meta'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_operator) by extensions ['ros']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_operator) by extension 'ros'
+[0.382s] DEBUG:colcon.colcon_core.package_identification:Package '/home/jj/tasktown_ws/src/village_operator' with type 'ros.ament_cmake' and name 'village_operator'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_task) by extensions ['ignore', 'ignore_ament_install']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_task) by extension 'ignore'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_task) by extension 'ignore_ament_install'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_task) by extensions ['colcon_pkg']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_task) by extension 'colcon_pkg'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_task) by extensions ['colcon_meta']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_task) by extension 'colcon_meta'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_task) by extensions ['ros']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_task) by extension 'ros'
+[0.383s] DEBUG:colcon.colcon_core.package_identification:Package '/home/jj/tasktown_ws/src/village_task' with type 'ros.ament_cmake' and name 'village_task'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_taskgroups) by extensions ['ignore', 'ignore_ament_install']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_taskgroups) by extension 'ignore'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_taskgroups) by extension 'ignore_ament_install'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_taskgroups) by extensions ['colcon_pkg']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_taskgroups) by extension 'colcon_pkg'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_taskgroups) by extensions ['colcon_meta']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_taskgroups) by extension 'colcon_meta'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_taskgroups) by extensions ['ros']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/jj/tasktown_ws/src/village_taskgroups) by extension 'ros'
+[0.384s] DEBUG:colcon.colcon_core.package_identification:Package '/home/jj/tasktown_ws/src/village_taskgroups' with type 'ros.ament_cmake' and name 'village_taskgroups'
+[0.385s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.409s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/jj/tasktown_ws/install
+[0.415s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 256 installed packages in /opt/ros/foxy
+[0.417s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_interfaces' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=RelWithDebInfo']'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.515s] DEBUG:colcon.colcon_core.verb:Building package 'village_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jj/tasktown_ws/build/village_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=RelWithDebInfo'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jj/tasktown_ws/install/village_interfaces', 'merge_install': False, 'path': '/home/jj/tasktown_ws/src/village_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_operator' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=RelWithDebInfo']'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_operator' build argument 'cmake_target' from command line to 'None'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_operator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_operator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_operator' build argument 'cmake_clean_first' from command line to 'False'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_operator' build argument 'cmake_force_configure' from command line to 'False'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_operator' build argument 'ament_cmake_args' from command line to 'None'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_operator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.515s] Level 5:colcon.colcon_core.verb:set package 'village_operator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.515s] DEBUG:colcon.colcon_core.verb:Building package 'village_operator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jj/tasktown_ws/build/village_operator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=RelWithDebInfo'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jj/tasktown_ws/install/village_operator', 'merge_install': False, 'path': '/home/jj/tasktown_ws/src/village_operator', 'symlink_install': True, 'test_result_base': None}
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_task' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=RelWithDebInfo']'
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_task' build argument 'cmake_target' from command line to 'None'
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_task' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_task' build argument 'cmake_clean_cache' from command line to 'False'
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_task' build argument 'cmake_clean_first' from command line to 'False'
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_task' build argument 'cmake_force_configure' from command line to 'False'
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_task' build argument 'ament_cmake_args' from command line to 'None'
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_task' build argument 'catkin_cmake_args' from command line to 'None'
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_task' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.516s] DEBUG:colcon.colcon_core.verb:Building package 'village_task' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jj/tasktown_ws/build/village_task', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=RelWithDebInfo'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jj/tasktown_ws/install/village_task', 'merge_install': False, 'path': '/home/jj/tasktown_ws/src/village_task', 'symlink_install': True, 'test_result_base': None}
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_taskgroups' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=RelWithDebInfo']'
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_taskgroups' build argument 'cmake_target' from command line to 'None'
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_taskgroups' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_taskgroups' build argument 'cmake_clean_cache' from command line to 'False'
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_taskgroups' build argument 'cmake_clean_first' from command line to 'False'
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_taskgroups' build argument 'cmake_force_configure' from command line to 'False'
+[0.516s] Level 5:colcon.colcon_core.verb:set package 'village_taskgroups' build argument 'ament_cmake_args' from command line to 'None'
+[0.517s] Level 5:colcon.colcon_core.verb:set package 'village_taskgroups' build argument 'catkin_cmake_args' from command line to 'None'
+[0.517s] Level 5:colcon.colcon_core.verb:set package 'village_taskgroups' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.517s] DEBUG:colcon.colcon_core.verb:Building package 'village_taskgroups' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jj/tasktown_ws/build/village_taskgroups', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=RelWithDebInfo'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jj/tasktown_ws/install/village_taskgroups', 'merge_install': False, 'path': '/home/jj/tasktown_ws/src/village_taskgroups', 'symlink_install': True, 'test_result_base': None}
+[0.517s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.518s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.518s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jj/tasktown_ws/src/village_interfaces' with build type 'ament_cmake'
+[0.518s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jj/tasktown_ws/src/village_interfaces'
+[0.520s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.520s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.520s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.540s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jj/tasktown_ws/build/village_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_interfaces -- -j2 -l2
+[1.138s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jj/tasktown_ws/build/village_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_interfaces -- -j2 -l2
+[1.316s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jj/tasktown_ws/build/village_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jj/tasktown_ws/build/village_interfaces
+[1.468s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(village_interfaces)
+[1.470s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_interfaces' for CMake module files
+[1.471s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_interfaces' for CMake config files
+[1.471s] Level 1:colcon.colcon_core.shell:create_environment_hook('village_interfaces', 'cmake_prefix_path')
+[1.472s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/cmake_prefix_path.ps1'
+[1.475s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/cmake_prefix_path.dsv'
+[1.476s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/cmake_prefix_path.sh'
+[1.477s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_interfaces/lib'
+[1.477s] Level 1:colcon.colcon_core.shell:create_environment_hook('village_interfaces', 'ld_library_path_lib')
+[1.478s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/ld_library_path_lib.ps1'
+[1.478s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/ld_library_path_lib.dsv'
+[1.478s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/ld_library_path_lib.sh'
+[1.479s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_interfaces/bin'
+[1.479s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_interfaces/lib/pkgconfig/village_interfaces.pc'
+[1.480s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages'
+[1.480s] Level 1:colcon.colcon_core.shell:create_environment_hook('village_interfaces', 'pythonpath')
+[1.480s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/pythonpath.ps1'
+[1.485s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jj/tasktown_ws/build/village_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/jj/tasktown_ws/build/village_interfaces
+[1.486s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/pythonpath.dsv'
+[1.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/pythonpath.sh'
+[1.487s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_interfaces/bin'
+[1.487s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/package.ps1'
+[1.489s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/package.dsv'
+[1.489s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/package.sh'
+[1.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/package.bash'
+[1.492s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/package.zsh'
+[1.497s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jj/tasktown_ws/install/village_interfaces/share/colcon-core/packages/village_interfaces)
+[1.685s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(village_interfaces)
+[1.685s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_interfaces' for CMake module files
+[1.686s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_interfaces' for CMake config files
+[1.686s] Level 1:colcon.colcon_core.shell:create_environment_hook('village_interfaces', 'cmake_prefix_path')
+[1.686s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/cmake_prefix_path.ps1'
+[1.687s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/cmake_prefix_path.dsv'
+[1.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/cmake_prefix_path.sh'
+[1.689s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_interfaces/lib'
+[1.689s] Level 1:colcon.colcon_core.shell:create_environment_hook('village_interfaces', 'ld_library_path_lib')
+[1.689s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/ld_library_path_lib.ps1'
+[1.690s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/ld_library_path_lib.dsv'
+[1.690s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/ld_library_path_lib.sh'
+[1.691s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_interfaces/bin'
+[1.691s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_interfaces/lib/pkgconfig/village_interfaces.pc'
+[1.691s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages'
+[1.691s] Level 1:colcon.colcon_core.shell:create_environment_hook('village_interfaces', 'pythonpath')
+[1.692s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/pythonpath.ps1'
+[1.692s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/pythonpath.dsv'
+[1.692s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/hook/pythonpath.sh'
+[1.693s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_interfaces/bin'
+[1.694s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/package.ps1'
+[1.695s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/package.dsv'
+[1.696s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/package.sh'
+[1.701s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/package.bash'
+[1.702s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/package.zsh'
+[1.703s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jj/tasktown_ws/install/village_interfaces/share/colcon-core/packages/village_interfaces)
+[1.707s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jj/tasktown_ws/src/village_operator' with build type 'ament_cmake'
+[1.708s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jj/tasktown_ws/src/village_operator'
+[1.708s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.708s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.719s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jj/tasktown_ws/src/village_task' with build type 'ament_cmake'
+[1.719s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jj/tasktown_ws/src/village_task'
+[1.720s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.720s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.755s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jj/tasktown_ws/build/village_operator': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j2 -l2
+[1.767s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jj/tasktown_ws/build/village_task': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j2 -l2
+[2.069s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jj/tasktown_ws/build/village_task' returned '0': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j2 -l2
+[2.215s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jj/tasktown_ws/build/village_task': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --install /home/jj/tasktown_ws/build/village_task
+[2.301s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(village_task)
+[2.301s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_task' for CMake module files
+[2.302s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jj/tasktown_ws/build/village_task' returned '0': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --install /home/jj/tasktown_ws/build/village_task
+[2.303s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_task' for CMake config files
+[2.303s] Level 1:colcon.colcon_core.shell:create_environment_hook('village_task', 'cmake_prefix_path')
+[2.303s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_task/share/village_task/hook/cmake_prefix_path.ps1'
+[2.309s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jj/tasktown_ws/install/village_task/share/village_task/hook/cmake_prefix_path.dsv'
+[2.310s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_task/share/village_task/hook/cmake_prefix_path.sh'
+[2.311s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_task/lib'
+[2.311s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_task/bin'
+[2.311s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_task/lib/pkgconfig/village_task.pc'
+[2.311s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_task/lib/python3.8/site-packages'
+[2.312s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_task/bin'
+[2.312s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_task/share/village_task/package.ps1'
+[2.317s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jj/tasktown_ws/install/village_task/share/village_task/package.dsv'
+[2.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_task/share/village_task/package.sh'
+[2.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_task/share/village_task/package.bash'
+[2.319s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_task/share/village_task/package.zsh'
+[2.319s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jj/tasktown_ws/install/village_task/share/colcon-core/packages/village_task)
+[2.474s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(village_task)
+[2.475s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_task' for CMake module files
+[2.475s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_task' for CMake config files
+[2.476s] Level 1:colcon.colcon_core.shell:create_environment_hook('village_task', 'cmake_prefix_path')
+[2.476s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_task/share/village_task/hook/cmake_prefix_path.ps1'
+[2.477s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jj/tasktown_ws/install/village_task/share/village_task/hook/cmake_prefix_path.dsv'
+[2.477s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_task/share/village_task/hook/cmake_prefix_path.sh'
+[2.478s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_task/lib'
+[2.478s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_task/bin'
+[2.478s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_task/lib/pkgconfig/village_task.pc'
+[2.479s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_task/lib/python3.8/site-packages'
+[2.479s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_task/bin'
+[2.480s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_task/share/village_task/package.ps1'
+[2.489s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jj/tasktown_ws/install/village_task/share/village_task/package.dsv'
+[2.491s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_task/share/village_task/package.sh'
+[2.491s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_task/share/village_task/package.bash'
+[2.492s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_task/share/village_task/package.zsh'
+[2.492s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jj/tasktown_ws/install/village_task/share/colcon-core/packages/village_task)
+[2.493s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jj/tasktown_ws/src/village_taskgroups' with build type 'ament_cmake'
+[2.493s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jj/tasktown_ws/src/village_taskgroups'
+[2.494s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.494s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.563s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jj/tasktown_ws/build/village_taskgroups': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_taskgroups -- -j2 -l2
+[2.773s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jj/tasktown_ws/build/village_taskgroups' returned '0': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_taskgroups -- -j2 -l2
+[2.934s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jj/tasktown_ws/build/village_taskgroups': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --install /home/jj/tasktown_ws/build/village_taskgroups
+[2.996s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(village_taskgroups)
+[2.997s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_taskgroups' for CMake module files
+[2.998s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jj/tasktown_ws/build/village_taskgroups' returned '0': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --install /home/jj/tasktown_ws/build/village_taskgroups
+[2.998s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_taskgroups' for CMake config files
+[2.999s] Level 1:colcon.colcon_core.shell:create_environment_hook('village_taskgroups', 'cmake_prefix_path')
+[2.999s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/hook/cmake_prefix_path.ps1'
+[3.000s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/hook/cmake_prefix_path.dsv'
+[3.000s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/hook/cmake_prefix_path.sh'
+[3.001s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_taskgroups/lib'
+[3.001s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_taskgroups/bin'
+[3.001s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_taskgroups/lib/pkgconfig/village_taskgroups.pc'
+[3.002s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_taskgroups/lib/python3.8/site-packages'
+[3.002s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_taskgroups/bin'
+[3.002s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/package.ps1'
+[3.003s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/package.dsv'
+[3.004s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/package.sh'
+[3.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/package.bash'
+[3.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/package.zsh'
+[3.017s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jj/tasktown_ws/install/village_taskgroups/share/colcon-core/packages/village_taskgroups)
+[3.188s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(village_taskgroups)
+[3.189s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_taskgroups' for CMake module files
+[3.189s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_taskgroups' for CMake config files
+[3.189s] Level 1:colcon.colcon_core.shell:create_environment_hook('village_taskgroups', 'cmake_prefix_path')
+[3.190s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/hook/cmake_prefix_path.ps1'
+[3.190s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/hook/cmake_prefix_path.dsv'
+[3.191s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/hook/cmake_prefix_path.sh'
+[3.192s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_taskgroups/lib'
+[3.192s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_taskgroups/bin'
+[3.192s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_taskgroups/lib/pkgconfig/village_taskgroups.pc'
+[3.192s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_taskgroups/lib/python3.8/site-packages'
+[3.192s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_taskgroups/bin'
+[3.194s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/package.ps1'
+[3.197s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/package.dsv'
+[3.198s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/package.sh'
+[3.198s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/package.bash'
+[3.199s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/package.zsh'
+[3.199s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jj/tasktown_ws/install/village_taskgroups/share/colcon-core/packages/village_taskgroups)
+[9.332s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jj/tasktown_ws/build/village_operator' returned '0': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j2 -l2
+[9.388s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jj/tasktown_ws/build/village_operator': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --install /home/jj/tasktown_ws/build/village_operator
+[9.449s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(village_operator)
+[9.450s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_operator' for CMake module files
+[9.451s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jj/tasktown_ws/build/village_operator' returned '0': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --install /home/jj/tasktown_ws/build/village_operator
+[9.451s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_operator' for CMake config files
+[9.452s] Level 1:colcon.colcon_core.shell:create_environment_hook('village_operator', 'cmake_prefix_path')
+[9.452s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_operator/share/village_operator/hook/cmake_prefix_path.ps1'
+[9.453s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jj/tasktown_ws/install/village_operator/share/village_operator/hook/cmake_prefix_path.dsv'
+[9.454s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_operator/share/village_operator/hook/cmake_prefix_path.sh'
+[9.455s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_operator/lib'
+[9.455s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_operator/bin'
+[9.455s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_operator/lib/pkgconfig/village_operator.pc'
+[9.456s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_operator/lib/python3.8/site-packages'
+[9.456s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_operator/bin'
+[9.456s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_operator/share/village_operator/package.ps1'
+[9.459s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jj/tasktown_ws/install/village_operator/share/village_operator/package.dsv'
+[9.460s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_operator/share/village_operator/package.sh'
+[9.462s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_operator/share/village_operator/package.bash'
+[9.462s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_operator/share/village_operator/package.zsh'
+[9.463s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jj/tasktown_ws/install/village_operator/share/colcon-core/packages/village_operator)
+[9.503s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(village_operator)
+[9.504s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_operator' for CMake module files
+[9.504s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_operator' for CMake config files
+[9.504s] Level 1:colcon.colcon_core.shell:create_environment_hook('village_operator', 'cmake_prefix_path')
+[9.505s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_operator/share/village_operator/hook/cmake_prefix_path.ps1'
+[9.505s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jj/tasktown_ws/install/village_operator/share/village_operator/hook/cmake_prefix_path.dsv'
+[9.509s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jj/tasktown_ws/install/village_operator/share/village_operator/hook/cmake_prefix_path.sh'
+[9.510s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_operator/lib'
+[9.510s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_operator/bin'
+[9.510s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_operator/lib/pkgconfig/village_operator.pc'
+[9.511s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_operator/lib/python3.8/site-packages'
+[9.511s] Level 1:colcon.colcon_core.environment:checking '/home/jj/tasktown_ws/install/village_operator/bin'
+[9.511s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_operator/share/village_operator/package.ps1'
+[9.515s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jj/tasktown_ws/install/village_operator/share/village_operator/package.dsv'
+[9.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_operator/share/village_operator/package.sh'
+[9.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_operator/share/village_operator/package.bash'
+[9.520s] INFO:colcon.colcon_core.shell:Creating package script '/home/jj/tasktown_ws/install/village_operator/share/village_operator/package.zsh'
+[9.521s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jj/tasktown_ws/install/village_operator/share/colcon-core/packages/village_operator)
+[9.522s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.523s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.523s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.524s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.539s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.539s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.539s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.578s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.579s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jj/tasktown_ws/install/local_setup.ps1'
+[9.581s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jj/tasktown_ws/install/_local_setup_util_ps1.py'
+[9.585s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jj/tasktown_ws/install/setup.ps1'
+[9.587s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jj/tasktown_ws/install/local_setup.sh'
+[9.591s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jj/tasktown_ws/install/_local_setup_util_sh.py'
+[9.592s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jj/tasktown_ws/install/setup.sh'
+[9.597s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jj/tasktown_ws/install/local_setup.bash'
+[9.598s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jj/tasktown_ws/install/setup.bash'
+[9.600s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jj/tasktown_ws/install/local_setup.zsh'
+[9.601s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jj/tasktown_ws/install/setup.zsh'

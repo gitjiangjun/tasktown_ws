@@ -1,0 +1,36 @@
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found village_interfaces: 0.0.0 (/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake)
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jj/tasktown_ws/build/village_operator
+[ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskUpdateNode::handle_task_update_sequence_callback(std::shared_ptr<village_interfaces::srv::TaskUpdate_Request_<std::allocator<void> > >, std::shared_ptr<village_interfaces::srv::TaskUpdate_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:482:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kelse[m[K’ without a previous ‘[01m[Kif[m[K’
+  482 |         [01;31m[Kelse[m[K if(signal == 0)
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskAssignServer::assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:574:1:[m[K [01;35m[Kwarning: [m[Klabel ‘[01m[Khere[m[K’ defined but not used [[01;35m[K-Wunused-label[m[K]
+  574 | [01;35m[Khere[m[K:
+      | [01;35m[K^~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:841:14:[m[K [01;31m[Kerror: [m[Klabel ‘[01m[Kloop[m[K’ used but not defined
+  841 |         goto [01;31m[Kloop[m[K;
+      |              [01;31m[K^~~~[m[K
+make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

@@ -6,7 +6,7 @@
 #include <algorithm> // 算法头文件
 #include <chrono>    // 时间头文件
 #include <memory>    // 内存管理头文件
-
+#include<signal.h>
 // 1.导入服务接口类型
 // 任务更新的服务接口 [创建完srv文件要记得编译才会出现"update_task.hpp"!!!]
 #include "village_interfaces/srv/task_update.hpp"
@@ -38,8 +38,21 @@ public:
             std::chrono::seconds(3),
             std::bind(&TaskRequestNode::send_tasks_request, this)
         );
+        signal(SIGINT,signal_handler);
+        
     }
 
+    void send_over()
+    {
+        vector<int>task_row(6,0);
+        task_row[1] = 0;
+        // 20240818修改：构造异步请求数据，只发送当前生成的任务
+        auto request = std::make_shared<village_interfaces::srv::TaskUpdate_Request>();
+        request->tasks = task_row; // 只发送当前生成的任务
+
+        // 5.3发送异步请求
+        task_update_client->async_send_request(request); 
+    }
     void send_tasks_request() {
         // 5.1等待服务端上线
         if (!task_update_client->wait_for_service(std::chrono::seconds(2))) {
@@ -56,7 +69,7 @@ public:
         if (is_first_request) {
             task_row[0] = 0; // 第一次发送任务类型为"0"
             task_row[1] = 2; // "0"类型任务的价值固定为2
-            task_row[2] = 19; // "0"类型任务的执行时间固定为900秒  改动
+            task_row[2] = 19; // "0"类型任务的执行时间固定为900秒
             is_first_request = false;
         } else {
             task_row[0] = rand() % 3 + 1; // 任务类型为"1", "2", "3"中的一个
@@ -124,12 +137,31 @@ private:
         RCLCPP_INFO(this->get_logger(), "发送了 %zu 个任务，任务已成功发送并更新", accumulated_tasks.size());     
 
     }
+    /*void signal_callback(rclcpp::Client<village_interfaces::srv::TaskUpdate>::SharedFuture response) {
+        auto result = response.get();
+            // 打印结果
+        std::cout << "Result: " << result << std::endl;
+        std::cout << "**********任务已结束" << std::endl;
+    }*/
+    static void signal_handler(int sig) {
+        if (sig == SIGINT) {
+            TaskRequestNode *instance = new TaskRequestNode("signal");
+            instance->send_over();
+            std::cout<<"接收到 Ctrl+C，发送结束信号"<<std::endl;
+            delete instance;
+            exit(0);
+        }
+    }
+
 };
+
+
 
 /*主函数*/
 int main(int argc, char **argv) {
     rclcpp::init(argc, argv);
     auto node = std::make_shared<TaskRequestNode>("task_request_node");
+    
     rclcpp::spin(node);
     rclcpp::shutdown();
     return 0;

@@ -1,0 +1,26 @@
+[0.041s] Invoking command in '/home/jj/tasktown_ws/build/village_operator': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4
+[0.153s] [35m[1mScanning dependencies of target operator_node[0m
+[0.199s] [ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[7.123s] [100%] [32m[1mLinking CXX executable operator_node[0m
+[7.536s] [100%] Built target operator_node
+[7.564s] Invoked command in '/home/jj/tasktown_ws/build/village_operator' returned '0': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4
+[7.602s] Invoking command in '/home/jj/tasktown_ws/build/village_operator': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --install /home/jj/tasktown_ws/build/village_operator
+[7.614s] -- Install configuration: "Debug"
+[7.616s] -- Execute custom install script
+[7.618s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/share/ament_index/resource_index/package_run_dependencies/village_operator
+[7.619s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/share/ament_index/resource_index/parent_prefix_path/village_operator
+[7.619s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/share/village_operator/environment/ament_prefix_path.sh
+[7.620s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/share/village_operator/environment/ament_prefix_path.dsv
+[7.622s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/share/village_operator/environment/path.sh
+[7.629s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/share/village_operator/environment/path.dsv
+[7.629s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/share/village_operator/local_setup.bash
+[7.629s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/share/village_operator/local_setup.sh
+[7.632s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/share/village_operator/local_setup.zsh
+[7.632s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/share/village_operator/local_setup.dsv
+[7.632s] -- Symlinking: /home/jj/tasktown_ws/install/village_operator/share/village_operator/package.dsv
+[7.655s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/share/ament_index/resource_index/packages/village_operator
+[7.658s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/share/village_operator/cmake/village_operatorConfig.cmake
+[7.661s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/share/village_operator/cmake/village_operatorConfig-version.cmake
+[7.661s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/share/village_operator/package.xml
+[7.666s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_operator/lib/village_operator/operator_node
+[7.669s] Invoked command in '/home/jj/tasktown_ws/build/village_operator' returned '0': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --install /home/jj/tasktown_ws/build/village_operator

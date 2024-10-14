@@ -1,0 +1,10 @@
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:132:5:[m[K [01;31m[Kerror: [m[Knon-static data member declared with placeholder ‘[01m[Kauto[m[K’
+  132 |     [01;31m[Kauto[m[K s_node = rclcpp::Node::make_shared("signal_node");
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In static member function ‘[01m[Kstatic void TaskRequestNode::signal_handler(int)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:146:30:[m[K [01;31m[Kerror: [m[Kcannot call member function ‘[01m[Kvoid TaskRequestNode::send_stop_signal()[m[K’ without object
+  146 |             send_stop_signal([01;31m[K)[m[K;
+      |                              [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/task_node.dir/build.make:63：CMakeFiles/task_node.dir/src/task.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/task_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

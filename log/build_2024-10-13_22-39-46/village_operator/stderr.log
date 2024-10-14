@@ -1,0 +1,27 @@
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:521:29:[m[K [01;31m[Kerror: [m[K‘[01m[KParameterEventHandler[m[K’ is not a member of ‘[01m[Krclcpp[m[K’; did you mean ‘[01m[KParameterEventsQoS[m[K’?
+  521 |     std::shared_ptr<rclcpp::[01;31m[KParameterEventHandler[m[K> param_subscriber_;
+      |                             [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+      |                             [32m[KParameterEventsQoS[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:521:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  521 |     std::shared_ptr<rclcpp::ParameterEventHandler[01;31m[K>[m[K param_subscriber_;
+      |                                                  [01;31m[K^[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In constructor ‘[01m[KTaskAssignServer::TaskAssignServer(const string&)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:527:27:[m[K [01;35m[Kwarning: [m[K‘[01m[KTaskAssignServer::manager[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+  527 |     TaskAssignmentManager [01;35m[Kmanager[m[K; // 管理任务分配矩阵
+      |                           [01;35m[K^~~~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:520:10:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kbool TaskAssignServer::is_first[m[K’ [[01;35m[K-Wreorder[m[K]
+  520 |     bool [01;35m[Kis_first[m[K;
+      |          [01;35m[K^~~~~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:486:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+  486 |     [01;35m[KTaskAssignServer[m[K(const std::string &name) : Node(name), manager(),is_first(true)
+      |     [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:489:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+  489 |         [01;31m[Ktimer_[m[K = this->create_wall_timer(
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[Ktimer_t[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:490:32:[m[K [01;31m[Kerror: [m[K‘[01m[KMinimalParam[m[K’ has not been declared
+  490 |             1000ms, std::bind(&[01;31m[KMinimalParam[m[K::timer_callback, this));
+      |                                [01;31m[K^~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

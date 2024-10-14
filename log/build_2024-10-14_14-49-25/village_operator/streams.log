@@ -1,0 +1,66 @@
+[0.046s] Invoking command in '/home/jj/tasktown_ws/build/village_operator': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4
+[0.193s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.242s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.529s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.563s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.646s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.655s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.893s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.011s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.016s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.278s] -- Found village_interfaces: 0.0.0 (/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake)
+[1.619s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.744s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.744s] -- Configured cppcheck include dirs: 
+[1.744s] -- Configured cppcheck exclude dirs and/or files: 
+[1.750s] -- Added test 'lint_cmake' to check CMake code style
+[1.750s] -- Added test 'uncrustify' to check C / C++ code style
+[1.750s] -- Configured uncrustify additional arguments: 
+[1.751s] -- Added test 'xmllint' to check XML markup files
+[1.762s] -- Configuring done
+[1.791s] -- Generating done
+[1.797s] -- Build files have been written to: /home/jj/tasktown_ws/build/village_operator
+[1.834s] [35m[1mScanning dependencies of target operator_node[0m
+[1.886s] [ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[4.729s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In constructor ‘[01m[KTaskAssignServer::TaskAssignServer(const string&)[m[K’:
+[4.729s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:494:24:[m[K [01;31m[Kerror: [m[K‘[01m[KTargetNode[m[K’ has not been declared
+[4.729s]   494 |             std::bind(&[01;31m[KTargetNode[m[K::handle_set_parameters, this, _1, _2)
+[4.729s]       |                        [01;31m[K^~~~~~~~~~[m[K
+[4.740s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:502:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[4.740s]   502 |         [01;31m[Ktimer_[m[K = this->create_wall_timer(
+[4.740s]       |         [01;31m[K^~~~~~[m[K
+[4.740s]       |         [32m[Ktimer_t[m[K
+[4.740s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:503:50:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_callback[m[K’ is not a member of ‘[01m[KTaskAssignServer[m[K’
+[4.740s]   503 |             1000ms, std::bind(&TaskAssignServer::[01;31m[Ktimer_callback[m[K, this));
+[4.741s]       |                                                  [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.758s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskAssignServer::handle_set_parameters(std::shared_ptr<rcl_interfaces::srv::SetParametersAtomically_Request_<std::allocator<void> > >, std::shared_ptr<rcl_interfaces::srv::SetParametersAtomically_Response_<std::allocator<void> > >)[m[K’:
+[4.758s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:562:37:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst rcl_interfaces::msg::Parameter_<std::allocator<void> >[m[K’ to ‘[01m[Kconst rclcpp::Parameter&[m[K’
+[4.758s]   562 |                 this->set_parameter([01;31m[Kparam[m[K);
+[4.758s]       |                                     [01;31m[K^~~~~[m[K
+[4.758s]       |                                     [01;31m[K|[m[K
+[4.759s]       |                                     [01;31m[Kconst rcl_interfaces::msg::Parameter_<std::allocator<void> >[m[K
+[4.759s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[4.759s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[4.759s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.759s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[4.759s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:461:43:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Krcl_interfaces::msg::SetParametersResult rclcpp::Node::set_parameter(const rclcpp::Parameter&)[m[K’
+[4.759s]   461 |   set_parameter([01;36m[Kconst rclcpp::Parameter & parameter[m[K);
+[4.760s]       |                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[4.760s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[4.760s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[4.760s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[4.760s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[4.760s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[4.760s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[4.760s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[4.760s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[4.760s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[4.760s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.760s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[4.760s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:563:105:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct rcl_interfaces::msg::Parameter_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kas_int[m[K’
+[4.761s]   563 | his->get_logger(), "Parameter updated: %s = %d", param.name.c_str(), param.[01;31m[Kas_int[m[K());
+[4.761s]       |                                                                            [01;31m[K^~~~~~[m[K
+[4.761s] 
+[5.924s] make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+[5.924s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+[5.924s] make: *** [Makefile:141：all] 错误 2

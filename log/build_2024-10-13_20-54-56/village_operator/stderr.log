@@ -1,0 +1,18 @@
+CMake Error at CMakeLists.txt:13 (find_package):
+  By not providing "Findcpp_parameter.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "cpp_parameter", but CMake did not find one.
+
+  Could not find a package configuration file provided by "cpp_parameter"
+  with any of the following names:
+
+    cpp_parameterConfig.cmake
+    cpp_parameter-config.cmake
+
+  Add the installation prefix of "cpp_parameter" to CMAKE_PREFIX_PATH or set
+  "cpp_parameter_DIR" to a directory containing one of the above files.  If
+  "cpp_parameter" provides a separate development package or SDK, be sure it
+  has been installed.
+
+
+make: *** [Makefile:266：cmake_check_build_system] 错误 1

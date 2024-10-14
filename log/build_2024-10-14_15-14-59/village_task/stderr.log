@@ -1,0 +1,42 @@
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In member function ‘[01m[Kvoid TaskRequestNode::set_parameter(const string&, bool)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:65:76:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::vector<rcl_interfaces::msg::Parameter_<std::allocator<void> >, std::allocator<rcl_interfaces::msg::Parameter_<std::allocator<void> > > >::push_back(rclcpp::Parameter)[m[K’
+   65 |         request_->parameters.push_back(rclcpp::Parameter(param_name, value)[01;31m[K)[m[K;
+      |                                                                            [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:1184:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = rcl_interfaces::msg::Parameter_<std::allocator<void> >; _Alloc = std::allocator<rcl_interfaces::msg::Parameter_<std::allocator<void> > >; std::vector<_Tp, _Alloc>::value_type = rcl_interfaces::msg::Parameter_<std::allocator<void> >][m[K’
+ 1184 |       [01;36m[Kpush_back[m[K(const value_type& __x)
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:1184:35:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Krclcpp::Parameter[m[K’ to ‘[01m[Kconst value_type&[m[K’ {aka ‘[01m[Kconst rcl_interfaces::msg::Parameter_<std::allocator<void> >&[m[K’}
+ 1184 |       push_back([01;36m[Kconst value_type& __x[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:1200:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = rcl_interfaces::msg::Parameter_<std::allocator<void> >; _Alloc = std::allocator<rcl_interfaces::msg::Parameter_<std::allocator<void> > >; std::vector<_Tp, _Alloc>::value_type = rcl_interfaces::msg::Parameter_<std::allocator<void> >][m[K’
+ 1200 |       [01;36m[Kpush_back[m[K(value_type&& __x)
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:1200:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Krclcpp::Parameter[m[K’ to ‘[01m[Kstd::vector<rcl_interfaces::msg::Parameter_<std::allocator<void> >, std::allocator<rcl_interfaces::msg::Parameter_<std::allocator<void> > > >::value_type&&[m[K’ {aka ‘[01m[Krcl_interfaces::msg::Parameter_<std::allocator<void> >&&[m[K’}
+ 1200 |       push_back([01;36m[Kvalue_type&& __x[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:2[m[K:
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In member function ‘[01m[Kvoid TaskRequestNode::send_request()[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:75:49:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K((std::__shared_ptr_access<rcl_interfaces::srv::SetParametersAtomically_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& result))->std::__shared_ptr_access<rcl_interfaces::srv::SetParametersAtomically_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->rcl_interfaces::srv::SetParametersAtomically_Response_<std::allocator<void> >::result[m[K’ from ‘[01m[Krcl_interfaces::srv::SetParametersAtomically_Response_<std::allocator<void> >::_result_type[m[K’ {aka ‘[01m[Krcl_interfaces::msg::SetParametersResult_<std::allocator<void> >[m[K’} to ‘[01m[Kbool[m[K’
+   75 |         RCLCPP_ERROR(this->get_logger(),[01;31m[Kresult->result[m[K?"成功":"失败");
+      |                                         [01;31m[K~~~~~~~~^~~~~~[m[K
+      |                                                 [01;31m[K|[m[K
+      |                                                 [01;31m[Krcl_interfaces::srv::SetParametersAtomically_Response_<std::allocator<void> >::_result_type {aka rcl_interfaces::msg::SetParametersResult_<std::allocator<void> >}[m[K
+make[2]: *** [CMakeFiles/task_node.dir/build.make:63：CMakeFiles/task_node.dir/src/task.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/task_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

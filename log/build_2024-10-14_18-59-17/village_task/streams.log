@@ -1,0 +1,17 @@
+[0.044s] Invoking command in '/home/jj/tasktown_ws/build/village_task': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j4 -l4
+[0.182s] [35m[1mScanning dependencies of target task_node[0m
+[0.267s] [ 50%] [32mBuilding CXX object CMakeFiles/task_node.dir/src/task.cpp.o[0m
+[2.216s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In static member function ‘[01m[Kstatic void TaskRequestNode::signal_handler(int)[m[K’:
+[2.216s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:138:13:[m[K [01;31m[Kerror: [m[Kinvalid use of member ‘[01m[KTaskRequestNode::task_update_client[m[K’ in static member function
+[2.216s]   138 |             [01;31m[Ktask_update_client[m[K->async_send_request(
+[2.216s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.217s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:112:68:[m[K [01;36m[Knote: [m[Kdeclared here
+[2.217s]   112 |     rclcpp::Client<village_interfaces::srv::TaskUpdate>::SharedPtr [01;36m[Ktask_update_client[m[K;
+[2.217s]       |                                                                    [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.217s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:140:61:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ is unavailable for static member functions
+[2.217s]   140 |                 std::bind(&TaskRequestNode::tasks_callback, [01;31m[Kthis[m[K, _1)
+[2.217s]       |                                                             [01;31m[K^~~~[m[K
+[3.430s] make[2]: *** [CMakeFiles/task_node.dir/build.make:63：CMakeFiles/task_node.dir/src/task.cpp.o] 错误 1
+[3.431s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/task_node.dir/all] 错误 2
+[3.431s] make: *** [Makefile:141：all] 错误 2
+[3.436s] Invoked command in '/home/jj/tasktown_ws/build/village_task' returned '2': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j4 -l4

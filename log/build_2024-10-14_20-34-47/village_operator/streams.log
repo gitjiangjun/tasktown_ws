@@ -1,0 +1,17 @@
+[0.042s] Invoking command in '/home/jj/tasktown_ws/build/village_operator': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4
+[0.141s] [35m[1mScanning dependencies of target operator_node[0m
+[0.200s] [ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[2.808s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskUpdateNode::handle_task_update_sequence_callback(std::shared_ptr<village_interfaces::srv::TaskUpdate_Request_<std::allocator<void> > >, std::shared_ptr<village_interfaces::srv::TaskUpdate_Response_<std::allocator<void> > >)[m[K’:
+[2.808s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:492:1:[m[K [01;31m[Kerror: [m[Kjump to label ‘[01m[Kend[m[K’
+[2.809s]   492 | [01;31m[Kend[m[K:    if(signal == 0)
+[2.809s]       | [01;31m[K^~~[m[K
+[2.809s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:437:18:[m[K [01;36m[Knote: [m[K  from here
+[2.809s]   437 |             goto [01;36m[Kend[m[K;
+[2.809s]       |                  [01;36m[K^~~[m[K
+[2.809s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:465:14:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kstd::shared_ptr<village_interfaces::srv::TaskAssign_Request_<std::allocator<void> > > task_assign_request[m[K’
+[2.809s]   465 |         auto [01;36m[Ktask_assign_request[m[K = std::make_shared<village_interfaces::srv::TaskAssign::Request>();
+[2.809s]       |              [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.040s] make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+[4.044s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+[4.044s] make: *** [Makefile:141：all] 错误 2
+[4.046s] Invoked command in '/home/jj/tasktown_ws/build/village_operator' returned '2': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4

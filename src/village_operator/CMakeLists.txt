@@ -9,7 +9,9 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(rcl_interfaces REQUIRED)
 find_package(village_interfaces REQUIRED)
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -31,6 +33,7 @@ add_executable(operator_node src/operator.cpp)
 ament_target_dependencies(operator_node 
   rclcpp
   std_msgs
+  rcl_interfaces
   village_interfaces)
 
 install(TARGETS 

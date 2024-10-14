@@ -1,0 +1,38 @@
+[35m[1mScanning dependencies of target operator_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In constructor ‘[01m[KTaskAssignServer::TaskAssignServer(const string&)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:511:27:[m[K [01;35m[Kwarning: [m[K‘[01m[KTaskAssignServer::manager[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+  511 |     TaskAssignmentManager [01;35m[Kmanager[m[K; // 管理任务分配矩阵
+      |                           [01;35m[K^~~~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:505:10:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kbool TaskAssignServer::is_first[m[K’ [[01;35m[K-Wreorder[m[K]
+  505 |     bool [01;35m[Kis_first[m[K;
+      |          [01;35m[K^~~~~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:485:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+  485 |     [01;35m[KTaskAssignServer[m[K(const std::string &name) : Node(name), manager(),is_first(true)
+      |     [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskAssignServer::assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:805:9:[m[K [01;31m[Kerror: [m[Kcontinue statement not within a loop
+  805 |         [01;31m[Kcontinue[m[K;
+      |         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K At global scope:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:846:43:[m[K [01;31m[Kerror: [m[K‘[01m[KParameterEvent[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a type; did you mean ‘[01m[KParameterEventsQoS[m[K’?
+  846 | void handle_parameter_event(const rclcpp::[01;31m[KParameterEvent[m[K::SharedPtr event) {
+      |                                           [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                           [32m[KParameterEventsQoS[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:846:69:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kevent[m[K’
+  846 | void handle_parameter_event(const rclcpp::ParameterEvent::SharedPtr [01;31m[Kevent[m[K) {
+      |                                                                     [01;31m[K^~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:846:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kevent[m[K’
+  846 | void handle_parameter_event[34m[K([m[Kconst rclcpp::ParameterEvent::SharedPtr[01;31m[K [m[K[32m[Kevent[m[K) {
+      |                            [34m[K~[m[K                                       [01;31m[K^[m[K[32m[K~~~~~[m[K
+      |                                                                    [32m[K)[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:846:69:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kevent[m[K’
+  846 | void handle_parameter_event(const rclcpp::ParameterEvent::SharedPtr [01;31m[Kevent[m[K) {
+      |                                                                     [01;31m[K^~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:883:20:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_parameter_event[m[K’ was not declared in this scope
+  883 |         std::bind(&[01;31m[Khandle_parameter_event[m[K, std::placeholders::_1)
+      |                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

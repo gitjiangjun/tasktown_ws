@@ -1,0 +1,33 @@
+[0.001s] Invoking command in '/home/jj/tasktown_ws/build/village_operator': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j2 -l2
+[0.063s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.135s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.511s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.529s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.617s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.629s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.920s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.048s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.052s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.276s] -- Found village_interfaces: 0.0.0 (/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake)
+[1.587s] CMake Error at CMakeLists.txt:13 (find_package):
+[1.587s]   By not providing "Findcpp_parameters.cmake" in CMAKE_MODULE_PATH this
+[1.587s]   project has asked CMake to find a package configuration file provided by
+[1.587s]   "cpp_parameters", but CMake did not find one.
+[1.588s] 
+[1.588s]   Could not find a package configuration file provided by "cpp_parameters"
+[1.588s]   with any of the following names:
+[1.588s] 
+[1.588s]     cpp_parametersConfig.cmake
+[1.588s]     cpp_parameters-config.cmake
+[1.588s] 
+[1.588s]   Add the installation prefix of "cpp_parameters" to CMAKE_PREFIX_PATH or set
+[1.588s]   "cpp_parameters_DIR" to a directory containing one of the above files.  If
+[1.588s]   "cpp_parameters" provides a separate development package or SDK, be sure it
+[1.588s]   has been installed.
+[1.589s] 
+[1.589s] 
+[1.589s] -- Configuring incomplete, errors occurred!
+[1.589s] See also "/home/jj/tasktown_ws/build/village_operator/CMakeFiles/CMakeOutput.log".
+[1.589s] See also "/home/jj/tasktown_ws/build/village_operator/CMakeFiles/CMakeError.log".
+[1.600s] make: *** [Makefile:266：cmake_check_build_system] 错误 1
+[1.601s] Invoked command in '/home/jj/tasktown_ws/build/village_operator' returned '2': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j2 -l2

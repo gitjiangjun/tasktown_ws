@@ -1,0 +1,394 @@
+[0.000000] (-) TimerEvent: {}
+[0.002703] (village_interfaces) JobQueued: {'identifier': 'village_interfaces', 'dependencies': OrderedDict()}
+[0.002833] (village_operator) JobQueued: {'identifier': 'village_operator', 'dependencies': OrderedDict([('village_interfaces', '/home/jj/tasktown_ws/install/village_interfaces')])}
+[0.002857] (village_task) JobQueued: {'identifier': 'village_task', 'dependencies': OrderedDict([('village_interfaces', '/home/jj/tasktown_ws/install/village_interfaces')])}
+[0.002873] (village_taskgroups) JobQueued: {'identifier': 'village_taskgroups', 'dependencies': OrderedDict([('village_interfaces', '/home/jj/tasktown_ws/install/village_interfaces')])}
+[0.007522] (village_interfaces) JobStarted: {'identifier': 'village_interfaces'}
+[0.036416] (village_interfaces) JobProgress: {'identifier': 'village_interfaces', 'progress': 'cmake'}
+[0.037682] (village_interfaces) JobProgress: {'identifier': 'village_interfaces', 'progress': 'build'}
+[0.039301] (village_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jj/tasktown_ws/build/village_interfaces', '--', '-j2', '-l2'], 'cwd': '/home/jj/tasktown_ws/build/village_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/jj/tasktown_ws'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'jj'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/tcf.json","messagesFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/nls.messages.json","corruptMarkerFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"32f27f55f621e572230994e3bfb8c0d6.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/tcf.json","_cacheRoot":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn","_resolvedLanguagePackCoreLocation":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40","_corruptedFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/corrupted.info"}'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('SSH_AGENT_PID', '1399'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jj/tasktown_ws/install/village_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/jj'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.93.1'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-01baddbe-1.93-main.sock'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', '1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '979'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4b7d3bb22773f891aa34e87e670b7dc5'), ('COLORTERM', 'truecolor'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('VSCODE_L10N_BUNDLE_LOCATION', 'file:///home/jj/.vscode/extensions/ms-ceintl.vscode-language-pack-zh-hans-1.94.2024100909/translations/extensions/vscode.json-language-features.i18n.json'), ('COLCON_PREFIX_PATH', '/home/jj/tasktown_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jj'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:43541'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jj'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/jj/.local/bin:/opt/ros/foxy/bin:/home/jj/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jj:@/tmp/.ICE-unix/1454,unix/jj:/tmp/.ICE-unix/1454'), ('VSCODE_AMD_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('INVOCATION_ID', '0c8c6cff1c394e7daa7422c239e710a3'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/cf47defb_b2a5_4da8_b9ad_39d699511e94'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-8edb1ace68.sock'), ('GNOME_TERMINAL_SERVICE', ':1.76'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/home/jj/tasktown_ws/install/village_interfaces:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jj/tasktown_ws/build/village_interfaces'), ('VSCODE_CLI', '1'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/jj/.config/Code/CachedData/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4b7d3bb22773f891aa34e87e670b7dc5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('ELECTRON_NO_ATTACH_CONSOLE', '1'), ('CMAKE_PREFIX_PATH', '/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/home/jj/tasktown_ws/install/village_interfaces:/opt/ros/foxy'), ('VSCODE_PID', '2280')]), 'shell': False}
+[0.101096] (-) TimerEvent: {}
+[0.162439] (village_interfaces) StdoutLine: {'line': b'[  1%] Built target village_interfaces__cpp\n'}
+[0.170367] (village_interfaces) StdoutLine: {'line': b'[ 12%] Built target village_interfaces__rosidl_generator_c\n'}
+[0.202313] (-) TimerEvent: {}
+[0.214359] (village_interfaces) StdoutLine: {'line': b'[ 23%] Built target village_interfaces__rosidl_typesupport_cpp\n'}
+[0.252840] (village_interfaces) StdoutLine: {'line': b'[ 34%] Built target village_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.282146] (village_interfaces) StdoutLine: {'line': b'[ 45%] Built target village_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.308497] (-) TimerEvent: {}
+[0.320459] (village_interfaces) StdoutLine: {'line': b'[ 56%] Built target village_interfaces__rosidl_typesupport_c\n'}
+[0.362439] (village_interfaces) StdoutLine: {'line': b'[ 67%] Built target village_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.373588] (village_interfaces) StdoutLine: {'line': b'[ 78%] Built target village_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.399545] (village_interfaces) StdoutLine: {'line': b'[ 78%] Built target village_interfaces\n'}
+[0.410353] (-) TimerEvent: {}
+[0.423627] (village_interfaces) StdoutLine: {'line': b'[ 80%] Built target village_interfaces__py\n'}
+[0.459725] (village_interfaces) StdoutLine: {'line': b'[ 89%] Built target village_interfaces__python\n'}
+[0.511392] (-) TimerEvent: {}
+[0.517083] (village_interfaces) StdoutLine: {'line': b'[ 92%] Built target village_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.542068] (village_interfaces) StdoutLine: {'line': b'[ 96%] Built target village_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.552265] (village_interfaces) StdoutLine: {'line': b'[100%] Built target village_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.565339] (village_interfaces) CommandEnded: {'returncode': 0}
+[0.611619] (-) TimerEvent: {}
+[0.712925] (-) TimerEvent: {}
+[0.737360] (village_interfaces) JobProgress: {'identifier': 'village_interfaces', 'progress': 'install'}
+[0.749731] (village_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jj/tasktown_ws/build/village_interfaces'], 'cwd': '/home/jj/tasktown_ws/build/village_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/jj/tasktown_ws'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'jj'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/tcf.json","messagesFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/nls.messages.json","corruptMarkerFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"32f27f55f621e572230994e3bfb8c0d6.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/tcf.json","_cacheRoot":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn","_resolvedLanguagePackCoreLocation":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40","_corruptedFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/corrupted.info"}'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('SSH_AGENT_PID', '1399'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jj/tasktown_ws/install/village_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/jj'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.93.1'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-01baddbe-1.93-main.sock'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', '1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '979'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4b7d3bb22773f891aa34e87e670b7dc5'), ('COLORTERM', 'truecolor'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('VSCODE_L10N_BUNDLE_LOCATION', 'file:///home/jj/.vscode/extensions/ms-ceintl.vscode-language-pack-zh-hans-1.94.2024100909/translations/extensions/vscode.json-language-features.i18n.json'), ('COLCON_PREFIX_PATH', '/home/jj/tasktown_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jj'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:43541'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jj'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/jj/.local/bin:/opt/ros/foxy/bin:/home/jj/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jj:@/tmp/.ICE-unix/1454,unix/jj:/tmp/.ICE-unix/1454'), ('VSCODE_AMD_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('INVOCATION_ID', '0c8c6cff1c394e7daa7422c239e710a3'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/cf47defb_b2a5_4da8_b9ad_39d699511e94'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-8edb1ace68.sock'), ('GNOME_TERMINAL_SERVICE', ':1.76'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/home/jj/tasktown_ws/install/village_interfaces:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jj/tasktown_ws/build/village_interfaces'), ('VSCODE_CLI', '1'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/jj/.config/Code/CachedData/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4b7d3bb22773f891aa34e87e670b7dc5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('ELECTRON_NO_ATTACH_CONSOLE', '1'), ('CMAKE_PREFIX_PATH', '/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/home/jj/tasktown_ws/install/village_interfaces:/opt/ros/foxy'), ('VSCODE_PID', '2280')]), 'shell': False}
+[0.764026] (village_interfaces) StdoutLine: {'line': b'-- Install configuration: "RelWithDebInfo"\n'}
+[0.765020] (village_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.765562] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/ament_index/resource_index/rosidl_interfaces/village_interfaces\n'}
+[0.766550] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__functions.h\n'}
+[0.766909] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__struct.h\n'}
+[0.767219] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__type_support.h\n'}
+[0.767547] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.767856] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/task.h\n'}
+[0.768160] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/borrow_money.h\n'}
+[0.768507] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__functions.h\n'}
+[0.768819] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__struct.h\n'}
+[0.769129] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__type_support.h\n'}
+[0.769475] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__functions.h\n'}
+[0.769785] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__struct.h\n'}
+[0.770114] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__type_support.h\n'}
+[0.770444] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__functions.h\n'}
+[0.770756] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__struct.h\n'}
+[0.771061] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__type_support.h\n'}
+[0.771444] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/task_assign.h\n'}
+[0.771827] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/task_update.h\n'}
+[0.772346] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/library_path.sh\n'}
+[0.772807] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/library_path.dsv\n'}
+[0.773826] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_c.h\n'}
+[0.774316] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.774703] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__rosidl_typesupport_fastrtps_c.h\n'}
+[0.775028] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__rosidl_typesupport_fastrtps_c.h\n'}
+[0.775357] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__rosidl_typesupport_fastrtps_c.h\n'}
+[0.776036] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[0.776945] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.777273] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.777634] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.778064] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.778407] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.778991] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.779926] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__rosidl_typesupport_introspection_c.h\n'}
+[0.780399] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.780742] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__rosidl_typesupport_introspection_c.h\n'}
+[0.781084] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__rosidl_typesupport_introspection_c.h\n'}
+[0.781423] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__rosidl_typesupport_introspection_c.h\n'}
+[0.782391] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__builder.hpp\n'}
+[0.782839] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__struct.hpp\n'}
+[0.783186] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__traits.hpp\n'}
+[0.783562] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__type_support.hpp\n'}
+[0.783903] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.784218] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/task.hpp\n'}
+[0.784584] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/borrow_money.hpp\n'}
+[0.784958] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__builder.hpp\n'}
+[0.785297] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__struct.hpp\n'}
+[0.785664] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__traits.hpp\n'}
+[0.786026] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__type_support.hpp\n'}
+[0.786357] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__builder.hpp\n'}
+[0.786855] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__struct.hpp\n'}
+[0.787417] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__traits.hpp\n'}
+[0.787782] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__type_support.hpp\n'}
+[0.788099] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__builder.hpp\n'}
+[0.788476] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__struct.hpp\n'}
+[0.788833] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__traits.hpp\n'}
+[0.789158] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__type_support.hpp\n'}
+[0.789510] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/task_assign.hpp\n'}
+[0.789832] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/task_update.hpp\n'}
+[0.791042] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/msg/detail/task__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.791450] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/borrow_money__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.791794] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_assign__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.792118] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/include/village_interfaces/srv/detail/task_update__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.792610] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/pythonpath.sh\n'}
+[0.793111] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/pythonpath.dsv\n'}
+[0.794021] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/__init__.py\n'}
+[0.795206] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/msg/__init__.py\n'}
+[0.795667] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/msg/_task.py\n'}
+[0.796740] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/srv/__init__.py\n'}
+[0.797098] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/srv/_borrow_money.py\n'}
+[0.797429] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/srv/_task_assign.py\n'}
+[0.797765] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/srv/_task_update.py\n'}
+[0.798545] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/village_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.799185] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/village_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.799759] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages/village_interfaces/village_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.800354] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__python.so\n'}
+[0.800819] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/msg/Task.idl\n'}
+[0.801288] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/BorrowMoney.idl\n'}
+[0.801763] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskAssign.idl\n'}
+[0.802260] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskUpdate.idl\n'}
+[0.802819] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/msg/Task.msg\n'}
+[0.803240] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/BorrowMoney.srv\n'}
+[0.803664] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/BorrowMoney_Request.msg\n'}
+[0.804091] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/BorrowMoney_Response.msg\n'}
+[0.804555] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskAssign.srv\n'}
+[0.804960] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskAssign_Request.msg\n'}
+[0.805413] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskAssign_Response.msg\n'}
+[0.805941] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskUpdate.srv\n'}
+[0.806427] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskUpdate_Request.msg\n'}
+[0.806911] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/srv/TaskUpdate_Response.msg\n'}
+[0.807346] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/ament_index/resource_index/package_run_dependencies/village_interfaces\n'}
+[0.807859] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/ament_index/resource_index/parent_prefix_path/village_interfaces\n'}
+[0.808288] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/ament_prefix_path.sh\n'}
+[0.808729] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/ament_prefix_path.dsv\n'}
+[0.809163] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/path.sh\n'}
+[0.809686] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/environment/path.dsv\n'}
+[0.810140] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/local_setup.bash\n'}
+[0.810624] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/local_setup.sh\n'}
+[0.811036] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/local_setup.zsh\n'}
+[0.811492] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/local_setup.dsv\n'}
+[0.811969] (village_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/package.dsv\n'}
+[0.813456] (-) TimerEvent: {}
+[0.826451] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/ament_index/resource_index/packages/village_interfaces\n'}
+[0.826681] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[0.826756] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.826833] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.826905] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.826975] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.827045] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.827116] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.827186] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfacesConfig.cmake\n'}
+[0.827255] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfacesConfig-version.cmake\n'}
+[0.827325] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/package.xml\n'}
+[0.827452] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_generator_c.so\n'}
+[0.827524] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[0.828154] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_c.so\n'}
+[0.828740] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[0.829381] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/lib/libvillage_interfaces__rosidl_typesupport_cpp.so\n'}
+[0.874466] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_generator_cExport.cmake\n'}
+[0.874674] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_generator_cExport-relwithdebinfo.cmake\n'}
+[0.875222] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.875436] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_introspection_cExport-relwithdebinfo.cmake\n'}
+[0.875953] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[0.876147] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_cExport-relwithdebinfo.cmake\n'}
+[0.876616] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_generator_cppExport.cmake\n'}
+[0.877246] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.877463] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_introspection_cppExport-relwithdebinfo.cmake\n'}
+[0.882519] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[0.882795] (village_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake/village_interfaces__rosidl_typesupport_cppExport-relwithdebinfo.cmake\n'}
+[0.885289] (village_interfaces) CommandEnded: {'returncode': 0}
+[0.914428] (-) TimerEvent: {}
+[1.015256] (-) TimerEvent: {}
+[1.116460] (-) TimerEvent: {}
+[1.146285] (village_interfaces) JobEnded: {'identifier': 'village_interfaces', 'rc': 0}
+[1.189221] (village_operator) JobStarted: {'identifier': 'village_operator'}
+[1.189788] (village_task) JobStarted: {'identifier': 'village_task'}
+[1.189872] (village_operator) JobProgress: {'identifier': 'village_operator', 'progress': 'cmake'}
+[1.189918] (village_operator) JobProgress: {'identifier': 'village_operator', 'progress': 'build'}
+[1.189948] (village_operator) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jj/tasktown_ws/build/village_operator', '--', '-j2', '-l2'], 'cwd': '/home/jj/tasktown_ws/build/village_operator', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/jj/tasktown_ws'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'jj'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/tcf.json","messagesFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/nls.messages.json","corruptMarkerFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"32f27f55f621e572230994e3bfb8c0d6.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/tcf.json","_cacheRoot":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn","_resolvedLanguagePackCoreLocation":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40","_corruptedFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/corrupted.info"}'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('SSH_AGENT_PID', '1399'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jj/tasktown_ws/install/village_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/jj'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.93.1'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-01baddbe-1.93-main.sock'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', '1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '979'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4b7d3bb22773f891aa34e87e670b7dc5'), ('COLORTERM', 'truecolor'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('VSCODE_L10N_BUNDLE_LOCATION', 'file:///home/jj/.vscode/extensions/ms-ceintl.vscode-language-pack-zh-hans-1.94.2024100909/translations/extensions/vscode.json-language-features.i18n.json'), ('COLCON_PREFIX_PATH', '/home/jj/tasktown_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jj'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:43541'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jj'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/jj/.local/bin:/opt/ros/foxy/bin:/home/jj/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jj:@/tmp/.ICE-unix/1454,unix/jj:/tmp/.ICE-unix/1454'), ('VSCODE_AMD_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('INVOCATION_ID', '0c8c6cff1c394e7daa7422c239e710a3'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/cf47defb_b2a5_4da8_b9ad_39d699511e94'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-8edb1ace68.sock'), ('GNOME_TERMINAL_SERVICE', ':1.76'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/home/jj/tasktown_ws/install/village_interfaces:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jj/tasktown_ws/build/village_operator'), ('VSCODE_CLI', '1'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/jj/.config/Code/CachedData/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4b7d3bb22773f891aa34e87e670b7dc5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('ELECTRON_NO_ATTACH_CONSOLE', '1'), ('CMAKE_PREFIX_PATH', '/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy'), ('VSCODE_PID', '2280')]), 'shell': False}
+[1.199837] (village_task) JobProgress: {'identifier': 'village_task', 'progress': 'cmake'}
+[1.200467] (village_task) JobProgress: {'identifier': 'village_task', 'progress': 'build'}
+[1.202292] (village_task) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jj/tasktown_ws/build/village_task', '--', '-j2', '-l2'], 'cwd': '/home/jj/tasktown_ws/build/village_task', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/jj/tasktown_ws'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'jj'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/tcf.json","messagesFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/nls.messages.json","corruptMarkerFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"32f27f55f621e572230994e3bfb8c0d6.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/tcf.json","_cacheRoot":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn","_resolvedLanguagePackCoreLocation":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40","_corruptedFile":"/home/jj/.config/Code/clp/32f27f55f621e572230994e3bfb8c0d6.zh-cn/corrupted.info"}'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('SSH_AGENT_PID', '1399'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jj/tasktown_ws/install/village_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/jj'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.93.1'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-01baddbe-1.93-main.sock'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', '1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '979'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4b7d3bb22773f891aa34e87e670b7dc5'), ('COLORTERM', 'truecolor'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('VSCODE_L10N_BUNDLE_LOCATION', 'file:///home/jj/.vscode/extensions/ms-ceintl.vscode-language-pack-zh-hans-1.94.2024100909/translations/extensions/vscode.json-language-features.i18n.json'), ('COLCON_PREFIX_PATH', '/home/jj/tasktown_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'jj'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:43541'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jj'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/jj/.local/bin:/opt/ros/foxy/bin:/home/jj/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/jj:@/tmp/.ICE-unix/1454,unix/jj:/tmp/.ICE-unix/1454'), ('VSCODE_AMD_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('INVOCATION_ID', '0c8c6cff1c394e7daa7422c239e710a3'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/cf47defb_b2a5_4da8_b9ad_39d699511e94'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-8edb1ace68.sock'), ('GNOME_TERMINAL_SERVICE', ':1.76'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/home/jj/tasktown_ws/install/village_interfaces:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jj/tasktown_ws/build/village_task'), ('VSCODE_CLI', '1'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/jj/.config/Code/CachedData/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4b7d3bb22773f891aa34e87e670b7dc5'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jj/tasktown_ws/install/village_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('ELECTRON_NO_ATTACH_CONSOLE', '1'), ('CMAKE_PREFIX_PATH', '/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy'), ('VSCODE_PID', '2280')]), 'shell': False}
+[1.217515] (-) TimerEvent: {}
+[1.294856] (village_task) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target task_node\x1b[0m\n'}
+[1.318570] (-) TimerEvent: {}
+[1.359483] (village_operator) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o\x1b[0m\n'}
+[1.388594] (village_task) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/task_node.dir/src/task.cpp.o\x1b[0m\n'}
+[1.418977] (-) TimerEvent: {}
+[1.519474] (-) TimerEvent: {}
+[1.620641] (-) TimerEvent: {}
+[1.725164] (-) TimerEvent: {}
+[1.829198] (-) TimerEvent: {}
+[1.929704] (-) TimerEvent: {}
+[2.034138] (-) TimerEvent: {}
+[2.134729] (-) TimerEvent: {}
+[2.238968] (-) TimerEvent: {}
+[2.339761] (-) TimerEvent: {}
+[2.440821] (-) TimerEvent: {}
+[2.541838] (-) TimerEvent: {}
+[2.642868] (-) TimerEvent: {}
+[2.743714] (-) TimerEvent: {}
+[2.844933] (-) TimerEvent: {}
+[2.946918] (-) TimerEvent: {}
+[3.047570] (-) TimerEvent: {}
+[3.153558] (-) TimerEvent: {}
+[3.265120] (-) TimerEvent: {}
+[3.366080] (-) TimerEvent: {}
+[3.467335] (-) TimerEvent: {}
+[3.580180] (-) TimerEvent: {}
+[3.680862] (-) TimerEvent: {}
+[3.784026] (-) TimerEvent: {}
+[3.884734] (-) TimerEvent: {}
+[3.991785] (-) TimerEvent: {}
+[4.093166] (-) TimerEvent: {}
+[4.194283] (-) TimerEvent: {}
+[4.300620] (-) TimerEvent: {}
+[4.401395] (-) TimerEvent: {}
+[4.502422] (-) TimerEvent: {}
+[4.602839] (-) TimerEvent: {}
+[4.703985] (-) TimerEvent: {}
+[4.808018] (-) TimerEvent: {}
+[4.908474] (-) TimerEvent: {}
+[5.018189] (-) TimerEvent: {}
+[5.122478] (-) TimerEvent: {}
+[5.223520] (-) TimerEvent: {}
+[5.324625] (-) TimerEvent: {}
+[5.425430] (-) TimerEvent: {}
+[5.526296] (-) TimerEvent: {}
+[5.627206] (-) TimerEvent: {}
+[5.727692] (-) TimerEvent: {}
+[5.830185] (-) TimerEvent: {}
+[5.930735] (-) TimerEvent: {}
+[6.031242] (-) TimerEvent: {}
+[6.131773] (-) TimerEvent: {}
+[6.232851] (-) TimerEvent: {}
+[6.338143] (-) TimerEvent: {}
+[6.438882] (-) TimerEvent: {}
+[6.542954] (-) TimerEvent: {}
+[6.646776] (-) TimerEvent: {}
+[6.748976] (-) TimerEvent: {}
+[6.850018] (-) TimerEvent: {}
+[6.950812] (-) TimerEvent: {}
+[7.051210] (-) TimerEvent: {}
+[7.152059] (-) TimerEvent: {}
+[7.253371] (-) TimerEvent: {}
+[7.354822] (-) TimerEvent: {}
+[7.455670] (-) TimerEvent: {}
+[7.558391] (-) TimerEvent: {}
+[7.583770] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KTaskAssignServer::TaskAssignServer(const string&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.584406] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:490:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<rclcpp::Parameter>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_future<std::vector<rclcpp::Parameter> >\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[7.584507] (village_operator) StderrLine: {'line': b'  490 |         params = parameter_client_->get_parameters({"stop_signal"}\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[7.584579] (village_operator) StderrLine: {'line': b'      |                                                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.590348] (village_operator) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/vector:72\x1b[m\x1b[K,\n'}
+[7.590621] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/functional:62\x1b[m\x1b[K,\n'}
+[7.590700] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13\x1b[m\x1b[K,\n'}
+[7.590771] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/algorithm:71\x1b[m\x1b[K,\n'}
+[7.590840] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:18\x1b[m\x1b[K,\n'}
+[7.590910] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[7.590991] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[7.591105] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[7.591176] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2\x1b[m\x1b[K:\n'}
+[7.591278] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/vector.tcc:198:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = rclcpp::Parameter; _Alloc = std::allocator<rclcpp::Parameter>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.591352] (village_operator) StderrLine: {'line': b'  198 |     \x1b[01;36m\x1b[Kvector<_Tp, _Alloc>\x1b[m\x1b[K::\n'}
+[7.591458] (village_operator) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.591531] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/vector.tcc:199:42:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_future<std::vector<rclcpp::Parameter> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst std::vector<rclcpp::Parameter>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.591602] (village_operator) StderrLine: {'line': b'  199 |     operator=(\x1b[01;36m\x1b[Kconst vector<_Tp, _Alloc>& __x\x1b[m\x1b[K)\n'}
+[7.591697] (village_operator) StderrLine: {'line': b'      |               \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[7.591802] (village_operator) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/vector:67\x1b[m\x1b[K,\n'}
+[7.591875] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/functional:62\x1b[m\x1b[K,\n'}
+[7.591944] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13\x1b[m\x1b[K,\n'}
+[7.592037] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/algorithm:71\x1b[m\x1b[K,\n'}
+[7.592141] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:18\x1b[m\x1b[K,\n'}
+[7.592246] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[7.592334] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[7.592435] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[7.592517] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2\x1b[m\x1b[K:\n'}
+[7.592586] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_vector.h:706:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::vector<_Tp, _Alloc>&&) [with _Tp = rclcpp::Parameter; _Alloc = std::allocator<rclcpp::Parameter>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.592693] (village_operator) StderrLine: {'line': b'  706 |       \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())\n'}
+[7.592798] (village_operator) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.592869] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_vector.h:706:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_future<std::vector<rclcpp::Parameter> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<rclcpp::Parameter>&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.592956] (village_operator) StderrLine: {'line': b'  706 |       operator=(\x1b[01;36m\x1b[Kvector&& __x\x1b[m\x1b[K) noexcept(_Alloc_traits::_S_nothrow_move())\n'}
+[7.593048] (village_operator) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[7.593129] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_vector.h:727:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::initializer_list<_Tp>) [with _Tp = rclcpp::Parameter; _Alloc = std::allocator<rclcpp::Parameter>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.593238] (village_operator) StderrLine: {'line': b'  727 |       \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(initializer_list<value_type> __l)\n'}
+[7.593319] (village_operator) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.593431] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_vector.h:727:46:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_future<std::vector<rclcpp::Parameter> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::initializer_list<rclcpp::Parameter>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.593507] (village_operator) StderrLine: {'line': b'  727 |       operator=(\x1b[01;36m\x1b[Kinitializer_list<value_type> __l\x1b[m\x1b[K)\n'}
+[7.593576] (village_operator) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[7.642874] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid TaskAssignServer::timer_callback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.643233] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:518:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<rclcpp::Parameter>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_future<std::vector<rclcpp::Parameter> >\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[7.643395] (village_operator) StderrLine: {'line': b'  518 |         params = parameter_client_->get_parameters({"stop_signal"}\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[7.643539] (village_operator) StderrLine: {'line': b'      |                                                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.643930] (village_operator) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/vector:72\x1b[m\x1b[K,\n'}
+[7.644040] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/functional:62\x1b[m\x1b[K,\n'}
+[7.644111] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13\x1b[m\x1b[K,\n'}
+[7.644181] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/algorithm:71\x1b[m\x1b[K,\n'}
+[7.644295] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:18\x1b[m\x1b[K,\n'}
+[7.644367] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[7.644436] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[7.644504] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[7.644573] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2\x1b[m\x1b[K:\n'}
+[7.644657] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/vector.tcc:198:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = rclcpp::Parameter; _Alloc = std::allocator<rclcpp::Parameter>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.644731] (village_operator) StderrLine: {'line': b'  198 |     \x1b[01;36m\x1b[Kvector<_Tp, _Alloc>\x1b[m\x1b[K::\n'}
+[7.644799] (village_operator) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.644869] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/vector.tcc:199:42:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_future<std::vector<rclcpp::Parameter> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst std::vector<rclcpp::Parameter>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.644939] (village_operator) StderrLine: {'line': b'  199 |     operator=(\x1b[01;36m\x1b[Kconst vector<_Tp, _Alloc>& __x\x1b[m\x1b[K)\n'}
+[7.645007] (village_operator) StderrLine: {'line': b'      |               \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[7.645077] (village_operator) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/vector:67\x1b[m\x1b[K,\n'}
+[7.645146] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/functional:62\x1b[m\x1b[K,\n'}
+[7.645284] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13\x1b[m\x1b[K,\n'}
+[7.645363] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/algorithm:71\x1b[m\x1b[K,\n'}
+[7.645431] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:18\x1b[m\x1b[K,\n'}
+[7.645500] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[7.645578] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[7.645646] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[7.645714] (village_operator) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2\x1b[m\x1b[K:\n'}
+[7.645782] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_vector.h:706:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::vector<_Tp, _Alloc>&&) [with _Tp = rclcpp::Parameter; _Alloc = std::allocator<rclcpp::Parameter>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.645853] (village_operator) StderrLine: {'line': b'  706 |       \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())\n'}
+[7.645921] (village_operator) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.645989] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_vector.h:706:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_future<std::vector<rclcpp::Parameter> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<rclcpp::Parameter>&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.646060] (village_operator) StderrLine: {'line': b'  706 |       operator=(\x1b[01;36m\x1b[Kvector&& __x\x1b[m\x1b[K) noexcept(_Alloc_traits::_S_nothrow_move())\n'}
+[7.646144] (village_operator) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[7.646355] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_vector.h:727:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::initializer_list<_Tp>) [with _Tp = rclcpp::Parameter; _Alloc = std::allocator<rclcpp::Parameter>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.646444] (village_operator) StderrLine: {'line': b'  727 |       \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(initializer_list<value_type> __l)\n'}
+[7.646515] (village_operator) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.646586] (village_operator) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_vector.h:727:46:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_future<std::vector<rclcpp::Parameter> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::initializer_list<rclcpp::Parameter>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.646656] (village_operator) StderrLine: {'line': b'  727 |       operator=(\x1b[01;36m\x1b[Kinitializer_list<value_type> __l\x1b[m\x1b[K)\n'}
+[7.646724] (village_operator) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[7.659855] (-) TimerEvent: {}
+[7.760285] (-) TimerEvent: {}
+[7.861064] (-) TimerEvent: {}
+[7.961581] (-) TimerEvent: {}
+[8.062479] (-) TimerEvent: {}
+[8.163652] (-) TimerEvent: {}
+[8.265670] (-) TimerEvent: {}
+[8.366546] (-) TimerEvent: {}
+[8.467521] (-) TimerEvent: {}
+[8.581910] (-) TimerEvent: {}
+[8.682642] (-) TimerEvent: {}
+[8.783604] (-) TimerEvent: {}
+[8.884621] (-) TimerEvent: {}
+[8.986762] (-) TimerEvent: {}
+[9.087737] (-) TimerEvent: {}
+[9.189204] (-) TimerEvent: {}
+[9.290800] (-) TimerEvent: {}
+[9.392876] (-) TimerEvent: {}
+[9.498906] (-) TimerEvent: {}
+[9.600391] (-) TimerEvent: {}
+[9.700931] (-) TimerEvent: {}
+[9.801929] (-) TimerEvent: {}
+[9.903358] (-) TimerEvent: {}
+[10.004969] (-) TimerEvent: {}
+[10.105993] (-) TimerEvent: {}
+[10.209125] (-) TimerEvent: {}
+[10.310013] (-) TimerEvent: {}
+[10.413750] (-) TimerEvent: {}
+[10.429474] (village_operator) StderrLine: {'line': b'make[2]: *** [CMakeFiles/operator_node.dir/build.make:63\xef\xbc\x9aCMakeFiles/operator_node.dir/src/operator.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[10.429747] (village_operator) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78\xef\xbc\x9aCMakeFiles/operator_node.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[10.429941] (village_operator) StderrLine: {'line': b'make: *** [Makefile:141\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[10.447500] (village_operator) CommandEnded: {'returncode': 2}
+[10.514251] (-) TimerEvent: {}
+[10.615317] (-) TimerEvent: {}
+[10.698674] (village_operator) JobEnded: {'identifier': 'village_operator', 'rc': 2}
+[10.715869] (-) TimerEvent: {}
+[10.817214] (-) TimerEvent: {}
+[10.918245] (-) TimerEvent: {}
+[11.018925] (-) TimerEvent: {}
+[11.120263] (-) TimerEvent: {}
+[11.221331] (-) TimerEvent: {}
+[11.322380] (-) TimerEvent: {}
+[11.423376] (-) TimerEvent: {}
+[11.524362] (-) TimerEvent: {}
+[11.625372] (-) TimerEvent: {}
+[11.725866] (-) TimerEvent: {}
+[11.826310] (-) TimerEvent: {}
+[11.927439] (-) TimerEvent: {}
+[12.028455] (-) TimerEvent: {}
+[12.129508] (-) TimerEvent: {}
+[12.230570] (-) TimerEvent: {}
+[12.331533] (-) TimerEvent: {}
+[12.432557] (-) TimerEvent: {}
+[12.533611] (-) TimerEvent: {}
+[12.634668] (-) TimerEvent: {}
+[12.735655] (-) TimerEvent: {}
+[12.836234] (-) TimerEvent: {}
+[12.936736] (-) TimerEvent: {}
+[13.037738] (-) TimerEvent: {}
+[13.138819] (-) TimerEvent: {}
+[13.239749] (-) TimerEvent: {}
+[13.340414] (-) TimerEvent: {}
+[13.412484] (village_task) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable task_node\x1b[0m\n'}
+[13.442825] (-) TimerEvent: {}
+[13.543950] (-) TimerEvent: {}
+[13.644935] (-) TimerEvent: {}
+[13.745895] (-) TimerEvent: {}
+[13.817559] (village_task) StdoutLine: {'line': b'[100%] Built target task_node\n'}
+[13.845568] (village_task) JobEnded: {'identifier': 'village_task', 'rc': 'SIGINT'}
+[13.846383] (-) TimerEvent: {}
+[13.856576] (village_taskgroups) JobSkipped: {'identifier': 'village_taskgroups'}
+[13.857124] (-) EventReactorShutdown: {}
