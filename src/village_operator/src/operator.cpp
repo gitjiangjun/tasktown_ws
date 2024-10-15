@@ -396,7 +396,7 @@ public:
 class TaskUpdateNode : public rclcpp::Node
 {
 public:
-    TaskUpdateNode(const std::string &name) : Node(name),is_first(true)
+    TaskUpdateNode(const std::string &name) : Node(name)
     {
         // 创建任务更新服务
         task_update_service = this->create_service<village_interfaces::srv::TaskUpdate>("task_update",
@@ -408,7 +408,7 @@ public:
     }
 
 private:
-    bool is_first;
+    bool is_first=true;
     // 声明任务更新服务
     rclcpp::Service<village_interfaces::srv::TaskUpdate>::SharedPtr task_update_service;
     // 声明任务分配服务
@@ -437,7 +437,8 @@ private:
             std::unique_lock<std::mutex> signal_lock(global_signal_mutex,std::defer_lock); // 加锁保护全局任务序列
             signal_lock.lock();
             global_signal=true;
-            std::cout<<"global_signal"<<global_signal<<std::endl;
+            //RCLCPP_INFO(this->get_logger(), "global_signal: %d", global_signal);
+            //std::cout<<"global_signal"<<global_signal<<std::endl;
             signal_lock.unlock();
             return;  
         }
@@ -479,7 +480,11 @@ private:
 
         }
         if(is_first){
-
+            is_first=false;                            
+            std::unique_lock<std::mutex> signal_lock(global_signal_mutex,std::defer_lock); // 加锁保护全局任务序列
+            signal_lock.lock();
+            global_signal=false;
+            signal_lock.unlock();  
             // 使用回调函数处理异步请求的响应
             task_assign_client->async_send_request(task_assign_request,
                                                 [this](rclcpp::Client<village_interfaces::srv::TaskAssign>::SharedFuture response_future)
@@ -488,11 +493,6 @@ private:
                                                     // 在这里处理任务分配服务的响应，如果需要的话
                                                     RCLCPP_INFO(this->get_logger(), "任务分配服务响应已收到");
                                                 });
-            is_first=false;                            
-            std::unique_lock<std::mutex> signal_lock(global_signal_mutex,std::defer_lock); // 加锁保护全局任务序列
-            signal_lock.lock();
-            global_signal=false;
-            signal_lock.unlock();  
         }
 
 
@@ -645,6 +645,7 @@ loop:
        {
             RCLCPP_INFO(this->get_logger(), "没有未处理的任务，结束循环。");
             tt=global_signal;
+            //RCLCPP_INFO(this->get_logger(), "global_signal=%d",tt);
             //std::cout<<"global_signal"<<global_signal<<std::endl;
             break;
        }
@@ -847,11 +848,6 @@ loop:
         }
     }
 
-    if(!tt)
-    {
-        goto loop;
-    }
-
     RCLCPP_INFO(this->get_logger(), "任务执行总时间：%d", manager.getTotalTime());
     RCLCPP_INFO(this->get_logger(), "任务执行总收益：%.2f", manager.getTotalReward());
 
@@ -863,6 +859,10 @@ loop:
     response->task_result = task_result_one_dimensional;
 
     RCLCPP_INFO(this->get_logger(), "任务分配完成，将结果返回给客户端。");
+    if(!tt)
+    {
+        goto loop;
+    }
 }
 
     //从任务序列中移除已分配的任务逻辑，暂时用不上了，因为没有移除任务，只是把任务标记为已处理，后面可以用
