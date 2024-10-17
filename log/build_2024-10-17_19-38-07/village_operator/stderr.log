@@ -1,7 +1,0 @@
-[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskUpdateNode::handle_task_update_sequence_callback(std::shared_ptr<village_interfaces::srv::TaskUpdate_Request_<std::allocator<void> > >, std::shared_ptr<village_interfaces::srv::TaskUpdate_Response_<std::allocator<void> > >)[m[K’:
-[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:436:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass TaskUpdateNode[m[K’ has no member named ‘[01m[Kdestroy_node[m[K’
-  436 |             this->[01;31m[Kdestroy_node[m[K();
-      |                   [01;31m[K^~~~~~~~~~~~[m[K
-make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
-make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
-make: *** [Makefile:141：all] 错误 2
