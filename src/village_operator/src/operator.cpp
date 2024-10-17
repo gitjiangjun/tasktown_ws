@@ -16,7 +16,7 @@
 #include <limits>             // 需要包含此头文件以使用 std::numeric_limits
 #include <cmath>              // 包含数学函数库以使用 exp()
 #include <fstream> // 引入文件流库
-
+#include <iomanip> // 设置空位 用于setw 和 setfill
 // 1. 导入服务接口
 // 任务更新的服务接口 [创建完srv文件要记得编译才会出现"task_update.hpp"!!!]
 #include "village_interfaces/srv/task_update.hpp"
@@ -26,8 +26,7 @@
 
 
 // 20240914修改：任务数据类型修改为包含任务到达时间的pair
-std::vector<std::pair<std::vector<int32_t>, std::chrono::steady_clock::time_point>> global_task_sequence; 
-
+std::vector<std::pair<std::vector<int32_t>, std::vector<std::chrono::system_clock::time_point>>> global_task_sequence; 
 // 20240819新增：用于保护全局任务序列的互斥锁
 std::mutex global_task_sequence_mutex;
 
@@ -420,16 +419,10 @@ private:
         const std::shared_ptr<village_interfaces::srv::TaskUpdate::Response> response)
     {
         // 20240914新增：记录任务的到达时间
-        auto task_arrival_time = std::chrono::steady_clock::now();
+        auto task_arrival_time = std::chrono::system_clock::now();
 
-        int signal;
-        std::unique_lock<std::mutex> task_lock(global_task_sequence_mutex); // 加锁保护全局任务序列
-        if(request->tasks[1]!=0)
-        {
-            // 将新任务添加到全局任务序列，并标记任务到达时间
-            global_task_sequence.push_back({request->tasks, task_arrival_time});  // 20240914新增
-            task_lock.unlock();
-        }
+        int signal=1;
+
         signal=request->tasks[1];
         std::cout<<"signal:"<<signal<<std::endl;
         if(signal == 0)
@@ -440,8 +433,18 @@ private:
             //RCLCPP_INFO(this->get_logger(), "global_signal: %d", global_signal);
             //std::cout<<"global_signal"<<global_signal<<std::endl;
             signal_lock.unlock();
+            //this->~TaskUpdateNode();
+            //rclcpp::shutdown();
+            RCLCPP_INFO(this->get_logger(), "任务更新服务return");
             return;  
         }
+        std::unique_lock<std::mutex> task_lock(global_task_sequence_mutex,std::defer_lock); // 加锁保护全局任务序列
+        request->tasks.push_back(0);
+        task_lock.lock();
+        // 将新任务添加到全局任务序列，并标记任务到达时间
+        global_task_sequence.push_back({request->tasks, {task_arrival_time}});  // 20240914新增
+        task_lock.unlock();
+        
 
         // 设置响应结果
         response->success = true; // 或根据实际更新情况设置
@@ -500,6 +503,9 @@ private:
     }
 };
 
+static void Show_result(
+std::vector<std::pair<std::vector<int32_t>, std::vector<std::chrono::system_clock::time_point>>> global_task_sequence
+);
 // 创建一个TaskAssignServer的类，继承自ROS2的rclcpp::Node
 // Class TaskAssignServer
 class TaskAssignServer : public rclcpp::Node
@@ -580,8 +586,10 @@ private:
 void assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign::Response> response)
 {
     std::unique_lock<std::mutex> task_lock(global_task_sequence_mutex,std::defer_lock); //暂时不上锁// 使用互斥锁来保护对全局任务序列的访问
-    std::unique_lock<std::mutex> signal_lock(global_signal_mutex,std::defer_lock); // 加锁保护全局任务序列
+    //std::unique_lock<std::mutex> signal_lock(global_signal_mutex,std::defer_lock); // 加锁保护全局任务序列
     bool tt;
+    vector<int> busy_operators;                                                            // 未处理的任务索引
+
 loop:
     while (true) // 无限循环：持续检查操作员和任务状态，并对任务进行分配
     {
@@ -593,7 +601,8 @@ loop:
        // vector<vector<double>> reward_matrix(3, vector<double>(global_task_sequence.size(), 0.0)); // 任务收益矩阵，行数固定为3（操作员数量），列数根据当前任务数动态调整
         vector<int> idle_operators;                                                               // 存储空闲的操作员索引
         vector<size_t> task_indices;  
-        vector<int> busy_operators;                                                            // 未处理的任务索引
+        //vector<int> busy_operators;                                                            // 未处理的任务索引
+        busy_operators.clear();
         //task_lock.unlock();
         // 遍历所有操作员，检查哪些操作员空闲
         for (size_t operator_index = 0; operator_index < operators_.size(); ++operator_index)
@@ -628,8 +637,23 @@ loop:
         task_lock.lock();
         for (size_t i = 0; i < global_task_sequence.size(); ++i)
         {
-            if (global_task_sequence[i].second != std::chrono::steady_clock::time_point()) // 如果任务未被处理
+            if (global_task_sequence[i].first.back() == 0 )//std::chrono::steady_clock::time_point()) // 如果任务未被处理
             {
+                if(global_task_sequence[i].first[6] != 0)//有时间限制
+                {
+                    int constraint = global_task_sequence[i].first[6];
+                    // 获取当前时间点
+                    auto now = std::chrono::system_clock::now();
+                    auto arrive_time = global_task_sequence[i].second[0];
+                    auto duration = std::chrono::duration_cast<std::chrono::seconds>(now-arrive_time).count();
+                    
+                    if(duration > constraint)
+                    {
+                        global_task_sequence[i].first.back() = 2;
+                        RCLCPP_INFO(this->get_logger(), "任务 %d 已过期，跳过。", i);
+                        continue;
+                    }
+                }
                 task_count++;
                 task_indices.push_back(i); // 记录未处理任务的索引
                 //allTasksAssigned = false;
@@ -647,6 +671,7 @@ loop:
             tt=global_signal;
             //RCLCPP_INFO(this->get_logger(), "global_signal=%d",tt);
             //std::cout<<"global_signal"<<global_signal<<std::endl;
+            std::this_thread::sleep_for(std::chrono::seconds(2));
             break;
        }
         vector<vector<double>> reward_matrix(3, vector<double>(task_count, 0.0)); // 任务收益矩阵，行数固定为3（操作员数量），列数根据当前任务数动态调整
@@ -657,9 +682,9 @@ loop:
         {
             //std::lock_guard<std::mutex> task_lock(global_task_sequence_mutex); // 使用互斥锁来保护对全局任务序列的访问
 
-            if (global_task_sequence[i].second == std::chrono::steady_clock::time_point()) // 如果任务已经被处理，跳过
+            if (global_task_sequence[i].first.back() != 0) // 如果任务已经被处理，跳过
             {
-                RCLCPP_INFO(this->get_logger(), "任务 %zu 已经被处理，跳过。", i);
+                RCLCPP_INFO(this->get_logger(), "任务 %zu 已经被处理或过期，跳过。", i);
                 continue;
             }
 
@@ -675,8 +700,8 @@ loop:
                 double success_rate = task_data[3 + j] / 100.0; // 获取成功率
 
                 // 计算任务分配的时间间隔
-                auto task_arrival_time = global_task_sequence[i].second;           // 任务到达时间
-                auto current_time = std::chrono::steady_clock::now();              // 当前时间
+                auto task_arrival_time = global_task_sequence[i].second[0];           // 任务到达时间
+                auto current_time = std::chrono::system_clock::now();              // 当前时间
                 std::chrono::duration<double> time_interval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - task_arrival_time); // 计算时间间隔
 
                 // 计算收益
@@ -739,7 +764,7 @@ loop:
             else
             {
                 RCLCPP_INFO(this->get_logger(), "problem:bug1");
-                std::this_thread::sleep_for(std::chrono::seconds(5));
+                std::this_thread::sleep_for(std::chrono::seconds(2));
                 continue;
             }
             //size_t selected_task_index = task_indices[matching_result[i]]; // 从匹配结果中获取任务索引
@@ -754,8 +779,8 @@ loop:
             double best_success_rate = best_task_data[3 + selected_operator_index] / 100.0;
 
             // 重新计算时间间隔
-            auto task_arrival_time = global_task_sequence[selected_task_index].second;  // 获取任务到达时间
-            auto current_time = std::chrono::steady_clock::now();                      // 当前时间
+            auto task_arrival_time = global_task_sequence[selected_task_index].second[0];  // 获取任务到达时间
+            auto current_time = std::chrono::system_clock::now();                      // 当前时间
             std::chrono::duration<double> time_interval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - task_arrival_time);  // 计算时间间隔
             
             // 显示最终选择的任务和相关信息
@@ -772,22 +797,26 @@ loop:
             // 使用互斥锁更新全局任务序列，将选定的任务标记为已处理
             
             //std::lock_guard<std::mutex> task_lock(global_task_sequence_mutex);
-            global_task_sequence[selected_task_index].second = std::chrono::steady_clock::time_point();  // 将任务标记为已处理
+            global_task_sequence[selected_task_index].first.back() = 1;//std::chrono::steady_clock::time_point();  // 将任务标记为已处理
             task_lock.unlock();
 
             //RCLCPP_INFO(this->get_logger(), "任务 %zu 标记为已处理。", selected_task_index);改动
             std::cout << "任务 " << selected_task_index << " 标记为已处理。" << std::endl;
             // 启动新线程，模拟任务执行
-            std::thread([this, selected_operator_index, best_task_time, response] {
+            std::thread([this, selected_task_index, selected_operator_index, best_task_time, response] {
+                std::unique_lock<std::mutex> task_lock(global_task_sequence_mutex,std::defer_lock); //暂时不上锁// 使用互斥锁来保护对全局任务序列的访问
+                task_lock.lock();
+                // 使用互斥锁更新全局任务序列，将选定的任务标记为已处理
+                global_task_sequence[selected_task_index].second.push_back(std::chrono::system_clock::now());  //开始处理的时间
+                task_lock.unlock();
                 std::this_thread::sleep_for(std::chrono::seconds(best_task_time));
-                {
-                    //std::lock_guard<std::mutex> lock(cv_mtx);
-                    this->manager.setOperatorIdle(selected_operator_index);
-                }
+                task_lock.lock();
+                global_task_sequence[selected_task_index].second.push_back(std::chrono::system_clock::now());//处理结束的时间
+                //std::lock_guard<std::mutex> lock(cv_mtx);
+                this->manager.setOperatorIdle(selected_operator_index);
                 //cv.notify_all();
                 //RCLCPP_INFO(this->get_logger(), "操作员 %zu 完成任务，设置为空闲状态。", selected_operator_index);改动
                 std::cout << "操作员" << selected_operator_index << " 完成任务，设置成空闲状态" << std::endl;
-
                 //assignTasks(response); // 继续检查是否有空闲的操作员需要分配任务 改动，有可能创建局部变量allTasksAssigned
             }).detach();
         }
@@ -836,7 +865,7 @@ loop:
             {
                 ss << value << "\t";
             }
-            ss << (task_pair.second == std::chrono::steady_clock::time_point() ? "已处理" : "未处理");
+            ss << ((task_pair.first.back() == 1) ? "已处理" : (task_pair.first.back() == 2) ? "已过期" : "未处理");
             RCLCPP_INFO(this->get_logger(), "%s", ss.str().c_str());
         }
         task_lock.unlock();
@@ -859,10 +888,29 @@ loop:
     response->task_result = task_result_one_dimensional;
 
     RCLCPP_INFO(this->get_logger(), "任务分配完成，将结果返回给客户端。");
-    if(!tt)
+    //RCLCPP_INFO(this->get_logger(), "tt的值：%d", tt);
+    if(tt)
     {
-        goto loop;
+        //RCLCPP_INFO(this->get_logger(), "HELLO");
+        busy_operators.clear();
+        for (size_t operator_index = 0; operator_index < operators_.size(); ++operator_index)
+        {
+            if (manager.isOperatorBusy(operator_index))
+            {
+                busy_operators.push_back(operator_index); // 记录忙碌的操作员
+            }
+        }
+        //std::cout << "还有" << busy_operators.size() << "个操作员忙碌" << std::endl;
+        //RCLCPP_INFO(this->get_logger(), "还有%zu个操作员忙碌", busy_operators.size());
+        if(busy_operators.size() >= 1){
+            //std::cout << "还有" << busy_operators.size() << "个操作员忙碌" << std::endl;
+            goto loop;
+        }
     }
+    Show_result(global_task_sequence);
+    std::cout << "下一步关闭" << std::endl;
+    rclcpp::shutdown();
+    //this->~TaskAssignServer();
 }
 
     //从任务序列中移除已分配的任务逻辑，暂时用不上了，因为没有移除任务，只是把任务标记为已处理，后面可以用
@@ -888,6 +936,79 @@ loop:
         }
     }*/
 };
+
+void printTime(const std::chrono::time_point<std::chrono::system_clock>& value) {
+
+    std::time_t current_time = std::chrono::system_clock::to_time_t(value);
+    
+    // 将 time_t 转换为 tm 结构（本地时间）
+    std::tm* local_time = std::localtime(&current_time);
+    
+    // 提取小时、分钟、秒
+    int hours = local_time->tm_hour;
+    int minutes = local_time->tm_min;
+    int seconds = local_time->tm_sec;
+
+    // 输出格式化的结果
+    std::cout << std::setw(2) << std::left << hours << ":"
+          << std::setw(2) << std::left << minutes << "_"
+          << std::setw(2) << std::left << seconds <<std::setw(4)<<std::left<<std::setfill(' ') << "'";
+}
+static void Show_result(
+std::vector<std::pair<std::vector<int32_t>, std::vector<std::chrono::system_clock::time_point>>> global_task_sequence
+)
+{
+    std::cout << std::setw(6) << std::setfill(' ')<<std::left<< "结果输出：" << std::endl;
+    std::cout << std::setw(26) << std::setfill(' ')<<std::left<<"任务：";
+    for (const auto &task_pair : global_task_sequence)
+    {   
+        const auto &value = task_pair.first;
+        {
+            std::cout << std::setw(12) << std::setfill(' ')<< std::left << value[0];
+        }
+    }std::cout << std::endl;
+    std::cout << std::setw(30) << std::setfill(' ')<<std::left<<"任务是否完成：";
+    for(const auto &task_pair : global_task_sequence)
+    {
+        const auto &value = task_pair.first.back();
+        {
+            std::cout << std::setw(15) << std::setfill(' ')<< std::left << ((value == 1) ? "已完成" : (value == 2) ? "已过期" : "未完成");
+        }
+    }std::cout << std::endl;
+    std::cout << std::setw(30) << std::setfill(' ')<<std::left<<"任务达到时间：";
+    for(const auto &task_pair : global_task_sequence){
+
+        const auto &value = task_pair.second;
+        {
+            printTime(value[0]);
+        }
+    }std::cout << std::endl;
+    std::cout << std::setw(32) << std::setfill(' ')<<std::left<<"任务开始执行时间：";
+    for(const auto &task_pair : global_task_sequence){
+        
+        const auto &value = task_pair.second;
+        if(value.size() > 1)
+        {
+            printTime(value[1]);
+        }
+        else
+        {
+            printTime(value[0]);
+        }
+    }std::cout << std::endl;
+    std::cout << std::setw(30) << std::setfill(' ')<<std::left<<"任务完成时间：";
+    for(const auto &task_pair : global_task_sequence){
+        const auto &value = task_pair.second;
+        if(value.size() > 1)
+        {
+            printTime(value[2]);
+        }
+        else
+        {
+            printTime(value[0]);
+        }
+    }std::cout << std::endl; 
+}
 
 /*主函数*/
 int main(int argc, char **argv)
@@ -918,7 +1039,7 @@ int main(int argc, char **argv)
     RCLCPP_INFO(rclcpp::get_logger("main"), "任务分配总计耗时：%ld 秒",
                std::chrono::duration_cast<std::chrono::seconds>(duration).count());
     
-    rclcpp::shutdown();
+    //rclcpp::shutdown();
     return 0;
 }
 /*---Secretary Matching with Free-Disposal for Display ads---*/

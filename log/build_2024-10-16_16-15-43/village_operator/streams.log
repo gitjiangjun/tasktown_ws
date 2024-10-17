@@ -1,0 +1,45 @@
+[0.042s] Invoking command in '/home/jj/tasktown_ws/build/village_operator': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4
+[0.142s] [35m[1mScanning dependencies of target operator_node[0m
+[0.228s] [ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[2.562s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In lambda function:
+[2.562s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:789:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kselected_task_index[m[K’ is not captured
+[2.562s]   789 |                 global_task_sequence[[01;31m[Kselected_task_index[m[K].second.push_back(std::chrono::steady_clock::now());  //开始处理的时间
+[2.562s]       |                                      [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.563s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:785:81:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+[2.563s]   785 |             std::thread([this, selected_operator_index, best_task_time, response[01;36m[K][m[K {
+[2.563s]       |                                                                                 [01;36m[K^[m[K
+[2.563s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:736:20:[m[K [01;36m[Knote: [m[K‘[01m[Ksize_t selected_task_index[m[K’ declared here
+[2.563s]   736 |             size_t [01;36m[Kselected_task_index[m[K;
+[2.563s]       |                    [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.563s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:793:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kselected_task_index[m[K’ is not captured
+[2.563s]   793 |                 global_task_sequence[[01;31m[Kselected_task_index[m[K].second.push_back(std::chrono::steady_clock::now());//处理结束的时间
+[2.563s]       |                                      [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.563s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:785:81:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+[2.563s]   785 |             std::thread([this, selected_operator_index, best_task_time, response[01;36m[K][m[K {
+[2.563s]       |                                                                                 [01;36m[K^[m[K
+[2.563s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:736:20:[m[K [01;36m[Knote: [m[K‘[01m[Ksize_t selected_task_index[m[K’ declared here
+[2.564s]   736 |             size_t [01;36m[Kselected_task_index[m[K;
+[2.564s]       |                    [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.573s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In function ‘[01m[Kvoid Show_result(std::vector<std::pair<std::vector<int>, std::vector<std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > > > > >)[m[K’:
+[2.573s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:909:33:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kconst int[int][m[K’ for array subscript
+[2.573s]   909 |             std::cout << value[0[01;31m[K][m[K << " ";
+[2.573s]       |                                 [01;31m[K^[m[K
+[2.574s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:913:31:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kconst std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ and ‘[01m[Kint[m[K’)
+[2.574s]   913 |             std::cout << value[01;31m[K[[m[K0] << " ";
+[2.574s]       |                               [01;31m[K^[m[K
+[2.575s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:917:31:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kconst std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ and ‘[01m[Kint[m[K’)
+[2.575s]   917 |             std::cout << value[01;31m[K[[m[K1] << " ";
+[2.575s]       |                               [01;31m[K^[m[K
+[2.575s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:921:31:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kconst std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ and ‘[01m[Kint[m[K’)
+[2.576s]   921 |             std::cout << value[01;31m[K[[m[K2] << " ";
+[2.576s]       |                               [01;31m[K^[m[K
+[2.577s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:925:34:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kback[m[K’ in ‘[01m[Kvalue[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[2.577s]   925 |             std::cout << ((value.[01;31m[Kback[m[K() == 1) ? "已完成" : (value.back() == 2) ? "已过期" : "未完成") << " ";
+[2.577s]       |                                  [01;31m[K^~~~[m[K
+[2.577s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:925:70:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kback[m[K’ in ‘[01m[Kvalue[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[2.577s]   925 |             std::cout << ((value.back() == 1) ? "已完成" : (value.[01;31m[Kback[m[K() == 2) ? "已过期" : "未完成") << " ";
+[2.577s]       |                                                                      [01;31m[K^~~~[m[K
+[3.638s] make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+[3.638s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+[3.638s] make: *** [Makefile:141：all] 错误 2
+[3.642s] Invoked command in '/home/jj/tasktown_ws/build/village_operator' returned '2': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4

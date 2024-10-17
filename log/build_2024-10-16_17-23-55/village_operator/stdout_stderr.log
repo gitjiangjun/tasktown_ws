@@ -1,0 +1,24 @@
+[35m[1mScanning dependencies of target operator_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In lambda function:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:789:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kselected_task_index[m[K’ is not captured
+  789 |                 global_task_sequence[[01;31m[Kselected_task_index[m[K].second.push_back(std::chrono::steady_clock::now());  //开始处理的时间
+      |                                      [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:785:81:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+  785 |             std::thread([this, selected_operator_index, best_task_time, response[01;36m[K][m[K {
+      |                                                                                 [01;36m[K^[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:736:20:[m[K [01;36m[Knote: [m[K‘[01m[Ksize_t selected_task_index[m[K’ declared here
+  736 |             size_t [01;36m[Kselected_task_index[m[K;
+      |                    [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:793:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kselected_task_index[m[K’ is not captured
+  793 |                 global_task_sequence[[01;31m[Kselected_task_index[m[K].second.push_back(std::chrono::steady_clock::now());//处理结束的时间
+      |                                      [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:785:81:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+  785 |             std::thread([this, selected_operator_index, best_task_time, response[01;36m[K][m[K {
+      |                                                                                 [01;36m[K^[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:736:20:[m[K [01;36m[Knote: [m[K‘[01m[Ksize_t selected_task_index[m[K’ declared here
+  736 |             size_t [01;36m[Kselected_task_index[m[K;
+      |                    [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

@@ -1,0 +1,22 @@
+[35m[1mScanning dependencies of target task_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/task_node.dir/src/task.cpp.o[0m
+[100%] [32m[1mLinking CXX executable task_node[0m
+[100%] Built target task_node
+-- Install configuration: "RelWithDebInfo"
+-- Execute custom install script
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/ament_index/resource_index/package_run_dependencies/village_task
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/ament_index/resource_index/parent_prefix_path/village_task
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/environment/path.sh
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/environment/path.dsv
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/local_setup.bash
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/local_setup.sh
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/local_setup.zsh
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/local_setup.dsv
+-- Symlinking: /home/jj/tasktown_ws/install/village_task/share/village_task/package.dsv
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/ament_index/resource_index/packages/village_task
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/cmake/village_taskConfig.cmake
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/cmake/village_taskConfig-version.cmake
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/package.xml
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/lib/village_task/task_node

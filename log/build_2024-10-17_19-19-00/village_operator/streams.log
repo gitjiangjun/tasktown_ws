@@ -1,0 +1,296 @@
+[0.043s] Invoking command in '/home/jj/tasktown_ws/build/village_operator': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4
+[0.104s] [35m[1mScanning dependencies of target operator_node[0m
+[0.185s] [ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[2.544s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskAssignServer::assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign_Response_<std::allocator<void> > >)[m[K’:
+[2.544s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:646:89:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator-[m[K’ (operand types are ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ and ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’)
+[2.545s]   646 |                auto duration = std::chrono::duration_cast<std::chrono::seconds>([32m[Know[m[K[01;31m[K-[m[K[34m[Karrive_time[m[K).count();
+[2.545s]       |                                                                                 [32m[K~~~[m[K[01;31m[K^[m[K[34m[K~~~~~~~~~~~[m[K
+[2.545s]       |                                                                                 [32m[K|[m[K   [34m[K|[m[K
+[2.545s]       |                                                                                 [32m[K|[m[K   [34m[Ktime_point<std::chrono::_V2::system_clock,[...]>[m[K
+[2.545s]       |                                                                                 [32m[Ktime_point<std::chrono::_V2::steady_clock,[...]>[m[K
+[2.545s] 
+[2.547s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[2.547s]                  from [01m[K/usr/include/c++/9/memory:62[m[K,
+[2.547s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144[m[K,
+[2.547s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.547s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:415:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> constexpr decltype ((__y.base() - __x.base())) std::operator-(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)[m[K’
+[2.547s]   415 |     [01;36m[Koperator[m[K-(const reverse_iterator<_IteratorL>& __x,
+[2.547s]       |     [01;36m[K^~~~~~~~[m[K
+[2.548s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:415:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.548s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:646:90:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+[2.548s]   646 |               auto duration = std::chrono::duration_cast<std::chrono::seconds>(now-[01;36m[Karrive_time[m[K).count();
+[2.548s]       |                                                                                    [01;36m[K^~~~~~~~~~~[m[K
+[2.548s] 
+[2.548s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[2.548s]                  from [01m[K/usr/include/c++/9/memory:62[m[K,
+[2.548s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144[m[K,
+[2.548s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.548s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:1209:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> constexpr decltype ((__x.base() - __y.base())) std::operator-(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)[m[K’
+[2.548s]  1209 |     [01;36m[Koperator[m[K-(const move_iterator<_IteratorL>& __x,
+[2.548s]       |     [01;36m[K^~~~~~~~[m[K
+[2.549s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:1209:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.549s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:646:90:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+[2.549s]   646 |               auto duration = std::chrono::duration_cast<std::chrono::seconds>(now-[01;36m[Karrive_time[m[K).count();
+[2.549s]       |                                                                                    [01;36m[K^~~~~~~~~~~[m[K
+[2.549s] 
+[2.549s] In file included from [01m[K/usr/include/c++/9/vector:68[m[K,
+[2.549s]                  from [01m[K/usr/include/c++/9/functional:62[m[K,
+[2.549s]                  from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+[2.550s]                  from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+[2.550s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:18[m[K,
+[2.550s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.550s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.550s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.550s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.550s] [01m[K/usr/include/c++/9/bits/stl_bvector.h:214:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ptrdiff_t std::operator-(const std::_Bit_iterator_base&, const std::_Bit_iterator_base&)[m[K’
+[2.550s]   214 |   [01;36m[Koperator[m[K-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)
+[2.550s]       |   [01;36m[K^~~~~~~~[m[K
+[2.550s] [01m[K/usr/include/c++/9/bits/stl_bvector.h:214:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ to ‘[01m[Kconst std::_Bit_iterator_base&[m[K’
+[2.550s]   214 |   operator-([01;36m[Kconst _Bit_iterator_base& __x[m[K, const _Bit_iterator_base& __y)
+[2.550s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[2.550s] In file included from [01m[K/usr/include/c++/9/mutex:39[m[K,
+[2.551s]                  from [01m[K/usr/include/c++/9/future:38[m[K,
+[2.551s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+[2.551s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.551s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.551s] [01m[K/usr/include/c++/9/chrono:463:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Rep1, class _Period1, class _Rep2, class _Period2> constexpr typename std::common_type<std::chrono::duration<_Rep1, _Period1>, std::chrono::duration<_Rep2, _Period2> >::type std::chrono::operator-(const std::chrono::duration<_Rep1, _Period1>&, const std::chrono::duration<_Rep2, _Period2>&)[m[K’
+[2.551s]   463 |       [01;36m[Koperator[m[K-(const duration<_Rep1, _Period1>& __lhs,
+[2.551s]       |       [01;36m[K^~~~~~~~[m[K
+[2.551s] [01m[K/usr/include/c++/9/chrono:463:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.551s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:646:90:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::chrono::duration<_Rep1, _Period1>[m[K’
+[2.551s]   646 |               auto duration = std::chrono::duration_cast<std::chrono::seconds>(now-[01;36m[Karrive_time[m[K).count();
+[2.551s]       |                                                                                    [01;36m[K^~~~~~~~~~~[m[K
+[2.551s] 
+[2.551s] In file included from [01m[K/usr/include/c++/9/mutex:39[m[K,
+[2.552s]                  from [01m[K/usr/include/c++/9/future:38[m[K,
+[2.552s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+[2.552s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.552s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.552s] [01m[K/usr/include/c++/9/chrono:751:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Clock, class _Dur1, class _Rep2, class _Period2> constexpr std::chrono::time_point<_Clock, typename std::common_type<_Dur1, std::chrono::duration<_Rep2, _Period2> >::type> std::chrono::operator-(const std::chrono::time_point<_Clock, _Duration1>&, const std::chrono::duration<_Rep2, _Period2>&)[m[K’
+[2.552s]   751 |       [01;36m[Koperator[m[K-(const time_point<_Clock, _Dur1>& __lhs,
+[2.552s]       |       [01;36m[K^~~~~~~~[m[K
+[2.553s] [01m[K/usr/include/c++/9/chrono:751:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.553s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:646:90:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::chrono::duration<_Rep2, _Period2>[m[K’
+[2.553s]   646 |               auto duration = std::chrono::duration_cast<std::chrono::seconds>(now-[01;36m[Karrive_time[m[K).count();
+[2.553s]       |                                                                                    [01;36m[K^~~~~~~~~~~[m[K
+[2.553s] 
+[2.553s] In file included from [01m[K/usr/include/c++/9/mutex:39[m[K,
+[2.553s]                  from [01m[K/usr/include/c++/9/future:38[m[K,
+[2.553s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+[2.553s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.553s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.553s] [01m[K/usr/include/c++/9/chrono:762:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Clock, class _Dur1, class _Dur2> constexpr typename std::common_type<_Duration1, _Duration2>::type std::chrono::operator-(const std::chrono::time_point<_Clock, _Duration1>&, const std::chrono::time_point<_Clock, _Duration2>&)[m[K’
+[2.553s]   762 |       [01;36m[Koperator[m[K-(const time_point<_Clock, _Dur1>& __lhs,
+[2.553s]       |       [01;36m[K^~~~~~~~[m[K
+[2.553s] [01m[K/usr/include/c++/9/chrono:762:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.554s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:646:90:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[K_Clock[m[K’ (‘[01m[Kstd::chrono::_V2::steady_clock[m[K’ and ‘[01m[Kstd::chrono::_V2::system_clock[m[K’)
+[2.554s]   646 |               auto duration = std::chrono::duration_cast<std::chrono::seconds>(now-[01;36m[Karrive_time[m[K).count();
+[2.554s]       |                                                                                    [01;36m[K^~~~~~~~~~~[m[K
+[2.554s] 
+[2.554s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:703:134:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator-[m[K’ (operand types are ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ and ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’)
+[2.554s]   703 | _interval = std::chrono::duration_cast<std::chrono::duration<double>>([32m[Kcurrent_time[m[K [01;31m[K-[m[K [34m[Ktask_arrival_time[m[K); // 计算时间间隔
+[2.554s]       |                                                                       [32m[K~~~~~~~~~~~~[m[K [01;31m[K^[m[K [34m[K~~~~~~~~~~~~~~~~~[m[K
+[2.554s]       |                                                                       [32m[K|[m[K              [34m[K|[m[K
+[2.554s]       |                                                                       [32m[K|[m[K              [34m[Ktime_point<std::chrono::_V2::system_clock,[...]>[m[K
+[2.554s]       |                                                                       [32m[Ktime_point<std::chrono::_V2::steady_clock,[...]>[m[K
+[2.554s] 
+[2.554s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[2.554s]                  from [01m[K/usr/include/c++/9/memory:62[m[K,
+[2.554s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144[m[K,
+[2.555s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.555s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:415:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> constexpr decltype ((__y.base() - __x.base())) std::operator-(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)[m[K’
+[2.555s]   415 |     [01;36m[Koperator[m[K-(const reverse_iterator<_IteratorL>& __x,
+[2.555s]       |     [01;36m[K^~~~~~~~[m[K
+[2.555s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:415:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.555s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:703:136:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+[2.555s]   703 | nterval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - [01;36m[Ktask_arrival_time[m[K); // 计算时间间隔
+[2.555s]       |                                                                                    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[2.555s] 
+[2.555s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[2.555s]                  from [01m[K/usr/include/c++/9/memory:62[m[K,
+[2.555s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144[m[K,
+[2.555s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.556s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:1209:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> constexpr decltype ((__x.base() - __y.base())) std::operator-(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)[m[K’
+[2.556s]  1209 |     [01;36m[Koperator[m[K-(const move_iterator<_IteratorL>& __x,
+[2.556s]       |     [01;36m[K^~~~~~~~[m[K
+[2.556s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:1209:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.556s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:703:136:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+[2.556s]   703 | nterval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - [01;36m[Ktask_arrival_time[m[K); // 计算时间间隔
+[2.556s]       |                                                                                    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[2.556s] 
+[2.556s] In file included from [01m[K/usr/include/c++/9/vector:68[m[K,
+[2.556s]                  from [01m[K/usr/include/c++/9/functional:62[m[K,
+[2.557s]                  from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+[2.557s]                  from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+[2.557s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:18[m[K,
+[2.557s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.557s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.557s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.557s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.557s] [01m[K/usr/include/c++/9/bits/stl_bvector.h:214:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ptrdiff_t std::operator-(const std::_Bit_iterator_base&, const std::_Bit_iterator_base&)[m[K’
+[2.557s]   214 |   [01;36m[Koperator[m[K-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)
+[2.558s]       |   [01;36m[K^~~~~~~~[m[K
+[2.558s] [01m[K/usr/include/c++/9/bits/stl_bvector.h:214:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ to ‘[01m[Kconst std::_Bit_iterator_base&[m[K’
+[2.558s]   214 |   operator-([01;36m[Kconst _Bit_iterator_base& __x[m[K, const _Bit_iterator_base& __y)
+[2.558s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[2.558s] In file included from [01m[K/usr/include/c++/9/mutex:39[m[K,
+[2.558s]                  from [01m[K/usr/include/c++/9/future:38[m[K,
+[2.558s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+[2.558s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.558s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.558s] [01m[K/usr/include/c++/9/chrono:463:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Rep1, class _Period1, class _Rep2, class _Period2> constexpr typename std::common_type<std::chrono::duration<_Rep1, _Period1>, std::chrono::duration<_Rep2, _Period2> >::type std::chrono::operator-(const std::chrono::duration<_Rep1, _Period1>&, const std::chrono::duration<_Rep2, _Period2>&)[m[K’
+[2.558s]   463 |       [01;36m[Koperator[m[K-(const duration<_Rep1, _Period1>& __lhs,
+[2.559s]       |       [01;36m[K^~~~~~~~[m[K
+[2.559s] [01m[K/usr/include/c++/9/chrono:463:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.559s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:703:136:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::chrono::duration<_Rep1, _Period1>[m[K’
+[2.559s]   703 | nterval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - [01;36m[Ktask_arrival_time[m[K); // 计算时间间隔
+[2.559s]       |                                                                                    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[2.559s] 
+[2.559s] In file included from [01m[K/usr/include/c++/9/mutex:39[m[K,
+[2.559s]                  from [01m[K/usr/include/c++/9/future:38[m[K,
+[2.559s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+[2.559s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.559s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.559s] [01m[K/usr/include/c++/9/chrono:751:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Clock, class _Dur1, class _Rep2, class _Period2> constexpr std::chrono::time_point<_Clock, typename std::common_type<_Dur1, std::chrono::duration<_Rep2, _Period2> >::type> std::chrono::operator-(const std::chrono::time_point<_Clock, _Duration1>&, const std::chrono::duration<_Rep2, _Period2>&)[m[K’
+[2.559s]   751 |       [01;36m[Koperator[m[K-(const time_point<_Clock, _Dur1>& __lhs,
+[2.560s]       |       [01;36m[K^~~~~~~~[m[K
+[2.560s] [01m[K/usr/include/c++/9/chrono:751:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.560s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:703:136:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::chrono::duration<_Rep2, _Period2>[m[K’
+[2.560s]   703 | nterval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - [01;36m[Ktask_arrival_time[m[K); // 计算时间间隔
+[2.560s]       |                                                                                    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[2.560s] 
+[2.560s] In file included from [01m[K/usr/include/c++/9/mutex:39[m[K,
+[2.560s]                  from [01m[K/usr/include/c++/9/future:38[m[K,
+[2.560s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+[2.560s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.561s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.561s] [01m[K/usr/include/c++/9/chrono:762:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Clock, class _Dur1, class _Dur2> constexpr typename std::common_type<_Duration1, _Duration2>::type std::chrono::operator-(const std::chrono::time_point<_Clock, _Duration1>&, const std::chrono::time_point<_Clock, _Duration2>&)[m[K’
+[2.561s]   762 |       [01;36m[Koperator[m[K-(const time_point<_Clock, _Dur1>& __lhs,
+[2.561s]       |       [01;36m[K^~~~~~~~[m[K
+[2.561s] [01m[K/usr/include/c++/9/chrono:762:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.561s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:703:136:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[K_Clock[m[K’ (‘[01m[Kstd::chrono::_V2::steady_clock[m[K’ and ‘[01m[Kstd::chrono::_V2::system_clock[m[K’)
+[2.562s]   703 | nterval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - [01;36m[Ktask_arrival_time[m[K); // 计算时间间隔
+[2.562s]       |                                                                                    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[2.562s] 
+[2.562s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:782:130:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator-[m[K’ (operand types are ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ and ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’)
+[2.562s]   782 | _interval = std::chrono::duration_cast<std::chrono::duration<double>>([32m[Kcurrent_time[m[K [01;31m[K-[m[K [34m[Ktask_arrival_time[m[K);  // 计算时间间隔
+[2.562s]       |                                                                       [32m[K~~~~~~~~~~~~[m[K [01;31m[K^[m[K [34m[K~~~~~~~~~~~~~~~~~[m[K
+[2.562s]       |                                                                       [32m[K|[m[K              [34m[K|[m[K
+[2.562s]       |                                                                       [32m[K|[m[K              [34m[Ktime_point<std::chrono::_V2::system_clock,[...]>[m[K
+[2.562s]       |                                                                       [32m[Ktime_point<std::chrono::_V2::steady_clock,[...]>[m[K
+[2.562s] 
+[2.562s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[2.562s]                  from [01m[K/usr/include/c++/9/memory:62[m[K,
+[2.563s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144[m[K,
+[2.563s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.563s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:415:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> constexpr decltype ((__y.base() - __x.base())) std::operator-(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)[m[K’
+[2.563s]   415 |     [01;36m[Koperator[m[K-(const reverse_iterator<_IteratorL>& __x,
+[2.563s]       |     [01;36m[K^~~~~~~~[m[K
+[2.563s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:415:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.563s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:782:132:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+[2.563s]   782 | nterval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - [01;36m[Ktask_arrival_time[m[K);  // 计算时间间隔
+[2.563s]       |                                                                                    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[2.563s] 
+[2.564s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[2.564s]                  from [01m[K/usr/include/c++/9/memory:62[m[K,
+[2.565s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144[m[K,
+[2.565s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.565s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:1209:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> constexpr decltype ((__x.base() - __y.base())) std::operator-(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)[m[K’
+[2.565s]  1209 |     [01;36m[Koperator[m[K-(const move_iterator<_IteratorL>& __x,
+[2.565s]       |     [01;36m[K^~~~~~~~[m[K
+[2.566s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:1209:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.566s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:782:132:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+[2.566s]   782 | nterval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - [01;36m[Ktask_arrival_time[m[K);  // 计算时间间隔
+[2.566s]       |                                                                                    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[2.566s] 
+[2.566s] In file included from [01m[K/usr/include/c++/9/vector:68[m[K,
+[2.566s]                  from [01m[K/usr/include/c++/9/functional:62[m[K,
+[2.566s]                  from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+[2.566s]                  from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+[2.566s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:18[m[K,
+[2.566s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.566s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.567s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.567s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.567s] [01m[K/usr/include/c++/9/bits/stl_bvector.h:214:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ptrdiff_t std::operator-(const std::_Bit_iterator_base&, const std::_Bit_iterator_base&)[m[K’
+[2.567s]   214 |   [01;36m[Koperator[m[K-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)
+[2.567s]       |   [01;36m[K^~~~~~~~[m[K
+[2.567s] [01m[K/usr/include/c++/9/bits/stl_bvector.h:214:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ to ‘[01m[Kconst std::_Bit_iterator_base&[m[K’
+[2.567s]   214 |   operator-([01;36m[Kconst _Bit_iterator_base& __x[m[K, const _Bit_iterator_base& __y)
+[2.567s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[2.567s] In file included from [01m[K/usr/include/c++/9/mutex:39[m[K,
+[2.567s]                  from [01m[K/usr/include/c++/9/future:38[m[K,
+[2.567s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+[2.567s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.567s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.568s] [01m[K/usr/include/c++/9/chrono:463:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Rep1, class _Period1, class _Rep2, class _Period2> constexpr typename std::common_type<std::chrono::duration<_Rep1, _Period1>, std::chrono::duration<_Rep2, _Period2> >::type std::chrono::operator-(const std::chrono::duration<_Rep1, _Period1>&, const std::chrono::duration<_Rep2, _Period2>&)[m[K’
+[2.568s]   463 |       [01;36m[Koperator[m[K-(const duration<_Rep1, _Period1>& __lhs,
+[2.568s]       |       [01;36m[K^~~~~~~~[m[K
+[2.568s] [01m[K/usr/include/c++/9/chrono:463:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.568s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:782:132:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::chrono::duration<_Rep1, _Period1>[m[K’
+[2.568s]   782 | nterval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - [01;36m[Ktask_arrival_time[m[K);  // 计算时间间隔
+[2.568s]       |                                                                                    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[2.568s] 
+[2.568s] In file included from [01m[K/usr/include/c++/9/mutex:39[m[K,
+[2.568s]                  from [01m[K/usr/include/c++/9/future:38[m[K,
+[2.568s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+[2.568s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.568s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.568s] [01m[K/usr/include/c++/9/chrono:751:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Clock, class _Dur1, class _Rep2, class _Period2> constexpr std::chrono::time_point<_Clock, typename std::common_type<_Dur1, std::chrono::duration<_Rep2, _Period2> >::type> std::chrono::operator-(const std::chrono::time_point<_Clock, _Duration1>&, const std::chrono::duration<_Rep2, _Period2>&)[m[K’
+[2.569s]   751 |       [01;36m[Koperator[m[K-(const time_point<_Clock, _Dur1>& __lhs,
+[2.569s]       |       [01;36m[K^~~~~~~~[m[K
+[2.569s] [01m[K/usr/include/c++/9/chrono:751:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.569s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:782:132:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::chrono::duration<_Rep2, _Period2>[m[K’
+[2.569s]   782 | nterval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - [01;36m[Ktask_arrival_time[m[K);  // 计算时间间隔
+[2.569s]       |                                                                                    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[2.569s] 
+[2.569s] In file included from [01m[K/usr/include/c++/9/mutex:39[m[K,
+[2.569s]                  from [01m[K/usr/include/c++/9/future:38[m[K,
+[2.569s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+[2.569s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.569s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.569s] [01m[K/usr/include/c++/9/chrono:762:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Clock, class _Dur1, class _Dur2> constexpr typename std::common_type<_Duration1, _Duration2>::type std::chrono::operator-(const std::chrono::time_point<_Clock, _Duration1>&, const std::chrono::time_point<_Clock, _Duration2>&)[m[K’
+[2.569s]   762 |       [01;36m[Koperator[m[K-(const time_point<_Clock, _Dur1>& __lhs,
+[2.570s]       |       [01;36m[K^~~~~~~~[m[K
+[2.570s] [01m[K/usr/include/c++/9/chrono:762:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.570s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:782:132:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[K_Clock[m[K’ (‘[01m[Kstd::chrono::_V2::steady_clock[m[K’ and ‘[01m[Kstd::chrono::_V2::system_clock[m[K’)
+[2.570s]   782 | nterval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - [01;36m[Ktask_arrival_time[m[K);  // 计算时间间隔
+[2.570s]       |                                                                                    [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[2.570s] 
+[2.570s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In function ‘[01m[Kvoid printTime(const std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)[m[K’:
+[2.570s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:938:69:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ to ‘[01m[Kconst time_point&[m[K’ {aka ‘[01m[Kconst std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&[m[K’}
+[2.570s]   938 |     std::time_t current_time = std::chrono::system_clock::to_time_t([01;31m[Kvalue[m[K);
+[2.570s]       |                                                                     [01;31m[K^~~~~[m[K
+[2.570s]       |                                                                     [01;31m[K|[m[K
+[2.571s]       |                                                                     [01;31m[Kconst std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K
+[2.571s] In file included from [01m[K/usr/include/c++/9/mutex:39[m[K,
+[2.571s]                  from [01m[K/usr/include/c++/9/future:38[m[K,
+[2.571s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+[2.571s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.571s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.571s] [01m[K/usr/include/c++/9/chrono:846:35:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstatic time_t std::chrono::_V2::system_clock::to_time_t(const time_point&)[m[K’
+[2.571s]   846 |       to_time_t([01;36m[Kconst time_point& __t[m[K) noexcept
+[2.571s]       |                 [01;36m[K~~~~~~~~~~~~~~~~~~^~~[m[K
+[2.571s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In function ‘[01m[Kvoid Show_result(std::vector<std::pair<std::vector<int>, std::vector<std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > > > > >)[m[K’:
+[2.571s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:979:31:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&[m[K’ from expression of type ‘[01m[Kconst value_type[m[K’ {aka ‘[01m[Kconst std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’}
+[2.572s]   979 |             printTime(value[0][01;31m[K)[m[K;
+[2.572s]       |                               [01;31m[K^[m[K
+[2.572s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:936:74:[m[K [01;36m[Knote: [m[Kin passing argument 1 of ‘[01m[Kvoid printTime(const std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)[m[K’
+[2.572s]   936 | void printTime([01;36m[Kconst std::chrono::time_point<std::chrono::steady_clock>& value[m[K) {
+[2.572s]       |                [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[2.572s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:988:31:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&[m[K’ from expression of type ‘[01m[Kconst value_type[m[K’ {aka ‘[01m[Kconst std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’}
+[2.572s]   988 |             printTime(value[1][01;31m[K)[m[K;
+[2.572s]       |                               [01;31m[K^[m[K
+[2.572s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:936:74:[m[K [01;36m[Knote: [m[Kin passing argument 1 of ‘[01m[Kvoid printTime(const std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)[m[K’
+[2.572s]   936 | void printTime([01;36m[Kconst std::chrono::time_point<std::chrono::steady_clock>& value[m[K) {
+[2.574s]       |                [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[2.575s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:1000:31:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&[m[K’ from expression of type ‘[01m[Kconst value_type[m[K’ {aka ‘[01m[Kconst std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’}
+[2.575s]  1000 |             printTime(value[2][01;31m[K)[m[K;
+[2.575s]       |                               [01;31m[K^[m[K
+[2.575s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:936:74:[m[K [01;36m[Knote: [m[Kin passing argument 1 of ‘[01m[Kvoid printTime(const std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)[m[K’
+[2.575s]   936 | void printTime([01;36m[Kconst std::chrono::time_point<std::chrono::steady_clock>& value[m[K) {
+[2.575s]       |                [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[3.627s] make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+[3.627s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+[3.628s] make: *** [Makefile:141：all] 错误 2
+[3.632s] Invoked command in '/home/jj/tasktown_ws/build/village_operator' returned '2': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4
