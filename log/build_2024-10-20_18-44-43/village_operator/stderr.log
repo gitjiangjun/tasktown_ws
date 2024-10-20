@@ -1,0 +1,10 @@
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskAssignServer::assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:711:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[Kreward_matrix[m[K’
+  711 |                 [01;31m[Kreward_matrix[m[K[j][task_indices.size() - 1] = reward; // 填充收益矩阵
+      |                 [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:709:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kreward[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  709 |                 double [01;35m[Kreward[m[K = success_rate * task_value //* exp(-time_interval.count() / 60.0);//改动
+      |                        [01;35m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

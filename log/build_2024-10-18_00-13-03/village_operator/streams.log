@@ -1,0 +1,249 @@
+[0.045s] Invoking command in '/home/jj/tasktown_ws/build/village_operator': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4
+[0.152s] [35m[1mScanning dependencies of target operator_node[0m
+[0.228s] [ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[2.551s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskAssignServer::assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign_Response_<std::allocator<void> > >)[m[K’:
+[2.551s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:596:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KallTasksAssigned[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.551s]   596 |         bool [01;35m[KallTasksAssigned[m[K = true; // 初始化allTasksAssigned=true，跟踪并标记是否所有任务都已经分配
+[2.551s]       |              [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[2.559s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In function ‘[01m[Kvoid print_task_order(const std::vector<int>&)[m[K’:
+[2.560s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:917:30:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask_index_record[m[K’ was not declared in this scope; did you mean ‘[01m[Ktask_index_order[m[K’?
+[2.560s]   917 |     for (const auto &value : [01;31m[Ktask_index_record[m[K)
+[2.561s]       |                              [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[2.562s]       |                              [32m[Ktask_index_order[m[K
+[2.562s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.562s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.562s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.562s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.562s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.562s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.562s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.563s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.563s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.563s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.563s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.563s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:921:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.563s]   921 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "处理任务顺序%s", row_str.str().c_str());
+[2.563s]       |                 [01;31m[K^~~~[m[K
+[2.563s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:921:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.563s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:921:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.563s]   921 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "处理任务顺序%s", row_str.str().c_str());
+[2.563s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.563s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:921:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.563s]   921 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "处理任务顺序%s", row_str.str().c_str());
+[2.564s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.564s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:921:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.564s]   921 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "处理任务顺序%s", row_str.str().c_str());
+[2.564s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.564s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.564s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.564s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.564s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.564s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.564s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.564s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.564s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.564s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.565s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.565s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.565s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:921:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.565s]   921 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "处理任务顺序%s", row_str.str().c_str());
+[2.565s]       |                 [01;31m[K^~~~[m[K
+[2.565s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:921:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.565s]   921 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "处理任务顺序%s", row_str.str().c_str());
+[2.565s]       |                 [01;31m[K^~~~[m[K
+[2.565s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:914:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktask_index_order[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.565s]   914 | void print_task_order([01;35m[Kconst std::vector<int> &task_index_order[m[K)
+[2.565s]       |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[2.565s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.565s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.565s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.566s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.566s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.566s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.566s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.566s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.566s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.566s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.566s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.566s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In function ‘[01m[Kvoid print_task_assignment(const std::vector<std::vector<int> >&)[m[K’:
+[2.566s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:926:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.566s]   926 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "实时更新任务分配矩阵:");
+[2.566s]       |                 [01;31m[K^~~~[m[K
+[2.566s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:926:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.566s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:926:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.567s]   926 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "实时更新任务分配矩阵:");
+[2.567s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.567s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:926:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.567s]   926 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "实时更新任务分配矩阵:");
+[2.567s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.567s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:926:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.567s]   926 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "实时更新任务分配矩阵:");
+[2.567s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.567s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.567s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.567s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.567s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.567s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.567s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.568s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.568s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.568s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.568s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.568s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.568s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:926:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.568s]   926 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "实时更新任务分配矩阵:");
+[2.568s]       |                 [01;31m[K^~~~[m[K
+[2.568s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:926:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.568s]   926 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "实时更新任务分配矩阵:");
+[2.569s]       |                 [01;31m[K^~~~[m[K
+[2.569s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.569s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.569s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.569s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.569s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.569s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.569s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.569s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.569s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.569s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.569s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.569s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:934:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.570s]   934 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "[%s]", row_str.str().c_str());
+[2.570s]       |                     [01;31m[K^~~~[m[K
+[2.570s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:934:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.570s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:934:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.570s]   934 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "[%s]", row_str.str().c_str());
+[2.570s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.570s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:934:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.570s]   934 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "[%s]", row_str.str().c_str());
+[2.570s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.570s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:934:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.570s]   934 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "[%s]", row_str.str().c_str());
+[2.570s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.570s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.570s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.571s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.571s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.571s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.571s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.571s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.571s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.571s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.571s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.571s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.571s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:934:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.571s]   934 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "[%s]", row_str.str().c_str());
+[2.572s]       |                     [01;31m[K^~~~[m[K
+[2.572s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:934:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.572s]   934 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "[%s]", row_str.str().c_str());
+[2.572s]       |                     [01;31m[K^~~~[m[K
+[2.572s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.572s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.572s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.572s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.572s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.572s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.572s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.572s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.572s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.572s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.573s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.573s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In function ‘[01m[Kvoid print_task_value_matrix(const std::vector<std::vector<double, std::allocator<double> > >&)[m[K’:
+[2.573s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:940:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.573s]   940 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "实时更新任务价值矩阵:");
+[2.573s]       |                 [01;31m[K^~~~[m[K
+[2.573s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:940:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.573s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:940:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.573s]   940 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "实时更新任务价值矩阵:");
+[2.573s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.573s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:940:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.573s]   940 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "实时更新任务价值矩阵:");
+[2.573s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.573s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:940:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.574s]   940 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "实时更新任务价值矩阵:");
+[2.574s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.574s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.574s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.574s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.574s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.574s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.574s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.574s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.574s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.574s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.575s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.575s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.575s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:940:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.575s]   940 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "实时更新任务价值矩阵:");
+[2.575s]       |                 [01;31m[K^~~~[m[K
+[2.575s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:940:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.575s]   940 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "实时更新任务价值矩阵:");
+[2.575s]       |                 [01;31m[K^~~~[m[K
+[2.575s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.575s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.576s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.576s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.576s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.576s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.576s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.576s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.576s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.576s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.576s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.576s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:948:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.576s]   948 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "[%s]", row_str.str().c_str());
+[2.576s]       |                     [01;31m[K^~~~[m[K
+[2.576s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:948:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.576s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:948:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.577s]   948 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "[%s]", row_str.str().c_str());
+[2.577s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.577s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:948:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.577s]   948 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "[%s]", row_str.str().c_str());
+[2.577s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.577s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:948:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.577s]   948 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "[%s]", row_str.str().c_str());
+[2.577s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.577s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.577s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.577s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.577s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.577s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.577s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.578s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.578s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.578s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.578s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.578s]                  from [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:2[m[K:
+[2.578s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:948:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.578s]   948 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "[%s]", row_str.str().c_str());
+[2.578s]       |                     [01;31m[K^~~~[m[K
+[2.578s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:948:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.578s]   948 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "[%s]", row_str.str().c_str());
+[2.578s]       |                     [01;31m[K^~~~[m[K
+[2.578s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K At global scope:
+[2.578s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:1028:1:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[K)[m[K’ token
+[2.579s]  1028 | [01;31m[K)[m[K
+[2.579s]       | [01;31m[K^[m[K
+[2.579s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In function ‘[01m[Kvoid Show_result(std::vector<std::pair<std::vector<int>, std::vector<std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > > > > >, std::vector<int>, std::vector<std::vector<int> >, std::vector<std::vector<int> >, int)[m[K’:
+[2.579s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:1033:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kprint_task_assignment_matrix[m[K’ was not declared in this scope; did you mean ‘[01m[Kprint_task_assignment[m[K’?
+[2.579s]  1033 |     [01;31m[Kprint_task_assignment_matrix[m[K(task_assign_matrix);
+[2.579s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.579s]       |     [32m[Kprint_task_assignment[m[K
+[2.579s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:1034:29:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst std::vector<std::vector<double, std::allocator<double> > >&[m[K’ from expression of type ‘[01m[Kstd::vector<std::vector<int> >[m[K’
+[2.579s]  1034 |     print_task_value_matrix([01;31m[Ktask_value_matrix[m[K);
+[2.579s]       |                             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[2.579s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:937:70:[m[K [01;36m[Knote: [m[Kin passing argument 1 of ‘[01m[Kvoid print_task_value_matrix(const std::vector<std::vector<double, std::allocator<double> > >&)[m[K’
+[2.579s]   937 | void print_task_value_matrix([01;36m[Kconst std::vector<std::vector<double>> &task_value_matrix[m[K)
+[2.579s]       |                              [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[3.357s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K At global scope:
+[3.357s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:506:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid Show_result(std::vector<std::pair<std::vector<int>, std::vector<std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > > > > >)[m[K’ declared ‘[01m[Kstatic[m[K’ but never defined [[01;35m[K-Wunused-function[m[K]
+[3.358s]   506 | static void [01;35m[KShow_result[m[K(
+[3.358s]       |             [01;35m[K^~~~~~~~~~~[m[K
+[3.617s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:506:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid Show_result(std::vector<std::pair<std::vector<int>, std::vector<std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > > > > >)[m[K’ used but never defined
+[3.618s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:1023:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid Show_result(std::vector<std::pair<std::vector<int>, std::vector<std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > > > > >, std::vector<int>, std::vector<std::vector<int> >, std::vector<std::vector<int> >, int)[m[K’ defined but not used [[01;35m[K-Wunused-function[m[K]
+[3.618s]  1023 | static void [01;35m[KShow_result[m[K(
+[3.618s]       |             [01;35m[K^~~~~~~~~~~[m[K
+[3.651s] make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+[3.651s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+[3.652s] make: *** [Makefile:141：all] 错误 2
+[3.655s] Invoked command in '/home/jj/tasktown_ws/build/village_operator' returned '2': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4

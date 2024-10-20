@@ -1,0 +1,15 @@
+[0.044s] Invoking command in '/home/jj/tasktown_ws/build/village_operator': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4
+[0.102s] [35m[1mScanning dependencies of target operator_node[0m
+[0.149s] [ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[2.434s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In function ‘[01m[Kvoid print_global_task_sequence(std::vector<std::pair<std::vector<int>, std::vector<std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > > > > >)[m[K’:
+[2.434s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:1007:23:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[2.434s]  1007 |         for(int i=3;[01;35m[Ki < 6[m[K,i++){
+[2.434s]       |                     [01;35m[K~~^~~[m[K
+[2.435s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:1007:30:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
+[2.435s]  1007 |         for(int i=3;i < 6,i++[01;31m[K)[m[K{
+[2.435s]       |                              [01;31m[K^[m[K
+[2.435s]       |                              [32m[K;[m[K
+[3.560s] make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+[3.561s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+[3.561s] make: *** [Makefile:141：all] 错误 2
+[3.562s] Invoked command in '/home/jj/tasktown_ws/build/village_operator' returned '2': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4

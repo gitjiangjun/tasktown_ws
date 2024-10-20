@@ -70,6 +70,7 @@ public:
             task_row[0] = 0; // 第一次发送任务类型为"0"
             task_row[1] = 2+priority[task_row[0]]; // "0"类型任务的价值固定为2
             task_row[2] = 19; // "0"类型任务的执行时间固定为900秒
+            task_row[6] = 0;//无时间约束
             is_first_request = false;
         } else {
             task_row[0] = rand() % 3 + 1; // 任务类型为"1", "2", "3"中的一个
@@ -77,17 +78,17 @@ public:
                 case 1:
                     task_row[1] = rand() % 5 + 4 + priority[task_row[0]]; // 任务价值在4-8之间
                     task_row[2] = rand() % 11 + 10; // 执行时间10-20秒
-                    task_row[6] = 0;
+                    task_row[6] = 0;//无时间约束
                     break;
                 case 2:
                     task_row[1] = rand() % 10 + 9 + priority[task_row[0]]; // 任务价值在9-18之间
                     task_row[2] = rand() % 6 + 10; // 执行时间10-15秒
-                    task_row[6] = 0;
+                    task_row[6] = 0;//无时间约束
                     break;
                 case 3:
                     task_row[1] = rand() % 15 + 10 + priority[task_row[0]]; // 任务价值在10-24之间
                     task_row[2] = rand() % 11 + 10; // 执行时间10-20秒
-                    task_row[6] = 10;
+                    task_row[6] = 10;//有时间约束10秒
                     break;
             }
         }

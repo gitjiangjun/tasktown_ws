@@ -1,0 +1,12 @@
+[0.036s] Invoking command in '/home/jj/tasktown_ws/build/village_operator': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4
+[0.098s] [35m[1mScanning dependencies of target operator_node[0m
+[0.152s] [ 50%] [32mBuilding CXX object CMakeFiles/operator_node.dir/src/operator.cpp.o[0m
+[2.495s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In function ‘[01m[Kvoid print_task_assignment(const std::vector<std::vector<int> >&)[m[K’:
+[2.495s] [01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:937:36:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Ktask_assignment_matrix[m[K’
+[2.496s]   937 |             row_str << std::setw(4)[01;31m[Kt[m[K[32m[Kask_assignment_matrix[m[K[i][j] << " ";
+[2.496s]       |                                    [01;31m[K^[m[K[32m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.496s]       |                                    [32m[K;[m[K
+[3.602s] make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+[3.602s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+[3.603s] make: *** [Makefile:141：all] 错误 2
+[3.607s] Invoked command in '/home/jj/tasktown_ws/build/village_operator' returned '2': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_operator -- -j4 -l4
