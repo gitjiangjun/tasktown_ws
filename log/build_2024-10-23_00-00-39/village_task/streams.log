@@ -1,0 +1,26 @@
+[0.040s] Invoking command in '/home/jj/tasktown_ws/build/village_task': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j4 -l4
+[0.142s] [35m[1mScanning dependencies of target task_node[0m
+[0.201s] [ 50%] [32mBuilding CXX object CMakeFiles/task_node.dir/src/task.cpp.o[0m
+[5.641s] [100%] [32m[1mLinking CXX executable task_node[0m
+[5.941s] [100%] Built target task_node
+[5.955s] Invoked command in '/home/jj/tasktown_ws/build/village_task' returned '0': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j4 -l4
+[5.986s] Invoking command in '/home/jj/tasktown_ws/build/village_task': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --install /home/jj/tasktown_ws/build/village_task
+[5.995s] -- Install configuration: "RelWithDebInfo"
+[5.996s] -- Execute custom install script
+[5.996s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/ament_index/resource_index/package_run_dependencies/village_task
+[5.996s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/ament_index/resource_index/parent_prefix_path/village_task
+[5.997s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/environment/ament_prefix_path.sh
+[5.997s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/environment/ament_prefix_path.dsv
+[5.998s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/environment/path.sh
+[5.998s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/environment/path.dsv
+[5.999s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/local_setup.bash
+[5.999s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/local_setup.sh
+[6.000s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/local_setup.zsh
+[6.000s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/local_setup.dsv
+[6.009s] -- Symlinking: /home/jj/tasktown_ws/install/village_task/share/village_task/package.dsv
+[6.012s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/ament_index/resource_index/packages/village_task
+[6.013s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/cmake/village_taskConfig.cmake
+[6.013s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/cmake/village_taskConfig-version.cmake
+[6.013s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/share/village_task/package.xml
+[6.014s] -- Up-to-date symlink: /home/jj/tasktown_ws/install/village_task/lib/village_task/task_node
+[6.017s] Invoked command in '/home/jj/tasktown_ws/build/village_task' returned '0': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --install /home/jj/tasktown_ws/build/village_task

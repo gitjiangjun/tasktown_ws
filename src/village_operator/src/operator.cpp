@@ -442,7 +442,7 @@ private:
         request->tasks.push_back(0);
         task_lock.lock();
         // 将新任务添加到全局任务序列，并标记任务到达时间
-        global_task_sequence.push_back({request->tasks, {task_arrival_time}});  // 20240914新增
+        global_task_sequence.push_back({request->tasks, {task_arrival_time}});  // 20240914新增  改动
         task_lock.unlock();
         
 
@@ -603,7 +603,7 @@ loop:
         //std::unique_lock<std::mutex> task_lock(global_task_sequence_mutex); // 加锁保护全局任务序列
        // vector<vector<double>> reward_matrix(3, vector<double>(global_task_sequence.size(), 0.0)); // 任务收益矩阵，行数固定为3（操作员数量），列数根据当前任务数动态调整
         vector<int> idle_operators;                                                               // 存储空闲的操作员索引
-        vector<size_t> task_indices;  
+       // vector<size_t> task_limit_indices;  
         //vector<int> busy_operators;                                                            // 未处理的任务索引
         busy_operators.clear();
         //task_lock.unlock();
@@ -636,7 +636,13 @@ loop:
         RCLCPP_INFO(this->get_logger(), "至少有一个操作员空闲，所有操作员一起遍历任务。");
 
         //std::unique_lock<std::mutex> task_lock(global_task_sequence_mutex); // 使用互斥锁来保护对全局任务序列的访问
+        
+        //每次循环，这下面的四个数据都会重置
         int task_count = 0;
+        vector<size_t> task_indices;
+        bool has_limit =false;
+        vector<vector<double>> reward_matrix(3); // 任务收益矩阵，行数固定为3（操作员数量），列数根据当前任务数动态调整
+
         task_lock.lock();
         for (size_t i = 0; i < global_task_sequence.size(); ++i)
         {
@@ -657,61 +663,75 @@ loop:
                         RCLCPP_INFO(this->get_logger(), "任务 %d 已过期，跳过。", i);
                         continue;
                     }
+                    else//***********************有时间约束且未过期，只记录这些任务
+                    {
+                        task_indices.push_back(i);
+                        task_count++;
+                        has_limit = true;
+                        const auto &task_data = global_task_sequence[i].first;
+                        int task_value = task_data[1]; // 获取任务价值
+                        for (size_t j = 0; j < operators_.size(); ++j)
+                        {
+                            double success_rate = task_data[3 + j] / 100.0; // 获取成功率
+                            // 计算任务分配的时间间隔
+                            auto task_arrival_time = global_task_sequence[i].second[0];           // 任务到达时间
+                            auto current_time = std::chrono::system_clock::now();              // 当前时间
+                            std::chrono::duration<double> time_interval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - task_arrival_time); // 计算时间间隔
+                            // 计算收益
+                            double reward = success_rate * task_value; //* exp(-time_interval.count() / 60.0);//改动
+                            //reward_matrix[j][task_indices.size() - 1] = reward; // 填充收益矩阵
+                            reward_matrix[j].push_back(reward) ; // 填充收益矩阵
+                        }
+                    }
                 }
-                task_count++;
-                task_indices.push_back(i); // 记录未处理任务的索引
-                //allTasksAssigned = false;
+            }
+        }
+        if(!has_limit)
+        {//只有普通任务，无需考虑，直接记录
+            for (size_t i = 0; i < global_task_sequence.size(); ++i)
+            {
+                if (global_task_sequence[i].first.back() != 0) // 如果任务已经被处理，跳过
+                {
+                    RCLCPP_INFO(this->get_logger(), "任务 %zu 已经被处理或过期，跳过。", i);
+                    continue;
+                }
+
+                task_indices.push_back(i);//记录索引
+                task_count++;//任务数量加一
+
+                const auto &task_data = global_task_sequence[i].first;
+                int task_value = task_data[1]; // 获取任务价值
+                // 遍历所有操作员，填充收益矩阵
+                for (size_t j = 0; j < operators_.size(); ++j)
+                {
+                    double success_rate = task_data[3 + j] / 100.0; // 获取成功率
+
+                    // 计算任务分配的时间间隔
+                    auto task_arrival_time = global_task_sequence[i].second[0];           // 任务到达时间
+                    auto current_time = std::chrono::system_clock::now();              // 当前时间
+                    std::chrono::duration<double> time_interval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - task_arrival_time); // 计算时间间隔
+
+                    // 计算收益
+                    double reward = success_rate * task_value; //* exp(-time_interval.count() / 60.0);//改动
+                    //reward_matrix[j][task_indices.size() - 1] = reward; // 填充收益矩阵
+                    reward_matrix[j].push_back(reward) ; // 填充收益矩阵
+                }
             }
         }
         task_lock.unlock();
-        /*if (allTasksAssigned)
+//task_count,task_indices要么记录有时间限制的未处理任务，要么记录普通任务*****
+        if(task_count == 0)
         {
-            RCLCPP_INFO(this->get_logger(), "所有任务都已分配，结束循环。");
-            break;
-        }*/
-       if(task_count == 0)
-       {
-            RCLCPP_INFO(this->get_logger(), "没有未处理的任务，结束循环。");
-            tt=global_signal;
-            //RCLCPP_INFO(this->get_logger(), "global_signal=%d",tt);
-            //std::cout<<"global_signal"<<global_signal<<std::endl;
-            std::this_thread::sleep_for(std::chrono::seconds(2));
-            break;
-       }
-        vector<vector<double>> reward_matrix(3, vector<double>(task_count, 0.0)); // 任务收益矩阵，行数固定为3（操作员数量），列数根据当前任务数动态调整
-         //改动
-         task_lock.lock();
-        // 遍历全局任务序列，构建收益矩阵
-        for (size_t i = 0; i < global_task_sequence.size(); ++i)
-        {
-            //std::lock_guard<std::mutex> task_lock(global_task_sequence_mutex); // 使用互斥锁来保护对全局任务序列的访问
-
-            if (global_task_sequence[i].first.back() != 0) // 如果任务已经被处理，跳过
-            {
-                RCLCPP_INFO(this->get_logger(), "任务 %zu 已经被处理或过期，跳过。", i);
-                continue;
-            }
-
-            const auto &task_data = global_task_sequence[i].first;
-            int task_value = task_data[1]; // 获取任务价值
-
-            // 遍历所有操作员，填充收益矩阵
-            for (size_t j = 0; j < operators_.size(); ++j)
-            {
-                double success_rate = task_data[3 + j] / 100.0; // 获取成功率
-
-                // 计算任务分配的时间间隔
-                auto task_arrival_time = global_task_sequence[i].second[0];           // 任务到达时间
-                auto current_time = std::chrono::system_clock::now();              // 当前时间
-                std::chrono::duration<double> time_interval = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - task_arrival_time); // 计算时间间隔
-
-                // 计算收益
-                double reward = success_rate * task_value; //* exp(-time_interval.count() / 60.0);//改动
-                //reward_matrix[j][task_indices.size() - 1] = reward; // 填充收益矩阵
-                reward_matrix[j][task_indices.size() - 1] = reward; // 填充收益矩阵
-            }
+                RCLCPP_INFO(this->get_logger(), "没有未处理的任务，结束循环。");
+                tt=global_signal;
+                //RCLCPP_INFO(this->get_logger(), "global_signal=%d",tt);
+                //std::cout<<"global_signal"<<global_signal<<std::endl;
+                std::this_thread::sleep_for(std::chrono::seconds(2));
+                break;
         }
-        task_lock.unlock();
+        //vector<vector<double>> reward_matrix(3); // 任务收益矩阵，行数固定为3（操作员数量），列数根据当前任务数动态调整
+         //改动，reward_matrix中的task_indices改为零
+       
 
         // 使用KM算法计算最大收益匹配
         KMAlgorithm km(reward_matrix);
@@ -724,18 +744,7 @@ loop:
             RCLCPP_INFO(this->get_logger(), "%d", element);
         }
         RCLCPP_INFO(this->get_logger(), "KM算法计算的最大总收益为: %.2f", max_reward);
-        for(size_t i=0;i< busy_operators.size();i++)//
-        {   int unlucky_task_index;
-            int who = busy_operators[i]; 
-            auto task_it=std::find(matching_result.begin(), matching_result.end(), who);   
-            if(task_it!=matching_result.end())
-            {
-                unlucky_task_index = task_indices[std::distance(matching_result.begin(), task_it)];//改动
-                task_lock.lock();
-                global_task_sequence[unlucky_task_index].first[3+who] -= 2;
-                task_lock.unlock();
-            }
-        }
+
         // 分配任务，只给空闲的操作员分配任务，并将任务标记为已处理
         for (size_t i = 0; i < idle_operators.size(); ++i)
         {
@@ -807,6 +816,18 @@ loop:
                 std::cout << "操作员" << selected_operator_index << " 完成任务，设置成空闲状态" << std::endl;
                 //assignTasks(response); // 继续检查是否有空闲的操作员需要分配任务 改动，有可能创建局部变量allTasksAssigned
             }).detach();
+        }
+        for(size_t i=0;i< busy_operators.size();i++)//对忙碌的匹配结果作微操
+        {   int unlucky_task_index;
+            int who = busy_operators[i]; 
+            auto task_it=std::find(matching_result.begin(), matching_result.end(), who);   
+            if(task_it!=matching_result.end())
+            {
+                unlucky_task_index = task_indices[std::distance(matching_result.begin(), task_it)];//改动
+                task_lock.lock();
+                global_task_sequence[unlucky_task_index].first[3+who] -= 2;//针对这个忙碌的操作员，减少其成功率，即减少下次仍然匹配到他的概率
+                task_lock.unlock();
+            }
         }
         //显示任务处理顺序
         print_task_order(manager.getTaskIndexRecord());
@@ -994,7 +1015,7 @@ std::vector<std::pair<std::vector<int32_t>, std::vector<std::chrono::system_cloc
     std::cout << std::setw(30) << std::setfill(' ')<<std::left<<"任务完成时间：";
     for(const auto &task_pair : global_task_sequence){
         const auto &value = task_pair.second;
-        if(value.size() > 1)
+        if(value.size() > 2)
         {
             printTime(value[2]);
         }

@@ -7,6 +7,7 @@
 #include <chrono>    // 时间头文件
 #include <memory>    // 内存管理头文件
 #include<signal.h>
+#include <unistd.h>  // 包含 sleep 函数
 // 1.导入服务接口类型
 // 任务更新的服务接口 [创建完srv文件要记得编译才会出现"update_task.hpp"!!!]
 #include "village_interfaces/srv/task_update.hpp"
@@ -51,7 +52,8 @@ public:
         request->tasks = task_row; // 只发送当前生成的任务
 
         // 5.3发送异步请求
-        task_update_client->async_send_request(request); 
+        task_update_client->async_send_request(request);
+
     }
     void send_tasks_request() {
         // 5.1等待服务端上线
@@ -64,11 +66,11 @@ public:
 
         // 20240818修改：生成任务列向量
         vector<int> task_row(7); // 1行7列的任务列向量
-        vector<int>priority={10,20,30,40};
+ 
         // 20240818修改：定义随机序列参数
         if (is_first_request) {
             task_row[0] = 0; // 第一次发送任务类型为"0"
-            task_row[1] = 2+priority[task_row[0]]; // "0"类型任务的价值固定为2
+            task_row[1] = 2; // "0"类型任务的价值固定为2
             task_row[2] = 19; // "0"类型任务的执行时间固定为900秒
             task_row[6] = 0;//无时间约束
             is_first_request = false;
@@ -76,19 +78,19 @@ public:
             task_row[0] = rand() % 3 + 1; // 任务类型为"1", "2", "3"中的一个
             switch (task_row[0]) {
                 case 1:
-                    task_row[1] = rand() % 5 + 4 + priority[task_row[0]]; // 任务价值在4-8之间
+                    task_row[1] = rand() % 5 + 4; // 任务价值在4-8之间
                     task_row[2] = rand() % 11 + 10; // 执行时间10-20秒
                     task_row[6] = 0;//无时间约束
                     break;
                 case 2:
-                    task_row[1] = rand() % 10 + 9 + priority[task_row[0]]; // 任务价值在9-18之间
+                    task_row[1] = rand() % 10 + 9; // 任务价值在9-18之间
                     task_row[2] = rand() % 6 + 10; // 执行时间10-15秒
                     task_row[6] = 0;//无时间约束
                     break;
                 case 3:
-                    task_row[1] = rand() % 15 + 10 + priority[task_row[0]]; // 任务价值在10-24之间
+                    task_row[1] = rand() % 15 + 10 ; // 任务价值在10-24之间
                     task_row[2] = rand() % 11 + 10; // 执行时间10-20秒
-                    task_row[6] = 10;//有时间约束10秒
+                    task_row[6] = 10;//有时间约束，10秒内需要处理
                     break;
             }
         }
@@ -152,6 +154,7 @@ private:
             TaskRequestNode *instance = new TaskRequestNode("signal");
             instance->send_over();
             std::cout<<"接收到 Ctrl+C，发送结束信号"<<std::endl;
+            sleep(2);
             delete instance;
             exit(0);
         }
