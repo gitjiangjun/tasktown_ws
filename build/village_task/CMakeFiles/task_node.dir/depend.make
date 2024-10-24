@@ -298,6 +298,12 @@ CMakeFiles/task_node.dir/src/task.cpp.o: /opt/ros/foxy/include/statistics_msgs/m
 CMakeFiles/task_node.dir/src/task.cpp.o: /opt/ros/foxy/include/statistics_msgs/msg/detail/statistic_data_point__struct.hpp
 CMakeFiles/task_node.dir/src/task.cpp.o: /opt/ros/foxy/include/statistics_msgs/msg/metrics_message.hpp
 CMakeFiles/task_node.dir/src/task.cpp.o: /opt/ros/foxy/include/statistics_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+CMakeFiles/task_node.dir/src/task.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/int32__builder.hpp
+CMakeFiles/task_node.dir/src/task.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/int32__struct.hpp
+CMakeFiles/task_node.dir/src/task.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/int32__traits.hpp
+CMakeFiles/task_node.dir/src/task.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/int32__type_support.hpp
+CMakeFiles/task_node.dir/src/task.cpp.o: /opt/ros/foxy/include/std_msgs/msg/int32.hpp
+CMakeFiles/task_node.dir/src/task.cpp.o: /opt/ros/foxy/include/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
 CMakeFiles/task_node.dir/src/task.cpp.o: /opt/ros/foxy/include/tracetools/config.h
 CMakeFiles/task_node.dir/src/task.cpp.o: /opt/ros/foxy/include/tracetools/tracetools.h
 CMakeFiles/task_node.dir/src/task.cpp.o: /opt/ros/foxy/include/tracetools/utils.hpp

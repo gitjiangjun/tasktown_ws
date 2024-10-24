@@ -354,3 +354,6 @@ ament_cmake_symlink_install_files("/home/jj/tasktown_ws/src/village_operator" FI
 
 # install("TARGETS" "operator_node" "DESTINATION" "lib/village_operator")
 include("/home/jj/tasktown_ws/build/village_operator/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install(FILES "package.xml" "DESTINATION" "share/village_operator")
+ament_cmake_symlink_install_files("/home/jj/tasktown_ws/src/village_operator" FILES "package.xml" "DESTINATION" "share/village_operator")

@@ -1,6 +1,7 @@
 // ROS 2 C++头文件
 #include "rclcpp/rclcpp.hpp"
 #include <rclcpp/client.hpp>
+#include <std_msgs/msg/int32.hpp>
 #include <iostream>  // 打印txt文档用
 #include <fstream>   // 包含文件流头文件，打印txt文档用
 #include <cstdlib>   // 标准库头文件
@@ -537,11 +538,13 @@ public:
                                                                                         std::bind(&TaskAssignServer::handle_task_assign_request_callback, this, _1, _2));
         // 打印服务端任务分配程序启动提示
         RCLCPP_INFO(this->get_logger(), "任务分配服务已启动，准备对客户端发来的随机任务序列进行分配");
+        // 创建发布者
+        task_status_publisher = this->create_publisher<std_msgs::msg::Int32>("task_status", 10);
     }
 
 private:
 
-
+    rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr task_status_publisher;
     rclcpp::Service<village_interfaces::srv::TaskAssign>::SharedPtr task_assign_service; // 任务分配服务对象
 
     std::vector<Operator> operators_; // 修改为二维向量
@@ -793,6 +796,9 @@ loop:
             
             //std::lock_guard<std::mutex> task_lock(global_task_sequence_mutex);
             global_task_sequence[selected_task_index].first.back() = 1;//std::chrono::steady_clock::time_point();  // 将任务标记为已处理
+            auto msg = std_msgs::msg::Int32();
+            msg.data = global_task_sequence[selected_task_index].first[0];
+            task_status_publisher->publish(msg);
             global_task_sequence[selected_task_index].first[3+selected_operator_index] = 0;//标记是此操作员处理
             global_task_sequence[selected_task_index].first[1]= manager.getTaskValueMatrix()[selected_operator_index].back();//将价值更新为实际收益
             task_lock.unlock();
@@ -862,10 +868,11 @@ loop:
     response->task_result = task_result_one_dimensional;
 
     RCLCPP_INFO(this->get_logger(), "任务分配完成，将结果返回给客户端。");
-    //RCLCPP_INFO(this->get_logger(), "tt的值：%d", tt);
+    RCLCPP_INFO(this->get_logger(), "tt的值：%d", tt);
     if(tt)
-    {
-        //RCLCPP_INFO(this->get_logger(), "HELLO");
+    {//要关闭，等待操作员空闲
+        RCLCPP_INFO(this->get_logger(), "HELLO");
+busy:
         busy_operators.clear();
         for (size_t operator_index = 0; operator_index < operators_.size(); ++operator_index)
         {
@@ -877,10 +884,16 @@ loop:
         //std::cout << "还有" << busy_operators.size() << "个操作员忙碌" << std::endl;
         //RCLCPP_INFO(this->get_logger(), "还有%zu个操作员忙碌", busy_operators.size());
         if(busy_operators.size() >= 1){
-            //std::cout << "还有" << busy_operators.size() << "个操作员忙碌" << std::endl;
-            goto loop;
+            std::cout << "分配关闭，但还有" << busy_operators.size() << "个操作员忙碌" << std::endl;
+            std::this_thread::sleep_for(std::chrono::seconds(4));
+            goto busy;
         }
     }
+    else
+    {
+        goto loop;
+    }
+
     Show_result(global_task_sequence,
     manager.getTaskIndexRecord(),
     manager.getTaskAssignment(),
@@ -1009,7 +1022,8 @@ std::vector<std::pair<std::vector<int32_t>, std::vector<std::chrono::system_cloc
         }
         else
         {
-            printTime(value[0]);
+            std::cout << std::setw(9) << std::setfill(' ') << std::left << "null";
+            //printTime(value[0]);
         }
     }std::cout << std::endl;
     std::cout << std::setw(30) << std::setfill(' ')<<std::left<<"任务完成时间：";
@@ -1021,7 +1035,8 @@ std::vector<std::pair<std::vector<int32_t>, std::vector<std::chrono::system_cloc
         }
         else
         {
-            printTime(value[0]);
+            std::cout << std::setw(9) << std::setfill(' ') << std::left << "null";
+            //printTime(value[0]);
         }
     }std::cout << std::endl;
     std::cout << std::setw(30) << std::setfill(' ') << std::left << "对应操作员：";
@@ -1068,7 +1083,7 @@ vector<vector<int>>task_value_matrix
 int main(int argc, char **argv)
 {
     // 20240821新增：获取程序开始时间点
-    auto start_time = std::chrono::steady_clock::now();
+    auto start_time = std::chrono::system_clock::now();
 
     rclcpp::init(argc, argv);                                                  // 初始化ROS2 节点
     auto update_node = std::make_shared<TaskUpdateNode>("task_update_node");   // 创建任务更新服务端节点，不传递任何参数，创建任务更新服务端节点
@@ -1087,7 +1102,7 @@ int main(int argc, char **argv)
     assign_thread.join();
 
     // 20240821新增：计算程序运行时间
-    auto end_time = std::chrono::steady_clock::now();
+    auto end_time = std::chrono::system_clock::now();
     auto duration = end_time - start_time;
     // 20240821新增：打印程序运行时间
     RCLCPP_INFO(rclcpp::get_logger("main"), "任务分配总计耗时：%ld 秒",

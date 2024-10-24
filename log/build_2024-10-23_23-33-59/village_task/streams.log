@@ -1,0 +1,30 @@
+[0.045s] Invoking command in '/home/jj/tasktown_ws/build/village_task': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j4 -l4
+[0.156s] [35m[1mScanning dependencies of target task_node[0m
+[0.223s] [ 50%] [32mBuilding CXX object CMakeFiles/task_node.dir/src/task.cpp.o[0m
+[2.072s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:214:36:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Kprint_accumulated_tasks_matrix[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+[2.073s]   214 |     print_accumulated_tasks_matrix([01;31m[K)[m[K{
+[2.073s]       |                                    [01;31m[K^[m[K
+[2.124s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In member function ‘[01m[Kint TaskRequestNode::generate_time_window()[m[K’:
+[2.124s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:196:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kis_event_triggered[m[K’ was not declared in this scope
+[2.124s]   196 |         if ([01;31m[Kis_event_triggered[m[K(time_window_probability_)) {
+[2.124s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.135s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In member function ‘[01m[Kint TaskRequestNode::print_accumulated_tasks_matrix()[m[K’:
+[2.135s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:220:28:[m[K [01;31m[Kerror: [m[K‘[01m[Ksetw[m[K’ is not a member of ‘[01m[Kstd[m[K’; did you mean ‘[01m[Kset[m[K’?
+[2.135s]   220 |                 ss << std::[01;31m[Ksetw[m[K(8) << accumulated_tasks[i][j] << "\t"; // 每个任务值之间用TAB分隔
+[2.135s]       |                            [01;31m[K^~~~[m[K
+[2.135s]       |                            [32m[Kset[m[K
+[2.135s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:224:5:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[2.136s]   224 |     [01;35m[K}[m[K
+[2.136s]       |     [01;35m[K^[m[K
+[2.137s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In static member function ‘[01m[Kstatic void TaskRequestNode::signal_handler(int)[m[K’:
+[2.137s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:227:69:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KTaskRequestNode::TaskRequestNode(const char [7])[m[K’
+[2.137s]   227 |             TaskRequestNode *instance = new TaskRequestNode("signal"[01;31m[K)[m[K;
+[2.137s]       |                                                                     [01;31m[K^[m[K
+[2.137s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:28:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KTaskRequestNode::TaskRequestNode(const string&, int)[m[K’
+[2.137s]    28 |     [01;36m[KTaskRequestNode[m[K(const std::string &name,int time_window_probability) : Node(name), is_first_request(true), time_window_probability_(time_window_probability){
+[2.137s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[2.138s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:28:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[4.097s] make[2]: *** [CMakeFiles/task_node.dir/build.make:63：CMakeFiles/task_node.dir/src/task.cpp.o] 错误 1
+[4.097s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/task_node.dir/all] 错误 2
+[4.098s] make: *** [Makefile:141：all] 错误 2
+[4.102s] Invoked command in '/home/jj/tasktown_ws/build/village_task' returned '2': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j4 -l4

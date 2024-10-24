@@ -1,0 +1,46 @@
+[0.038s] Invoking command in '/home/jj/tasktown_ws/build/village_task': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j4 -l4
+[0.079s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.125s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.401s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.411s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.458s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.462s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.607s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.655s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.657s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.812s] -- Found village_interfaces: 0.0.0 (/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake)
+[1.030s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.124s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.124s] -- Configured cppcheck include dirs: 
+[1.125s] -- Configured cppcheck exclude dirs and/or files: 
+[1.125s] -- Added test 'lint_cmake' to check CMake code style
+[1.126s] -- Added test 'uncrustify' to check C / C++ code style
+[1.126s] -- Configured uncrustify additional arguments: 
+[1.126s] -- Added test 'xmllint' to check XML markup files
+[1.132s] -- Configuring done
+[1.146s] -- Generating done
+[1.150s] -- Build files have been written to: /home/jj/tasktown_ws/build/village_task
+[1.182s] [35m[1mScanning dependencies of target task_node[0m
+[1.218s] [ 50%] [32mBuilding CXX object CMakeFiles/task_node.dir/src/task.cpp.o[0m
+[2.973s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In constructor ‘[01m[KTaskRequestNode::TaskRequestNode(const string&)[m[K’:
+[2.973s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:46:35:[m[K [01;31m[Kerror: [m[K‘[01m[KIntSubscriber[m[K’ has not been declared
+[2.973s]    46 |       "int_topic", 10, std::bind(&[01;31m[KIntSubscriber[m[K::message_callback, this, std::placeholders::_1));
+[2.973s]       |                                   [01;31m[K^~~~~~~~~~~~~[m[K
+[3.005s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[3.005s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:185:62:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Krclcpp::executors::MultiThreadedExecutor::MultiThreadedExecutor(const rclcpp::executors::MultiThreadedExecutor&)[m[K’
+[3.005s]   185 |     auto executor = rclcpp::executors::MultiThreadedExecutor([01;31m[K)[m[K;
+[3.006s]       |                                                              [01;31m[K^[m[K
+[3.006s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/context.hpp:33[m[K,
+[3.006s]                  from [01m[K/opt/ros/foxy/include/rclcpp/contexts/default_context.hpp:18[m[K,
+[3.006s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:32[m[K,
+[3.006s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[3.006s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[3.006s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[3.006s]                  from [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:2[m[K:
+[3.006s] [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:83:3:[m[K [01;36m[Knote: [m[Kdeclared here
+[3.006s]    83 |   [01;36m[KRCLCPP_DISABLE_COPY[m[K(MultiThreadedExecutor)
+[3.006s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.098s] make[2]: *** [CMakeFiles/task_node.dir/build.make:63：CMakeFiles/task_node.dir/src/task.cpp.o] 错误 1
+[4.098s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/task_node.dir/all] 错误 2
+[4.098s] make: *** [Makefile:141：all] 错误 2
+[4.100s] Invoked command in '/home/jj/tasktown_ws/build/village_task' returned '2': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j4 -l4

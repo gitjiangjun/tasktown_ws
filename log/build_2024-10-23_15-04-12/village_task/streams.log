@@ -1,0 +1,31 @@
+[0.041s] Invoking command in '/home/jj/tasktown_ws/build/village_task': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j4 -l4
+[0.125s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.191s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.438s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.452s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.508s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.513s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.675s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.747s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.749s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.942s] -- Found village_interfaces: 0.0.0 (/home/jj/tasktown_ws/install/village_interfaces/share/village_interfaces/cmake)
+[1.234s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.331s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.331s] -- Configured cppcheck include dirs: 
+[1.331s] -- Configured cppcheck exclude dirs and/or files: 
+[1.331s] -- Added test 'lint_cmake' to check CMake code style
+[1.332s] -- Added test 'uncrustify' to check C / C++ code style
+[1.332s] -- Configured uncrustify additional arguments: 
+[1.332s] -- Added test 'xmllint' to check XML markup files
+[1.341s] -- Configuring done
+[1.360s] -- Generating done
+[1.362s] -- Build files have been written to: /home/jj/tasktown_ws/build/village_task
+[1.411s] [ 50%] [32mBuilding CXX object CMakeFiles/task_node.dir/src/task.cpp.o[0m
+[1.523s] [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Kstd_msg/msg/int32.hpp: 没有那个文件或目录
+[1.523s]     3 | #include [01;31m[K<std_msg/msg/int32.hpp>[m[K
+[1.524s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.524s] compilation terminated.
+[1.527s] make[2]: *** [CMakeFiles/task_node.dir/build.make:63：CMakeFiles/task_node.dir/src/task.cpp.o] 错误 1
+[1.527s] make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/task_node.dir/all] 错误 2
+[1.528s] make: *** [Makefile:141：all] 错误 2
+[1.533s] Invoked command in '/home/jj/tasktown_ws/build/village_task' returned '2': CMAKE_PREFIX_PATH=/home/jj/tasktown_ws/install/village_interfaces:/home/jj/tasktown_ws/install/village_taskgroups:/home/jj/tasktown_ws/install/village_task:/home/jj/tasktown_ws/install/village_operator:/opt/ros/foxy /usr/bin/cmake --build /home/jj/tasktown_ws/build/village_task -- -j4 -l4

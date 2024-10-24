@@ -1,0 +1,16 @@
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskAssignmentManager::assignTask(int, int, int, double, int, double)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:282:111:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktime_interval[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  282 | t operatorIndex, int taskIndex, int taskTime, double successRate, int taskValue, [01;35m[Kdouble time_interval[m[K)
+      |                                                                                  [01;35m[K~~~~~~~^~~~~~~~~~~~~[m[K
+
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In constructor ‘[01m[KTaskAssignServer::TaskAssignServer(const string&)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:542:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask_status_publisher[m[K’ was not declared in this scope
+  542 |         [01;31m[Ktask_status_publisher[m[K = this->create_publisher<std_msgs::msg::Int32>("task_status", 10);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskAssignServer::assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:801:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask_status_publisher[m[K’ was not declared in this scope
+  801 |             [01;31m[Ktask_status_publisher[m[K->publish(msg);
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/operator_node.dir/build.make:63：CMakeFiles/operator_node.dir/src/operator.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/operator_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

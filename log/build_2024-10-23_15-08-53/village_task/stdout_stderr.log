@@ -1,0 +1,19 @@
+[35m[1mScanning dependencies of target task_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/task_node.dir/src/task.cpp.o[0m
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:185:62:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Krclcpp::executors::MultiThreadedExecutor::MultiThreadedExecutor(const rclcpp::executors::MultiThreadedExecutor&)[m[K’
+  185 |     auto executor = rclcpp::executors::MultiThreadedExecutor([01;31m[K)[m[K;
+      |                                                              [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/context.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/contexts/default_context.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:32[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/jj/tasktown_ws/src/village_task/src/task.cpp:2[m[K:
+[01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:83:3:[m[K [01;36m[Knote: [m[Kdeclared here
+   83 |   [01;36m[KRCLCPP_DISABLE_COPY[m[K(MultiThreadedExecutor)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/task_node.dir/build.make:63：CMakeFiles/task_node.dir/src/task.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:78：CMakeFiles/task_node.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

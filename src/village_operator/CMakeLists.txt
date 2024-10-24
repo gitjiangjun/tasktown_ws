@@ -11,7 +11,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rcl_interfaces REQUIRED)
 find_package(village_interfaces REQUIRED)
-
+find_package(std_msgs REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -40,3 +40,9 @@ install(TARGETS
   operator_node
   DESTINATION lib/${PROJECT_NAME}
   )
+
+
+# 安装包描述文件
+install(FILES package.xml
+  DESTINATION share/${PROJECT_NAME}
+)

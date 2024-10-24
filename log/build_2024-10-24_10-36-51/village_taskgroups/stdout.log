@@ -1,0 +1,19 @@
+[100%] Built target taskgroups_node
+-- Install configuration: "RelWithDebInfo"
+-- Execute custom install script
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/share/ament_index/resource_index/package_run_dependencies/village_taskgroups
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/share/ament_index/resource_index/parent_prefix_path/village_taskgroups
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/environment/path.sh
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/environment/path.dsv
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/local_setup.bash
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/local_setup.sh
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/local_setup.zsh
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/local_setup.dsv
+-- Symlinking: /home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/package.dsv
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/share/ament_index/resource_index/packages/village_taskgroups
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/cmake/village_taskgroupsConfig.cmake
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/cmake/village_taskgroupsConfig-version.cmake
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/share/village_taskgroups/package.xml
+-- Up-to-date symlink: /home/jj/tasktown_ws/install/village_taskgroups/lib/village_taskgroups/taskgroups_node

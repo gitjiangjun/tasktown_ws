@@ -1,0 +1,4 @@
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskAssignmentManager::assignTask(int, int, int, double, int, double)[m[K’:
+[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:282:111:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktime_interval[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  282 |     void assignTask(int operatorIndex, int taskIndex, int taskTime, double successRate, int taskValue, [01;35m[Kdouble time_interval[m[K)
+      |                                                                                                        [01;35m[K~~~~~~~^~~~~~~~~~~~~[m[K
