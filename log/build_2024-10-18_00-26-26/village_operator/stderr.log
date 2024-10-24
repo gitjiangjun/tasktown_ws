@@ -1,4 +1,0 @@
-[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:[m[K In member function ‘[01m[Kvoid TaskAssignServer::assignTasks(std::shared_ptr<village_interfaces::srv::TaskAssign_Response_<std::allocator<void> > >)[m[K’:
-[01m[K/home/jj/tasktown_ws/src/village_operator/src/operator.cpp:599:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KallTasksAssigned[m[K’ [[01;35m[K-Wunused-variable[m[K]
-  599 |         bool [01;35m[KallTasksAssigned[m[K = true; // 初始化allTasksAssigned=true，跟踪并标记是否所有任务都已经分配
-      |              [01;35m[K^~~~~~~~~~~~~~~~[m[K
